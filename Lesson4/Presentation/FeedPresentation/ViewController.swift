@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if indexPath.row % 2 == 0 {
             cell.configure(image: nil, description: "fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde")
         } else {
-            cell.configure(image: "fsd", description: nil)
+            cell.configure(image: "fsd", description: "fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde fsde")
         }
         return cell
     }
