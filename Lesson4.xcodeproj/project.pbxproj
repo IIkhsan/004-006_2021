@@ -12,6 +12,7 @@
 		5EE6900827036B9200F5C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900627036B9200F5C170 /* Main.storyboard */; };
 		5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900927036B9400F5C170 /* Assets.xcassets */; };
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
+		A56EB0D927075B8000E8B2F9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56EB0D827075B8000E8B2F9 /* PostViewController.swift */; };
 		A5D32E8D270650F30012C29B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D32E8C270650F30012C29B /* FeedTableViewCell.swift */; };
 		A5D32E8F270656EA0012C29B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D32E8E270656EA0012C29B /* Post.swift */; };
 		A5D6C445270601BB00D084C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6C444270601BB00D084C3 /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 		5EE6900927036B9400F5C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE6900C27036B9400F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56EB0D827075B8000E8B2F9 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A5D32E8C270650F30012C29B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		A5D32E8E270656EA0012C29B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A5D6C444270601BB00D084C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +81,17 @@
 				A5D6C4432706019700D084C3 /* LoginPresentation */,
 				A5D6C4462706093E00D084C3 /* FeedPresentation */,
 				A5D32E9027065B460012C29B /* ProfilePresentation */,
+				A56EB0D727075B6400E8B2F9 /* PostPresentation */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A56EB0D727075B6400E8B2F9 /* PostPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				A56EB0D827075B8000E8B2F9 /* PostViewController.swift */,
+			);
+			path = PostPresentation;
 			sourceTree = "<group>";
 		};
 		A5D32E9027065B460012C29B /* ProfilePresentation */ = {
@@ -180,6 +191,7 @@
 			files = (
 				A5D6C445270601BB00D084C3 /* LoginViewController.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
+				A56EB0D927075B8000E8B2F9 /* PostViewController.swift in Sources */,
 				A5D6C4482706097200D084C3 /* FeedViewController.swift in Sources */,
 				A5D32E8F270656EA0012C29B /* Post.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
