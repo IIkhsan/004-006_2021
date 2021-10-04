@@ -17,9 +17,7 @@ class StartScreenViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         
         if login == "login", password == "password" {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(identifier: "FeedViewController") as! FeedViewController
-            navigationController?.pushViewController(vc, animated: true)
+            performSegue(withIdentifier: "TabBarSegue", sender: nil)
         }
     }
     
