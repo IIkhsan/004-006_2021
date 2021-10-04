@@ -14,6 +14,9 @@
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
 		9239242C270752B9005C0E38 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239242B270752B9005C0E38 /* StartScreenViewController.swift */; };
 		9239242F270754B0005C0E38 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239242E270754B0005C0E38 /* FeedViewController.swift */; };
+		92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */; };
+		92A6290D270ADAE30076DEC2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290C270ADAE30076DEC2 /* Post.swift */; };
+		92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290E270ADC190076DEC2 /* PostInformation .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9239242B270752B9005C0E38 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		9239242E270754B0005C0E38 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		92A6290C270ADAE30076DEC2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		92A6290E270ADC190076DEC2 /* PostInformation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostInformation .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				9239242E270754B0005C0E38 /* FeedViewController.swift */,
+				92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */,
+				92A6290C270ADAE30076DEC2 /* Post.swift */,
+				92A6290E270ADC190076DEC2 /* PostInformation .swift */,
 			);
 			path = FeedPresentation;
 			sourceTree = "<group>";
@@ -166,8 +175,11 @@
 			files = (
 				9239242C270752B9005C0E38 /* StartScreenViewController.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
+				92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */,
 				9239242F270754B0005C0E38 /* FeedViewController.swift in Sources */,
+				92A6290D270ADAE30076DEC2 /* Post.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
+				92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
