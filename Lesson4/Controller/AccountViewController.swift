@@ -12,17 +12,17 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userStatusTextLabel: UILabel!
-    @IBOutlet weak var changeStatusButton: UIButton!
+    @IBOutlet weak var changeUserStatusButton: UIButton!
     @IBOutlet weak var userTownTextLabel: UILabel!
     @IBOutlet weak var userPhoneNumberTextLabel: UILabel!
     @IBOutlet weak var postsTableView: UITableView!
-    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var counterOfPostsTextLabel: UILabel!
+    @IBOutlet weak var moreInfoButton: UIButton!
+    @IBOutlet weak var addNewPostButton: UIButton!
+    @IBOutlet weak var changeStatusButton: UIButton!
     
     //MARK: - Var
     private var posts: [Post] = []
     private let dataManager = DataManager()
-    private var heightOfTableView: CGFloat = 0
     private var user: User?
     
     //MARK: - VC's cycle
@@ -45,7 +45,6 @@ class AccountViewController: UIViewController {
         postsTableView.delegate = self
         postsTableView.dataSource = self
         postsTableView.estimatedRowHeight = 400
-        counterOfPostsTextLabel.text = posts.count.description
         
         guard let user = user else { return }
         userAvatarImageView.image = user.avatar
@@ -53,6 +52,17 @@ class AccountViewController: UIViewController {
         userStatusTextLabel.text = user.status
         userTownTextLabel.text = user.city
         userPhoneNumberTextLabel.text = user.phone
+        
+        configureViews()
+    }
+    
+    private func configureViews() {
+        moreInfoButton.layer.cornerRadius = moreInfoButton.frame.height / 2
+        moreInfoButton.backgroundColor = .gray
+        changeStatusButton.layer.cornerRadius = changeUserStatusButton.frame.height / 2
+        changeStatusButton.backgroundColor = .gray
+        addNewPostButton.layer.cornerRadius = addNewPostButton.frame.height / 2
+        addNewPostButton.backgroundColor = .gray
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,9 +84,6 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? NewsTableViewCell else { return UITableViewCell() }
         cell.configure(posts[indexPath.row])
-        // Нужно динамически менять размер таблицы, чтобы scroll view прокручивался, иначе прокручивается только таблица
-        heightOfTableView += cell.frame.height
-        tableViewHeightConstraint.constant = heightOfTableView
         return cell
     }
 }
