@@ -120,11 +120,11 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="713" id="nla-fw-lJv" customClass="FeedTableViewCell" customModule="Lesson4" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="713"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="754" id="nla-fw-lJv" customClass="FeedTableViewCell" customModule="Lesson4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="754"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nla-fw-lJv" id="BN7-1w-kRm">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="713"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="754"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcY-PH-21M">
@@ -155,27 +155,52 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-yv-A31">
-                                                    <rect key="frame" x="8" y="87.000000000000014" width="374" height="136.33333333333337"/>
+                                                    <rect key="frame" x="10" y="87.000000000000014" width="372" height="136.33333333333337"/>
                                                     <string key="text">Впервые в истории российского футбола было заключено соглашение о партнерстве между клубом “Локомотив” и медико-генетическим центром Genotek. тактические схемы в футбольных матчах, максимально использовать потенциал каждого футболиста и избегать травм.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrg-A7-b2C">
-                                                    <rect key="frame" x="0.0" y="228.33333333333334" width="390" height="464.66666666666663"/>
+                                                    <rect key="frame" x="0.0" y="233.33333333333334" width="390" height="450.66666666666663"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wx8-67-Exd">
+                                                    <rect key="frame" x="8" y="692" width="374" height="42"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-gY-EwC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NJK-pe-Rvw">
+                                                            <rect key="frame" x="43" y="0.0" width="35" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JfH-hC-W42">
+                                                            <rect key="frame" x="86" y="0.0" width="35" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SHR-yv-A31" firstAttribute="top" secondItem="QcY-PH-21M" secondAttribute="bottom" id="JPr-31-1GL"/>
                                                 <constraint firstAttribute="trailing" secondItem="QcY-PH-21M" secondAttribute="trailing" id="PvU-Kh-L7V"/>
+                                                <constraint firstItem="wx8-67-Exd" firstAttribute="top" secondItem="rrg-A7-b2C" secondAttribute="bottom" constant="8" symbolic="YES" id="Tle-wT-tJM"/>
                                                 <constraint firstAttribute="trailing" secondItem="SHR-yv-A31" secondAttribute="trailing" constant="8" id="Ts3-Lg-Vm3"/>
                                                 <constraint firstItem="QcY-PH-21M" firstAttribute="leading" secondItem="BN7-1w-kRm" secondAttribute="leading" id="WFK-zJ-1uO"/>
-                                                <constraint firstItem="rrg-A7-b2C" firstAttribute="top" secondItem="SHR-yv-A31" secondAttribute="bottom" constant="5" id="XS9-bj-PFf"/>
+                                                <constraint firstItem="rrg-A7-b2C" firstAttribute="top" secondItem="SHR-yv-A31" secondAttribute="bottom" constant="10" id="XS9-bj-PFf"/>
                                                 <constraint firstItem="QcY-PH-21M" firstAttribute="top" secondItem="BN7-1w-kRm" secondAttribute="top" id="gsv-61-Mvt"/>
                                                 <constraint firstAttribute="trailing" secondItem="rrg-A7-b2C" secondAttribute="trailing" id="htm-XF-0EG"/>
+                                                <constraint firstAttribute="bottom" secondItem="wx8-67-Exd" secondAttribute="bottom" constant="20" id="miQ-PC-oN9"/>
                                                 <constraint firstItem="rrg-A7-b2C" firstAttribute="leading" secondItem="BN7-1w-kRm" secondAttribute="leading" id="mie-Gn-7lR"/>
-                                                <constraint firstItem="SHR-yv-A31" firstAttribute="leading" secondItem="BN7-1w-kRm" secondAttribute="leading" constant="8" id="sFq-YV-bSq"/>
-                                                <constraint firstAttribute="bottom" secondItem="rrg-A7-b2C" secondAttribute="bottom" constant="20" id="zzY-as-GtX"/>
+                                                <constraint firstItem="wx8-67-Exd" firstAttribute="leading" secondItem="BN7-1w-kRm" secondAttribute="leading" constant="8" id="pXD-Kb-tvJ"/>
+                                                <constraint firstItem="SHR-yv-A31" firstAttribute="leading" secondItem="BN7-1w-kRm" secondAttribute="leading" constant="10" id="sFq-YV-bSq"/>
+                                                <constraint firstAttribute="trailing" secondItem="wx8-67-Exd" secondAttribute="trailing" constant="8" id="uoC-Nm-skI"/>
+                                                <constraint firstItem="wx8-67-Exd" firstAttribute="height" secondItem="BN7-1w-kRm" secondAttribute="height" multiplier="0.0557029" id="vlM-vg-uH4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -238,8 +263,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="doc.richtext.ar" catalog="system" width="115" height="128"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
