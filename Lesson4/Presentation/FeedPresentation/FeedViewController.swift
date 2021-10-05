@@ -8,8 +8,9 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    var posts: [Post] = []
     @IBOutlet weak var tableView: UITableView!
+    
+    var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,21 +40,11 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         return cell as UITableViewCell
     }
     
-    // Было бы хорошо сделать 2 конструктора для поста (первый для ячеек с текстом, второй - для ячеек без текста), но так как задание требует несколько видов ячеек, пришлось подгонять сами посты под ячейки
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        print(cells[indexPath.row])
-//        print(posts[indexPath.row].shortText)
-//
-//        if cells[indexPath.row] is CustomTableViewCell{
-//            let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-//            vc.post = posts[indexPath.row]
-//            navigationController?.present(vc, animated: true, completion: nil)
-//        } else {
-//            let vc = sb.instantiateViewController(identifier: "PhotoDetailViewController") as! PhotoDetailViewController
-//            vc.post = posts[indexPath.row]
-//            navigationController?.present(vc, animated: true, completion: nil)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "DetailFeedViewController") as! DetailFeedViewController
+        vc.post = posts[indexPath.row]
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
 }
 

@@ -1,6 +1,6 @@
 import Foundation
 
-let photos: [String] = ["", "aa.jpg"]
+let photos: [String] = ["", "aa.jpg", "9picture"]
 let authors: [String] = ["artem.kalugin", "nnn_nnnnn", "LarieMyHeart", "sad_boy(",
                          "Indironst", "Eatintiont", "OspreyProme", "pompy_ggrojeco",
                          "arrewheme", "myasnoy"]
