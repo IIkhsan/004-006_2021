@@ -490,48 +490,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ti4-eR-iaS">
-                                <rect key="frame" x="9" y="105" width="372" height="315"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ti4-eR-iaS">
+                                <rect key="frame" x="9" y="105" width="372" height="525"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAW-tR-9Pa">
-                                        <rect key="frame" x="0.0" y="0.0" width="372" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="245"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-vx-nDn">
-                                        <rect key="frame" x="0.0" y="41" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="251" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5S-b2-a4q">
-                                        <rect key="frame" x="0.0" y="81" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="291" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place of work..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kc8-Q6-EYS">
-                                        <rect key="frame" x="0.0" y="121" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="331" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Town..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsv-qv-Cc9">
-                                        <rect key="frame" x="0.0" y="161" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="371" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fli-dq-4GH">
-                                        <rect key="frame" x="0.0" y="201" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="411" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myD-3a-DIb">
-                                        <rect key="frame" x="0.0" y="241" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="451" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCb-4r-UiV">
-                                        <rect key="frame" x="0.0" y="281" width="372" height="34"/>
+                                        <rect key="frame" x="0.0" y="491" width="372" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -541,6 +541,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noU-ch-tYV">
+                                <rect key="frame" x="158.66666666666666" y="655" width="73" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonAction:" destination="8Fv-en-tu5" eventType="touchUpInside" id="Cbw-Gc-Xtb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UOp-O4-6eA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -548,17 +556,33 @@
                             <constraint firstItem="ti4-eR-iaS" firstAttribute="top" secondItem="mru-OK-jM7" secondAttribute="bottom" constant="10" id="GaS-SU-QOZ"/>
                             <constraint firstItem="ti4-eR-iaS" firstAttribute="top" secondItem="UOp-O4-6eA" secondAttribute="top" constant="61" id="N9a-OS-dbn"/>
                             <constraint firstItem="mru-OK-jM7" firstAttribute="centerX" secondItem="UOp-O4-6eA" secondAttribute="centerX" id="dbg-h5-o39"/>
+                            <constraint firstItem="noU-ch-tYV" firstAttribute="top" secondItem="ti4-eR-iaS" secondAttribute="bottom" constant="25" id="fNn-Tc-NpZ"/>
+                            <constraint firstItem="noU-ch-tYV" firstAttribute="centerX" secondItem="UOp-O4-6eA" secondAttribute="centerX" id="vNu-3h-EZi"/>
                             <constraint firstItem="UOp-O4-6eA" firstAttribute="trailing" secondItem="ti4-eR-iaS" secondAttribute="trailing" constant="9" id="yr3-A0-fyd"/>
-                            <constraint firstItem="UOp-O4-6eA" firstAttribute="bottom" secondItem="ti4-eR-iaS" secondAttribute="bottom" constant="390" id="z2X-eS-48K"/>
+                            <constraint firstItem="UOp-O4-6eA" firstAttribute="bottom" secondItem="ti4-eR-iaS" secondAttribute="bottom" constant="180" id="z2X-eS-48K"/>
                             <constraint firstItem="ti4-eR-iaS" firstAttribute="leading" secondItem="UOp-O4-6eA" secondAttribute="leading" constant="9" id="zHf-hb-E95"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="Hl3-vx-nDn" id="wdJ-d1-mp3"/>
+                        <outlet property="loginTextField" destination="myD-3a-DIb" id="iAh-fn-L93"/>
+                        <outlet property="nicknameTextField" destination="RAW-tR-9Pa" id="0uG-Qp-IyE"/>
+                        <outlet property="passwordTextField" destination="WCb-4r-UiV" id="Sb7-pg-emR"/>
+                        <outlet property="phoneNumberTextField" destination="Fli-dq-4GH" id="8Fb-Wn-Lxj"/>
+                        <outlet property="placeOfWorkTextField" destination="Kc8-Q6-EYS" id="rve-jP-gtT"/>
+                        <outlet property="secondNameTextField" destination="Z5S-b2-a4q" id="B8J-LQ-MAR"/>
+                        <outlet property="townTextField" destination="qsv-qv-Cc9" id="r4S-pN-qEO"/>
+                        <segue destination="xPq-ya-61U" kind="show" identifier="RegisterTabBarSegue" id="nr0-g3-yA0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9c-dU-W2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886" y="766"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GAz-ra-jGa"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="aa" width="500" height="500"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
