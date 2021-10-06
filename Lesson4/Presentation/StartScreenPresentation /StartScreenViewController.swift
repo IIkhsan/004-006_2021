@@ -15,9 +15,13 @@ class StartScreenViewController: UIViewController {
     @IBAction func signInButtonAction(_ sender: Any) {
         guard let login = loginTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        let userKey = [login, password]
         
-        if login == "login", password == "password" {
-            performSegue(withIdentifier: "TabBarSegue", sender: nil)
+        for key in db.keys {
+            if key[0] == userKey[0], key[1] == userKey[1] {
+                performSegue(withIdentifier: "TabBarSegue", sender: nil)
+                userNow = db[userKey] ?? User(firstName: "", secondName: "", nickname: "", number: "", placeOfWork: "", town: "", avatar: "")
+            }
         }
     }
     
