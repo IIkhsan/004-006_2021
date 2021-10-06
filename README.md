@@ -38,8 +38,9 @@
 
 ### Задание с 5 занятия (5 баллов). 
 
-1. Делаем рефакторинг проекта по стилю с MARK(lifecycle, init, private functions, public functions, Delegates, Datasources) `// MARK: - `, применяем архитектуру MVC(Model, View(в нашем случае это Storyboard), Controller) и рефакторим наши модули, добавляем логическое разделение и ставим комментарии (Outlets, properties, private properties) `// Outlet properties и т.д.`.
-2. Во viewController, вы просто добавяляли некий генератор для моделей (профиль, лента). Теперь задача стоит в том, чтобы создать некий сервис для получения этих данных из вне. В нашем случае - это будет как на паре. Получить данные нужно будет через @escaping closure, в функции получения сделайте задержку перед получением `sleep(3)`, конфигурирование данных и обновление таблиц производим после получения данных. 
+1. Делаем рефакторинг проекта по стилю с MARK(lifecycle, init, private functions, public functions, Delegates, Datasources) `// MARK: - `, применяем архитектуру MVC(Model, View(в нашем случае это Storyboard), Controller) и рефакторим наши модули, добавляем логическое разделение и ставим комментарии (Outlets, properties, private properties) `// Outlet properties и т.д.`. https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
+2. Во viewController, вы просто добавяляли некий генератор для моделей (профиль, лента). Теперь задача стоит в том, чтобы создать некий сервис для получения этих данных из вне. В нашем случае - это будет как на паре. Получить данные нужно будет через @escaping closure, в функции получения сделайте задержку перед получением `sleep(3)`, конфигурирование данных и обновление таблиц производим после получения данных. https://docs.swift.org/swift-book/LanguageGuide/Closures.html
+3. Соблюдаем style guide https://github.com/raywenderlich/swift-style-guide
 
 ### Задание с 6 занятия (5 баллов).
 
@@ -48,6 +49,12 @@
 3. Логин и пароль валидируется: логин всегда email, все что не email пропускать не должно; пароль не меньше 6 символов, только латиница, содержит хотя бы 1 цифру.
 4. Редактирование статуса пользователя через делегат на новом экране
 5. Использовать TabBarController для экрана профиля и ленты.
+
+#### Ссылки
+
+* style guide: https://github.com/raywenderlich/swift-style-guide
+* все о замыкании: https://docs.swift.org/swift-book/LanguageGuide/Closures.html
+* все о MVC от apple: https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
 
 Итого:
 
