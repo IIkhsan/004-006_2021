@@ -25,6 +25,12 @@ class StartScreenViewController: UIViewController {
         }
     }
     
+    @IBAction func registerButtonAction(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

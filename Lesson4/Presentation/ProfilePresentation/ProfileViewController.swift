@@ -19,6 +19,15 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func detailButtonAction(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "DetailProfileViewController") as! DetailProfileViewController
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func logOutButtonAction(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "StartScreenViewController") as! StartScreenViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func configure() {

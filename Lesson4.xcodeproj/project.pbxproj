@@ -18,6 +18,8 @@
 		925CEFE9270E1910005BA81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFE8270E1910005BA81F /* User.swift */; };
 		925CEFEB270E1A3E005BA81F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFEA270E1A3E005BA81F /* Users.swift */; };
 		925CEFEE270E1E6B005BA81F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFED270E1E6B005BA81F /* ProfileViewController.swift */; };
+		925CEFF1270E242A005BA81F /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFF0270E242A005BA81F /* DetailProfileViewController.swift */; };
+		925CEFF4270E3216005BA81F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFF3270E3216005BA81F /* RegistrationViewController.swift */; };
 		92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */; };
 		92A6290D270ADAE30076DEC2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290C270ADAE30076DEC2 /* Post.swift */; };
 		92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290E270ADC190076DEC2 /* PostInformation .swift */; };
@@ -37,6 +39,8 @@
 		925CEFE8270E1910005BA81F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		925CEFEA270E1A3E005BA81F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		925CEFED270E1E6B005BA81F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		925CEFF0270E242A005BA81F /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
+		925CEFF3270E3216005BA81F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		92A6290C270ADAE30076DEC2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		92A6290E270ADC190076DEC2 /* PostInformation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostInformation .swift"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		5EE6901A27037D7D00F5C170 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				925CEFF2270E31F3005BA81F /* RegistrationPresentation */,
+				925CEFEF270E2410005BA81F /* DetailProfilePresentation */,
 				925CEFEC270E1E48005BA81F /* ProfilePresentation */,
 				92305811270B7F90008666FA /* DetailFeedPresentation */,
 				9239242D27075485005C0E38 /* FeedPresentation */,
@@ -145,6 +151,22 @@
 				925CEFED270E1E6B005BA81F /* ProfileViewController.swift */,
 			);
 			path = ProfilePresentation;
+			sourceTree = "<group>";
+		};
+		925CEFEF270E2410005BA81F /* DetailProfilePresentation */ = {
+			isa = PBXGroup;
+			children = (
+				925CEFF0270E242A005BA81F /* DetailProfileViewController.swift */,
+			);
+			path = DetailProfilePresentation;
+			sourceTree = "<group>";
+		};
+		925CEFF2270E31F3005BA81F /* RegistrationPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				925CEFF3270E3216005BA81F /* RegistrationViewController.swift */,
+			);
+			path = RegistrationPresentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,11 +243,13 @@
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				925CEFEB270E1A3E005BA81F /* Users.swift in Sources */,
 				92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */,
+				925CEFF4270E3216005BA81F /* RegistrationViewController.swift in Sources */,
 				9239242F270754B0005C0E38 /* FeedViewController.swift in Sources */,
 				92A6290D270ADAE30076DEC2 /* Post.swift in Sources */,
 				925CEFEE270E1E6B005BA81F /* ProfileViewController.swift in Sources */,
 				925CEFE9270E1910005BA81F /* User.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
+				925CEFF1270E242A005BA81F /* DetailProfileViewController.swift in Sources */,
 				92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */,
 				92305813270B7FBF008666FA /* DetailFeedViewController.swift in Sources */,
 			);
