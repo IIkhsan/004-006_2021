@@ -15,11 +15,11 @@ class FeedsViewController: UIViewController {
     private var posts: [Post] = []
     private let dataManager = DataManager()
     
-    //MARK: - View controller's methods
+    //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        posts = dataManager.generatePosts()
+        obtainData()
     }
     
     //MARK: - Table's method
@@ -34,6 +34,18 @@ class FeedsViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.estimatedRowHeight = 400
+    }
+    
+    private func obtainData() {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.dataManager.getPosts { data in
+                DispatchQueue.main.async {
+                    strongSelf.posts = data
+                    strongSelf.mainTableView.reloadData()
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

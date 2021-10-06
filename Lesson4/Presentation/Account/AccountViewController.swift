@@ -28,9 +28,9 @@ class AccountViewController: UIViewController {
     //MARK: - VC's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        posts = dataManager.generatePosts()
-        user = dataManager.generateUsers()?.first
         configure()
+        obtainPostsData()
+        obtainUserData()
     }
     
     //MARK: - Table's method
@@ -45,17 +45,34 @@ class AccountViewController: UIViewController {
         postsTableView.delegate = self
         postsTableView.dataSource = self
         postsTableView.estimatedRowHeight = 400
-        
-        guard let user = user else { return }
-        userAvatarImageView.image = user.avatar
-        userNameTextLabel.text = user.name
-        userStatusTextLabel.text = user.status
-        userTownTextLabel.text = user.city
-        userPhoneNumberTextLabel.text = user.phone
-        
         configureViews()
     }
     
+    private func obtainPostsData() {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.dataManager.getPosts { data in
+                DispatchQueue.main.async {
+                    strongSelf.posts = data
+                    strongSelf.postsTableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    private func obtainUserData() {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.dataManager.generateUsers { data in
+                DispatchQueue.main.async {
+                    strongSelf.user = data.first
+                    strongSelf.configureProfile()
+                }
+            }
+        }
+    }
+    
+    // Set up elements
     private func configureViews() {
         moreInfoButton.layer.cornerRadius = moreInfoButton.frame.height / 2
         moreInfoButton.backgroundColor = .gray
@@ -65,6 +82,16 @@ class AccountViewController: UIViewController {
         addNewPostButton.backgroundColor = .gray
     }
     
+    private func configureProfile() {
+        guard let user = user else { return }
+        userNameTextLabel.text = user.name
+        userAvatarImageView.image = user.avatar
+        userStatusTextLabel.text = user.status
+        userTownTextLabel.text = user.city
+        userPhoneNumberTextLabel.text = user.phone
+    }
+    
+    // Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.detailedPostSeque.rawValue,
                let viewController = segue.destination as? DetailedPostViewController,
@@ -87,4 +114,3 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-

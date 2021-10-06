@@ -72,87 +72,87 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
-				D276EC0B2707058B00AA8413 /* Controller */,
-				D276EC0A2707058400AA8413 /* View */,
-				D276EC092707057600AA8413 /* Model */,
-				5EE6900E27036B9400F5C170 /* Info.plist */,
-				5EE6900927036B9400F5C170 /* Assets.xcassets */,
+				D2730D10270DC8ED007DD777 /* Resources */,
+				D2730D0B270DC845007DD777 /* Presentation */,
+				D2730D11270DC944007DD777 /* Services */,
+				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
+				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
 			);
 			path = Lesson4;
 			sourceTree = "<group>";
 		};
-		D2320F5727074D6A00FF5C21 /* Managers */ = {
+		D2730D0B270DC845007DD777 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D2320F5827074D8400FF5C21 /* DataManager.swift */,
+				D2730D0F270DC8CA007DD777 /* Login */,
+				D2730D0E270DC8AE007DD777 /* Detailed post */,
+				D2730D0D270DC884007DD777 /* Account */,
+				D2730D0C270DC864007DD777 /* Feeds */,
 			);
-			path = Managers;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		D2320F6127075E6400FF5C21 /* Entities */ = {
+		D2730D0C270DC864007DD777 /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
-				D2320F6227075E7100FF5C21 /* Post.swift */,
-				D2320F6427075E9B00FF5C21 /* User.swift */,
+				D276EC102707075900AA8413 /* FeedsViewController.swift */,
+				D2320F5D2707572500FF5C21 /* NewsTableViewCell.swift */,
 			);
-			path = Entities;
+			path = Feeds;
 			sourceTree = "<group>";
 		};
-		D2320F68270766A800FF5C21 /* Helpers */ = {
+		D2730D0D270DC884007DD777 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				D2320F5A270750A200FF5C21 /* Constants.swift */,
+				D276EC122707076400AA8413 /* AccountViewController.swift */,
 			);
-			path = Helpers;
+			path = Account;
 			sourceTree = "<group>";
 		};
-		D276EC092707057600AA8413 /* Model */ = {
+		D2730D0E270DC8AE007DD777 /* Detailed post */ = {
 			isa = PBXGroup;
 			children = (
-				D2320F68270766A800FF5C21 /* Helpers */,
-				D2320F6127075E6400FF5C21 /* Entities */,
-				D2320F5727074D6A00FF5C21 /* Managers */,
-				D276EC0C270705A600AA8413 /* Delegates */,
+				D2320F692707670400FF5C21 /* DetailedPostViewController.swift */,
 			);
-			path = Model;
+			path = "Detailed post";
 			sourceTree = "<group>";
 		};
-		D276EC0A2707058400AA8413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D276EC0D270705BD00AA8413 /* Stroyboards */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D276EC0B2707058B00AA8413 /* Controller */ = {
+		D2730D0F270DC8CA007DD777 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				D276EC0E270705F200AA8413 /* LoginViewController.swift */,
-				D276EC102707075900AA8413 /* FeedsViewController.swift */,
-				D276EC122707076400AA8413 /* AccountViewController.swift */,
-				D2320F5D2707572500FF5C21 /* NewsTableViewCell.swift */,
-				D2320F692707670400FF5C21 /* DetailedPostViewController.swift */,
 			);
-			path = Controller;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		D276EC0C270705A600AA8413 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
-				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
-			);
-			path = Delegates;
-			sourceTree = "<group>";
-		};
-		D276EC0D270705BD00AA8413 /* Stroyboards */ = {
+		D2730D10270DC8ED007DD777 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				5EE6900E27036B9400F5C170 /* Info.plist */,
+				5EE6900927036B9400F5C170 /* Assets.xcassets */,
+				D2320F5A270750A200FF5C21 /* Constants.swift */,
 			);
-			path = Stroyboards;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2730D11270DC944007DD777 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D2730D12270DC958007DD777 /* PostService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2730D12270DC958007DD777 /* PostService */ = {
+			isa = PBXGroup;
+			children = (
+				D2320F5827074D8400FF5C21 /* DataManager.swift */,
+				D2320F6227075E7100FF5C21 /* Post.swift */,
+				D2320F6427075E9B00FF5C21 /* User.swift */,
+			);
+			path = PostService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				INFOPLIST_FILE = Lesson4/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -404,7 +404,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				INFOPLIST_FILE = Lesson4/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
