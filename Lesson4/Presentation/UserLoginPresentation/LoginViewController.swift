@@ -17,12 +17,16 @@ class LoginViewController: UIViewController {
         for user in UserModel.users {
             if loginTextField.text == user.username && passwordTextField.text == user.password {
                 guard let tabBarController = storyboard?.instantiateViewController(identifier: "TabBarController") else { return }
-//                navigationController?.pushViewController(tabBarController, animated: true)
                 navigationController?.viewControllers = [tabBarController]
                 print(1)
             }
         }
     }
+    /*
+    // -TODO: navigationBar чтобы везде нормально выглядел
+     TODO: LOGOUT, REGISTRATION
+     TODO: 5 HOMEWORK
+ */
     @IBAction func signUpButtonAction(_ sender: Any) {
     }
     
@@ -30,6 +34,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginButton.layer.backgroundColor = UIColor.systemBlue.cgColor
         signUpButton.layer.backgroundColor = UIColor.systemBlue.cgColor
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
     }
     

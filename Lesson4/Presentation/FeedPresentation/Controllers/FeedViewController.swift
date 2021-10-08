@@ -34,6 +34,7 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         guard let postViewController = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as? PostViewController else { return }
         postViewController.loadViewIfNeeded()
         postViewController.configure(avatarImage: UserModel.users[0].posts[indexPath.row].avatarImagePost, name: UserModel.users[0].posts[indexPath.row].nameOfPost, postInfo: UserModel.users[0].posts[indexPath.row].postInfo, postImage: UserModel.users[0].posts[indexPath.row].structPostImage, postText: UserModel.users[0].posts[indexPath.row].postText)
+        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.pushViewController(postViewController, animated: true)
     }
     
