@@ -9,6 +9,8 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var accountImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var accountNameLabel: UILabel!
@@ -16,13 +18,18 @@ class PostViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     
+    //Property
+    
     var post: Post?
     
+    // MARK: -  View Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
+    
+    //Private funcions
     
     private func config() {
         guard let post = post else { return }
@@ -35,11 +42,8 @@ class PostViewController: UIViewController {
         makeImageViewRound(image: accountImage)
     }
     
-    func makeImageViewRound(image: UIImageView) {
+    private func makeImageViewRound(image: UIImageView) {
             image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
     }
-    
-
-
 }

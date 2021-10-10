@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct User {
-    
     var username: String
     var accountName: String?
     var accountImage: UIImage?

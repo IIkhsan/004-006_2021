@@ -9,10 +9,8 @@ import Foundation
 import UIKit
 
 struct Post {
-    
     let user: User
     let postText: String?
     let postDate: String
     let postImage: UIImage?
-    
 }

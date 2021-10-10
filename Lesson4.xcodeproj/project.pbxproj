@@ -70,10 +70,9 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
+				D6B8A65727136D5500B5E56E /* Resources */,
 				5EE6901A27037D7D00F5C170 /* Presentation */,
 				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
-				5EE6900E27036B9400F5C170 /* Info.plist */,
-				D62E81C4270E57E7009DD50A /* TabBarViewController.swift */,
 				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
 			);
 			path = Lesson4;
@@ -82,66 +81,59 @@
 		5EE6901A27037D7D00F5C170 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D6B8A656271320E600B5E56E /* Assets */,
-				D6B8A655271320C500B5E56E /* Base */,
-				D6B8A65427131F2200B5E56E /* PostPresentation */,
-				D6B8A6512713151E00B5E56E /* ProfilePresentation */,
-				D62E81C8270FB0DD009DD50A /* PostsFeedPresentation */,
-				D6CB1410270B8EDD00AE288A /* LogInPresentation */,
+				D6B8A65A27136DF700B5E56E /* Profile */,
+				D6B8A65927136DD900B5E56E /* PostsFeed */,
+				D6B8A65827136DCD00B5E56E /* LogIn */,
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				D62E81C4270E57E7009DD50A /* TabBarViewController.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		D62E81C8270FB0DD009DD50A /* PostsFeedPresentation */ = {
-			isa = PBXGroup;
-			children = (
-				D6CB1411270B910C00AE288A /* PostsFeedViewController.swift */,
-				D62E81C9270FB21D009DD50A /* PostsFeedTableViewCell.swift */,
-				D62E81C0270E5100009DD50A /* User.swift */,
-				D62E81CD270FB35F009DD50A /* Post.swift */,
-			);
-			path = PostsFeedPresentation;
-			sourceTree = "<group>";
-		};
-		D6B8A6512713151E00B5E56E /* ProfilePresentation */ = {
-			isa = PBXGroup;
-			children = (
-				D6B8A64F2713146500B5E56E /* ProfileViewController.swift */,
-			);
-			path = ProfilePresentation;
-			sourceTree = "<group>";
-		};
-		D6B8A65427131F2200B5E56E /* PostPresentation */ = {
-			isa = PBXGroup;
-			children = (
-				D6B8A65227131BC600B5E56E /* PostViewController.swift */,
-			);
-			path = PostPresentation;
 			sourceTree = "<group>";
 		};
 		D6B8A655271320C500B5E56E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
 				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		D6B8A656271320E600B5E56E /* Assets */ = {
+		D6B8A65727136D5500B5E56E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6B8A655271320C500B5E56E /* Base */,
+				5EE6900E27036B9400F5C170 /* Info.plist */,
 				5EE6900927036B9400F5C170 /* Assets.xcassets */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		D6CB1410270B8EDD00AE288A /* LogInPresentation */ = {
+		D6B8A65827136DCD00B5E56E /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
 				D6CB140E270B8EC200AE288A /* LogInViewController.swift */,
 			);
-			path = LogInPresentation;
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		D6B8A65927136DD900B5E56E /* PostsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				D62E81CD270FB35F009DD50A /* Post.swift */,
+				D62E81C9270FB21D009DD50A /* PostsFeedTableViewCell.swift */,
+				D6CB1411270B910C00AE288A /* PostsFeedViewController.swift */,
+				D6B8A65227131BC600B5E56E /* PostViewController.swift */,
+			);
+			path = PostsFeed;
+			sourceTree = "<group>";
+		};
+		D6B8A65A27136DF700B5E56E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8A64F2713146500B5E56E /* ProfileViewController.swift */,
+				D62E81C0270E5100009DD50A /* User.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
