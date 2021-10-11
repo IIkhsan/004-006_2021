@@ -8,8 +8,8 @@
 import Foundation
 
 final class PostService {
-    func addToFeed(completion: @escaping (() -> Void)) {
+    func addToFeed(completion: @escaping (() -> Post)) -> Post {
         sleep(3)
-        completion()
+        return completion()
     }
 }

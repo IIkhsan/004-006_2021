@@ -17,25 +17,27 @@ class FeedViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        fillPosts()
     }
-    
-    private func fillPosts() {
-        for _ in 0...10 {
-            posts.append(createPost())
-        }
-    }
-
 }
 
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"FeedTableViewCell", for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
-        cell.setPost(post: posts[indexPath.row])
+        
+        if posts.count < 10 {
+            let postService = PostService()
+            let post = postService.addToFeed(completion: createPost)
+            posts.append(post)
+            cell.setPost(post: post)
+        } else {
+            cell.setPost(post: posts[indexPath.row])
+        }
+//        tableView.reloadData()
+        
         
         return cell as UITableViewCell
     }
