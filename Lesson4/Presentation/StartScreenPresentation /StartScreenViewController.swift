@@ -8,10 +8,11 @@
 import UIKit
 
 class StartScreenViewController: UIViewController {
-
+    // Outlet properties
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // MARK: - Button actions
     @IBAction func signInButtonAction(_ sender: Any) {
         guard let login = loginTextField.text else { return }
         guard let password = passwordTextField.text else { return }
@@ -31,6 +32,7 @@ class StartScreenViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -8,10 +8,13 @@
 import UIKit
 
 class FeedViewController: UIViewController {
+    // Outlet properties
     @IBOutlet weak var tableView: UITableView!
     
+    // Properties
     var posts: [Post] = []
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -20,6 +23,7 @@ class FeedViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDeletage
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -36,9 +40,7 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.setPost(post: posts[indexPath.row])
         }
-//        tableView.reloadData()
-        
-        
+
         return cell as UITableViewCell
     }
     

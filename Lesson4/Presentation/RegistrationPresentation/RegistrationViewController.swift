@@ -8,6 +8,7 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    // Outlet properties
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,11 +18,14 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var secondNameTextField: UITextField!
     @IBOutlet weak var placeOfWorkTextField: UITextField!
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - Action functions
     @IBAction func registerButtonAction(_ sender: Any) {
+        // Properties
         guard let nickname = nicknameTextField.text else { return }
         guard let firstName = firstNameTextField.text else { return }
         guard let password = passwordTextField.text else { return }

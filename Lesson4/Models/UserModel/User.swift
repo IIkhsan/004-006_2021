@@ -1,4 +1,5 @@
 struct User {
+    // Property
     var firstName: String
     var secondName: String
     var nickname: String

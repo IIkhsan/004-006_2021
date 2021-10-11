@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailProfileViewController: UIViewController {
+    // Outlet properties
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var secondNameLabel: UILabel!
@@ -15,12 +16,14 @@ class DetailProfileViewController: UIViewController {
     @IBOutlet weak var townLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
     }
     
+    // MARK: - Private functions
     private func configure() {
         nicknameLabel.text = userNow.nickname
         firstNameLabel.text = userNow.firstName

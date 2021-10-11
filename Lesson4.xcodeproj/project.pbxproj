@@ -78,16 +78,13 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
+				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
 				9275A6852714252B00D74F1B /* Services */,
 				9275A68127141D9300D74F1B /* Global */,
 				925CEFE6270E18F5005BA81F /* Models */,
+				925157B12714C0D900C64B96 /* Resource */,
 				5EE6901A27037D7D00F5C170 /* Presentation */,
-				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
-				5EE6900E27036B9400F5C170 /* Info.plist */,
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
-				5EE6900927036B9400F5C170 /* Assets.xcassets */,
-				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
-				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
 			path = Lesson4;
 			sourceTree = "<group>";
@@ -95,6 +92,7 @@
 		5EE6901A27037D7D00F5C170 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
 				925CEFF2270E31F3005BA81F /* RegistrationPresentation */,
 				925CEFEF270E2410005BA81F /* DetailProfilePresentation */,
 				925CEFEC270E1E48005BA81F /* ProfilePresentation */,
@@ -126,15 +124,40 @@
 			children = (
 				9239242E270754B0005C0E38 /* FeedViewController.swift */,
 				92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */,
-				92A6290C270ADAE30076DEC2 /* Post.swift */,
-				92A6290E270ADC190076DEC2 /* PostInformation .swift */,
 			);
 			path = FeedPresentation;
+			sourceTree = "<group>";
+		};
+		925157B12714C0D900C64B96 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5EE6900E27036B9400F5C170 /* Info.plist */,
+				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
+				5EE6900927036B9400F5C170 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		925157B22714C33B00C64B96 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				92A6290C270ADAE30076DEC2 /* Post.swift */,
+			);
+			path = PostModel;
+			sourceTree = "<group>";
+		};
+		925157B32714C35000C64B96 /* PostGlobal */ = {
+			isa = PBXGroup;
+			children = (
+				92A6290E270ADC190076DEC2 /* PostInformation .swift */,
+			);
+			path = PostGlobal;
 			sourceTree = "<group>";
 		};
 		925CEFE6270E18F5005BA81F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925157B22714C33B00C64B96 /* PostModel */,
 				925CEFE7270E18FD005BA81F /* UserModel */,
 			);
 			path = Models;
@@ -175,6 +198,7 @@
 		9275A68127141D9300D74F1B /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				925157B32714C35000C64B96 /* PostGlobal */,
 				9275A68227141D9A00D74F1B /* UserGlobal */,
 			);
 			path = Global;
@@ -435,8 +459,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				DEVELOPMENT_TEAM = 258576KTZ4;
+				INFOPLIST_FILE = Lesson4/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,8 +479,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				DEVELOPMENT_TEAM = 258576KTZ4;
+				INFOPLIST_FILE = Lesson4/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

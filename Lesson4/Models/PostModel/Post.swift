@@ -1,4 +1,5 @@
 struct Post {
+    // Property
     let avatar: String
     let nickname: String
     let text: String
@@ -21,8 +22,5 @@ func createPost() -> Post {
         randomImage = anotherRandomImage
     }
     
-    
     return Post(avatar: randomAvatar, nickname: randomNickname, text: randomText, image: randomImage)
 }
-
-
