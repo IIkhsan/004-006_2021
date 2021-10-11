@@ -17,7 +17,6 @@ class DetailFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
     }
     
