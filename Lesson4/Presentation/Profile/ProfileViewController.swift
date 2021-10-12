@@ -12,7 +12,13 @@ class ProfileViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var profileHeaderImageView: UIImageView!
+    @IBOutlet weak var UsernameLabel: UILabel!
+    @IBOutlet weak var accountNameLabel: UILabel!
+    @IBOutlet weak var followingCountLabel: UILabel!
+    @IBOutlet weak var FollowersCountLabel: UILabel!
     
+    @IBOutlet weak var accountImageView: UIImageView!
     // MARK: -  View Life cycle
     
     override func viewDidLoad() {

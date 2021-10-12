@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Cd-rR-JUr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q0F-5I-CAi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -111,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsFeedTableViewCell" rowHeight="342" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-eY-foU" customClass="PostsFeedTableViewCell" customModule="Lesson4" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsFeedTableViewCell" rowHeight="342" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-eY-foU" customClass="PostsFeedTableViewCell" customModule="Lesson4" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="342"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oka-eY-foU" id="5el-hb-L6O">
@@ -405,7 +405,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="m1M-Vz-Swp"/>
                     <connections>
+                        <outlet property="FollowersCountLabel" destination="LAU-qX-8z6" id="NyY-zO-Rct"/>
+                        <outlet property="UsernameLabel" destination="rmv-c8-ejo" id="0LC-qw-kgY"/>
+                        <outlet property="accountImageView" destination="Ggn-wk-zl1" id="7lJ-W0-gub"/>
+                        <outlet property="accountNameLabel" destination="GIR-au-DPp" id="GuI-Pp-gaD"/>
                         <outlet property="editProfileButton" destination="zX4-Es-Vmm" id="u0u-W8-IdB"/>
+                        <outlet property="followingCountLabel" destination="o4r-Jx-OIU" id="NUd-xW-tp1"/>
+                        <outlet property="profileHeaderImageView" destination="yaV-zJ-Sgm" id="ILv-Hk-FRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HW-ij-AxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
