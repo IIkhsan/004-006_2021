@@ -8,12 +8,14 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-
+    
+    /// Outlets
     @IBOutlet weak var communityImageView: UIImageView!
     @IBOutlet weak var communityLabel: UILabel!
     @IBOutlet weak var publicationDateLabel: UILabel!
     @IBOutlet weak var articleLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,6 +24,8 @@ class FeedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    /// Setting data for a sell
+    /// - Parameter post: Post with data
     func setData(post: Post) {
         communityImageView.image = post.communityImage
         communityLabel.text = post.communityTitle

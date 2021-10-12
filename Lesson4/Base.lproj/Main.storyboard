@@ -29,7 +29,7 @@
         <scene sceneID="ayE-vi-9rS">
             <objects>
                 <viewController id="9yw-q5-Tgr" customClass="ProfileViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aBL-K5-LpR">
+                    <view key="view" contentMode="scaleToFill" id="aBL-K5-LpR" customClass="ProfileView" customModule="Lesson4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -195,17 +195,17 @@
                             <constraint firstItem="7HC-Kj-a9o" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ak8-6O-aJL" secondAttribute="bottom" constant="420" id="dY3-IR-PYc"/>
                             <constraint firstItem="5wR-PO-eML" firstAttribute="leading" secondItem="7HC-Kj-a9o" secondAttribute="leading" id="u7P-Lh-xnd"/>
                         </constraints>
+                        <connections>
+                            <outlet property="cityLabel" destination="xwN-x6-250" id="AjX-LC-AlE"/>
+                            <outlet property="educationLabel" destination="h7w-lO-tyz" id="9K3-oG-dn8"/>
+                            <outlet property="nameLabel" destination="ERa-Ka-hKE" id="u8G-Yj-RSm"/>
+                            <outlet property="numberLabel" destination="1gO-Ja-1Sc" id="BhV-St-DrY"/>
+                            <outlet property="profileImageView" destination="89K-88-Irm" id="jb6-hC-HLK"/>
+                            <outlet property="statusLabel" destination="YHr-wQ-sst" id="dpR-3V-jRP"/>
+                            <outlet property="workLabel" destination="tRi-w3-9tD" id="LSx-Lx-BNV"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="Io3-UG-SPK"/>
-                    <connections>
-                        <outlet property="cityLabel" destination="xwN-x6-250" id="KoP-6W-Muu"/>
-                        <outlet property="educationLabel" destination="h7w-lO-tyz" id="JXJ-kD-3i7"/>
-                        <outlet property="nameLabel" destination="ERa-Ka-hKE" id="zEq-fq-mg3"/>
-                        <outlet property="numberLabel" destination="1gO-Ja-1Sc" id="iiA-yK-uhf"/>
-                        <outlet property="profileImageView" destination="89K-88-Irm" id="BV5-Ik-4Bd"/>
-                        <outlet property="statusLabel" destination="YHr-wQ-sst" id="VmA-ca-GWn"/>
-                        <outlet property="workLabel" destination="tRi-w3-9tD" id="84W-sc-vUN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGT-1D-q87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,7 +215,7 @@
         <scene sceneID="CPA-Ex-Abc">
             <objects>
                 <viewController id="Z4Z-pG-XCM" customClass="FeedViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gRg-Kh-F8E">
+                    <view key="view" contentMode="scaleToFill" id="gRg-Kh-F8E" customClass="FeedView" customModule="Lesson4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -309,22 +309,24 @@
                             <constraint firstItem="yDb-Nk-OS0" firstAttribute="top" secondItem="6ey-hY-YP2" secondAttribute="top" id="ifV-IP-JrA"/>
                             <constraint firstItem="6ey-hY-YP2" firstAttribute="trailing" secondItem="yDb-Nk-OS0" secondAttribute="trailing" id="xYu-U3-12F"/>
                         </constraints>
+                        <connections>
+                            <outlet property="feedTableView" destination="yDb-Nk-OS0" id="KKY-Kf-dEb"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Новости" image="house" catalog="system" id="BZe-0d-XK6"/>
                     <connections>
-                        <outlet property="feedTableView" destination="yDb-Nk-OS0" id="b6W-P0-qt2"/>
                         <segue destination="T04-7D-MBf" kind="push" identifier="postFullInformationSegue" id="6HW-2t-5zO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hb1-Jo-8go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333.8461538461538" y="-606.39810426540282"/>
+            <point key="canvasLocation" x="1333.1775700934579" y="-606.47948164146874"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="v1l-HI-FKN">
             <objects>
                 <viewController id="T04-7D-MBf" customClass="PostViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fdB-01-ONn">
+                    <view key="view" contentMode="scaleToFill" id="fdB-01-ONn" customClass="PostView" customModule="Lesson4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -415,16 +417,15 @@
                             <constraint firstItem="6s2-UE-zS6" firstAttribute="top" secondItem="vRQ-hb-a4m" secondAttribute="top" id="cBH-oR-0yD"/>
                             <constraint firstItem="6s2-UE-zS6" firstAttribute="leading" secondItem="vRQ-hb-a4m" secondAttribute="leading" id="jK0-gf-36w"/>
                         </constraints>
+                        <connections>
+                            <outlet property="articleLabel" destination="jBt-hP-ddj" id="Jeb-ru-4eO"/>
+                            <outlet property="communityImageView" destination="sN5-UO-XJR" id="bJj-QO-lzp"/>
+                            <outlet property="communityLabel" destination="c4S-3g-5Je" id="VE6-VS-jTA"/>
+                            <outlet property="postImageView" destination="lV1-64-cc4" id="gzi-Xf-J5m"/>
+                            <outlet property="publicationDateLabel" destination="vL9-9J-GmN" id="uZD-0V-Yft"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="4s1-ju-1Z9"/>
-                    <connections>
-                        <outlet property="articleLabel" destination="jBt-hP-ddj" id="D0q-kY-6K5"/>
-                        <outlet property="communityImageView" destination="sN5-UO-XJR" id="Qgz-FW-Kef"/>
-                        <outlet property="communityLabel" destination="c4S-3g-5Je" id="FOn-HD-fVK"/>
-                        <outlet property="postImageView" destination="lV1-64-cc4" id="lbc-mk-ieR"/>
-                        <outlet property="publicationDateLabel" destination="vL9-9J-GmN" id="wKG-Pn-X61"/>
-                        <outlet property="scrollView" destination="6s2-UE-zS6" id="Zmo-eK-cyw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKg-bc-Erj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,7 +435,7 @@
         <scene sceneID="66Y-VY-x2A">
             <objects>
                 <viewController id="wad-9G-TYV" customClass="LoginViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NiQ-qk-mgo">
+                    <view key="view" contentMode="scaleToFill" id="NiQ-qk-mgo" customClass="LoginView" customModule="Lesson4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -451,6 +452,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="412" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="mailTextField:" destination="YmT-wQ-HRg" eventType="editingDidEnd" id="V9o-4R-bZh"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-vd-6ns">
                                         <rect key="frame" x="0.0" y="53" width="412" height="34"/>
@@ -482,6 +486,10 @@
                             <constraint firstItem="PcM-GT-xjQ" firstAttribute="centerX" secondItem="NiQ-qk-mgo" secondAttribute="centerX" id="eZp-kv-LiR"/>
                             <constraint firstItem="bX4-wG-81s" firstAttribute="trailing" secondItem="3On-fU-xXx" secondAttribute="trailing" constant="8" id="mFk-2u-Mc7"/>
                         </constraints>
+                        <connections>
+                            <outlet property="mailTextField" destination="HRF-jW-7xi" id="3CT-JI-btS"/>
+                            <outlet property="passwordTextField" destination="Qkz-vd-6ns" id="GjA-6C-A56"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Выйти" id="G4V-51-tlJ">
                         <view key="titleView" contentMode="scaleToFill" id="85K-Aa-f8F">
@@ -491,12 +499,11 @@
                         </view>
                     </navigationItem>
                     <connections>
-                        <outlet property="mailTextField" destination="HRF-jW-7xi" id="vLq-5n-jUd"/>
-                        <outlet property="passwordTextField" destination="Qkz-vd-6ns" id="jfy-ZB-JTv"/>
                         <segue destination="mZq-Z1-wMX" kind="push" identifier="loginSegue" id="Guc-NJ-KFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neN-Qq-nk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="YmT-wQ-HRg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-117.39130434782609" y="-293.30357142857139"/>
         </scene>

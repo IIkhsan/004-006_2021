@@ -8,20 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var mailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func loginButton(_ sender: Any) {
-        if mailTextField.text == "admin", passwordTextField.text == "admin" {
-            
+        guard let loginView = view as? LoginView else { return }
+        if loginView.mailTextField.text == "admin", loginView.passwordTextField.text == "admin" {
+
             performSegue(withIdentifier: "loginSegue", sender: nil)
-            mailTextField.text = ""
-            passwordTextField.text = ""
+            loginView.mailTextField.text = ""
+            loginView.passwordTextField.text = ""
         }
     }
 }

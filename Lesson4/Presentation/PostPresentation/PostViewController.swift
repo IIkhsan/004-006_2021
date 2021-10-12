@@ -8,13 +8,6 @@
 import UIKit
 
 class PostViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var communityImageView: UIImageView!
-    @IBOutlet weak var communityLabel: UILabel!
-    @IBOutlet weak var publicationDateLabel: UILabel!
-    @IBOutlet weak var articleLabel: UILabel!
-    @IBOutlet weak var postImageView: UIImageView!
     
     var post: Post?
     
@@ -22,13 +15,15 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
-
+    
+    /// Сonfiguring post with full information
     private func configure() {
+        guard let postView = view as? PostView else { return }
         guard let post = post else { return }
-        communityImageView.image = post.communityImage
-        communityLabel.text = post.communityTitle
-        publicationDateLabel.text = post.publicationDate
-        articleLabel.text = post.article
-        postImageView.image = post.postImage
+        postView.communityImageView.image = post.communityImage
+        postView.communityLabel.text = post.communityTitle
+        postView.publicationDateLabel.text = post.publicationDate
+        postView.articleLabel.text = post.article
+        postView.postImageView.image = post.postImage
     }
 }
