@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SCd-bE-J5N">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,25 +9,152 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed View Controller-->
+        <!--Feed-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="Y6W-OH-hqX" customClass="FeedViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q8x-wO-ni6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q8x-wO-ni6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EP2-TD-uN9"/>
+                            <constraint firstItem="q8x-wO-ni6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Jfl-gB-LwU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q8x-wO-ni6" secondAttribute="trailing" id="NBN-Uc-Viy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="q8x-wO-ni6" secondAttribute="bottom" id="T4g-jS-QMC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Feed" id="qQv-jj-qD9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="postsTableView" destination="q8x-wO-ni6" id="5my-tf-9yT"/>
+                        <segue destination="One-Jx-KCy" kind="show" identifier="FeedTableViewSegue" id="dcr-DJ-77t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="114"/>
+            <point key="canvasLocation" x="1028.985507246377" y="113.31521739130436"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="Inz-HS-ImU">
+            <objects>
+                <viewController storyboardIdentifier="PostViewController" id="One-Jx-KCy" customClass="PostViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VOb-UM-vRt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JuV-Yc-93z" userLabel="Content Stack View">
+                                <rect key="frame" x="10" y="144" width="394" height="460"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gup-un-IGA">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MB-Ud-Yi4">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="61"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rqO-Kj-8CJ">
+                                        <rect key="frame" x="0.0" y="66" width="394" height="394"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rqO-Kj-8CJ" secondAttribute="height" multiplier="1:1" id="N1P-sX-O7D"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qte-KO-Tgu" userLabel="Account Stack View">
+                                <rect key="frame" x="10" y="64" width="394" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6f-EL-r49">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="CEg-Vn-dzn"/>
+                                            <constraint firstAttribute="width" secondItem="S6f-EL-r49" secondAttribute="height" multiplier="1:1" id="Y8e-ce-mcf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yfn-91-tZF">
+                                        <rect key="frame" x="78" y="0.0" width="316" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-Nx-14S">
+                                                <rect key="frame" x="0.0" y="0.0" width="316" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmZ-N1-sBd">
+                                                <rect key="frame" x="0.0" y="37.666666666666671" width="316" height="32.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="moi-lw-ttE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JuV-Yc-93z" firstAttribute="leading" secondItem="moi-lw-ttE" secondAttribute="leading" constant="10" id="3kj-jm-c33"/>
+                            <constraint firstItem="JuV-Yc-93z" firstAttribute="top" secondItem="Qte-KO-Tgu" secondAttribute="bottom" constant="10" id="9HP-B9-43E"/>
+                            <constraint firstItem="Qte-KO-Tgu" firstAttribute="leading" secondItem="moi-lw-ttE" secondAttribute="leading" constant="10" id="LjE-EM-sfB"/>
+                            <constraint firstItem="moi-lw-ttE" firstAttribute="trailing" secondItem="Qte-KO-Tgu" secondAttribute="trailing" constant="10" id="MoZ-ph-a97"/>
+                            <constraint firstItem="Qte-KO-Tgu" firstAttribute="top" secondItem="moi-lw-ttE" secondAttribute="top" constant="20" id="SYE-Je-188"/>
+                            <constraint firstItem="moi-lw-ttE" firstAttribute="trailing" secondItem="JuV-Yc-93z" secondAttribute="trailing" constant="10" id="v7E-hF-Idw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post" id="axQ-I4-V6o"/>
+                    <connections>
+                        <outlet property="accountLogoImageView" destination="S6f-EL-r49" id="tTq-gZ-KCj"/>
+                        <outlet property="accountNameLabel" destination="SGb-Nx-14S" id="q0i-1I-rue"/>
+                        <outlet property="postDate" destination="VmZ-N1-sBd" id="Bml-d0-D0O"/>
+                        <outlet property="postImageView" destination="rqO-Kj-8CJ" id="faw-TB-P3k"/>
+                        <outlet property="postTextLabel" destination="2MB-Ud-Yi4" id="BC8-fe-88i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEY-1A-gz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="112.50000000000001"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="fvO-uA-SYT">
+            <objects>
+                <navigationController storyboardIdentifier="UserNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SCd-bE-J5N" customClass="UserNavigationController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed" id="Wtr-0G-bmI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvB-d6-DEK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="mk6-EB-rNa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjY-PW-Vts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="113"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="feed" width="24" height="24"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
