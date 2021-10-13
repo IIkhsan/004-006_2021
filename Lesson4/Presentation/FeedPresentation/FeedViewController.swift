@@ -13,6 +13,7 @@ class FeedViewController: UIViewController {
     
     // Properties
     var posts: [Post] = []
+    let postService = PostService()
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -20,26 +21,30 @@ class FeedViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        prepareContent()
+    }
+    
+    private func prepareContent() {
+        postService.getData(completion: processingPost(comePosts:))
+    }
+    
+    private func processingPost(comePosts: [Post]) {
+        comePosts.forEach { post in
+            posts.append(post)
+        }
     }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDeletage
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"FeedTableViewCell", for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
         
-        if posts.count < 10 {
-            let postService = PostService()
-            let post = postService.addToFeed(completion: createPost)
-            posts.append(post)
-            cell.setPost(post: post)
-        } else {
-            cell.setPost(post: posts[indexPath.row])
-        }
+        cell.setPost(post: posts[indexPath.row])
 
         return cell as UITableViewCell
     }

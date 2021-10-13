@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     // Outlet properties
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
     
@@ -33,9 +33,15 @@ class ProfileViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func changePersonalInformationButtonAction(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "ChangeInformationViewController") as! ChangeInformationViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Private functions
     private func configure() {
-        avatarImage.image = UIImage(named: userNow.avatar)
+        avatarImageView.image = UIImage(named: userNow.avatar)
         nicknameLabel.text = userNow.nickname
         fullNameLabel.text = userNow.firstName + " " + userNow.secondName
     }

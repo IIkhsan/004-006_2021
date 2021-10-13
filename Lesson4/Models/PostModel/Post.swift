@@ -7,10 +7,10 @@ struct Post {
 }
 
 func createPost() -> Post {
-    guard var randomAvatar = photos.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }
-    guard let randomNickname = authors.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }
-    guard let randomText = posts.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }
-    guard var randomImage = photos.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }
+    guard var randomImage = photos.randomElement(),
+          var randomAvatar = photos.randomElement(),
+          let randomNickname = authors.randomElement(),
+          let randomText = posts.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }
     
     while randomAvatar == "" {
         guard let anotherAvatar = photos.randomElement() else { return Post(avatar: "", nickname: "", text: "", image: "") }

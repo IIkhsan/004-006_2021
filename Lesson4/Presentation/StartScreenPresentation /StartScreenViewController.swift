@@ -21,7 +21,7 @@ class StartScreenViewController: UIViewController {
         for key in db.keys {
             if key[0] == userKey[0], key[1] == userKey[1] {
                 performSegue(withIdentifier: "TabBarSegue", sender: nil)
-                userNow = db[userKey] ?? User(firstName: "", secondName: "", nickname: "", number: "", placeOfWork: "", town: "", avatar: "")
+                userNow = db[userKey] ?? User(id: 0, firstName: "", secondName: "", nickname: "", number: "", placeOfWork: "", town: "", avatar: "")
             }
         }
     }
