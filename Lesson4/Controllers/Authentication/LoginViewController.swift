@@ -64,10 +64,4 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func needToRemoveThis(_ sender: UIButton) {
-        // TODO: убрать эту кнопку перед пушем
-        #warning("Delete this action before deployment")
-        loginUser(users[0])
-    }
-    
 }

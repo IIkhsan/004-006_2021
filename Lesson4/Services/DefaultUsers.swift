@@ -9,7 +9,7 @@ import Foundation
 
 class DataManager {
 
-    static func createDefaultUsers(completion: @escaping ((_ users: [User]) -> Void)) {
+    static func createDefaultUsers(completion: @escaping (([User]) -> Void)) {
         sleep(3)
         
         var users: [User] = []

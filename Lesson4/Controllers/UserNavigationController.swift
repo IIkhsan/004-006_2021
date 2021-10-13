@@ -21,7 +21,6 @@ class UserNavigationController: UINavigationController {
     }
     weak var contentsTabBarController: ContentsTabBarController?
     
-    // TODO: попробовать поменять на viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         

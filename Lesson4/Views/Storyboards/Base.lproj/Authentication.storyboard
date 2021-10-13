@@ -51,28 +51,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-MS-xRQ">
-                                <rect key="frame" x="115" y="113" width="184" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Войти как etimesoy">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="needToRemoveThis:" destination="eb4-HJ-BzP" eventType="touchUpInside" id="ruj-ze-2m3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I1i-Q1-ctW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FIY-MS-xRQ" firstAttribute="centerX" secondItem="I1i-Q1-ctW" secondAttribute="centerX" id="1uj-Yc-plg"/>
                             <constraint firstItem="Q8Z-7x-ytD" firstAttribute="leading" secondItem="I1i-Q1-ctW" secondAttribute="leading" constant="30" id="GoK-Dy-9Qj"/>
                             <constraint firstItem="Q8Z-7x-ytD" firstAttribute="top" secondItem="2Ii-AI-czq" secondAttribute="bottom" constant="120" id="P9W-rE-Voi"/>
                             <constraint firstItem="yED-p1-1u2" firstAttribute="centerX" secondItem="Q8Z-7x-ytD" secondAttribute="centerX" id="U5B-po-0KH"/>
                             <constraint firstItem="YUg-O3-gRw" firstAttribute="centerX" secondItem="2Ii-AI-czq" secondAttribute="centerX" id="cE7-jd-hxD"/>
                             <constraint firstItem="2Ii-AI-czq" firstAttribute="centerX" secondItem="I1i-Q1-ctW" secondAttribute="centerX" id="del-CP-wKr"/>
                             <constraint firstItem="yED-p1-1u2" firstAttribute="leading" secondItem="Q8Z-7x-ytD" secondAttribute="leading" id="eQc-1J-E95"/>
-                            <constraint firstItem="FIY-MS-xRQ" firstAttribute="top" secondItem="I1i-Q1-ctW" secondAttribute="top" constant="69" id="qMR-1p-it7"/>
                             <constraint firstItem="2Ii-AI-czq" firstAttribute="top" secondItem="I1i-Q1-ctW" secondAttribute="top" constant="175" id="rhP-yi-tKv"/>
                             <constraint firstItem="I1i-Q1-ctW" firstAttribute="bottom" secondItem="YUg-O3-gRw" secondAttribute="bottom" constant="170" id="uwf-Dx-mQH"/>
                             <constraint firstItem="Q8Z-7x-ytD" firstAttribute="centerX" secondItem="2Ii-AI-czq" secondAttribute="centerX" id="yIu-wb-2fw"/>
@@ -265,9 +253,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

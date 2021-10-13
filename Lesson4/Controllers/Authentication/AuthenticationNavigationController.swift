@@ -15,7 +15,6 @@ class AuthenticationNavigationController: UINavigationController {
         }
     }
     static let identifier = String(describing: AuthenticationNavigationController.self)
-    
     weak var contentsTabBarController: ContentsTabBarController?
     
 }
