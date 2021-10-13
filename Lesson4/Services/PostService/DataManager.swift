@@ -15,9 +15,9 @@ final class DataManager {
     private let nicks = ["sixz.r", "asda.sd", "el.primo", "welcome"]
     private var counterOfType = 0
     private let phones = ["+79148561256", "+76145567256", "+73198461296"]
-    private let emails = ["example@mail.ru", "test@ya.ru", "user@gmail.com"]
+    private let emails = ["test@mail.ru", "test@ya.ru", "test@gmail.com"]
     
-    //MARK: - Generating
+    //MARK: - Generating methods
     func getPosts(completion : @escaping (_ data: [Post]) -> Void) {
         let posts = generatePosts()
         sleep(3)
@@ -49,6 +49,32 @@ final class DataManager {
         users.append(user)
         sleep(3)
         completion(users)
+    }
+    
+    func generateUsersWithoutTime() -> [User] {
+        var users: [User] = []
+        var user = User(name: "Роман Сницарюк", avatar: #imageLiteral(resourceName: "1"))
+        user.status = nicks[0]
+        user.city = "Kazan"
+        user.phone = phones[0]
+        user.email = emails[0]
+        user.password = "Admin1"
+        users.append(user)
+        user = User(name: "Роман Сницарюк", avatar: #imageLiteral(resourceName: "2"))
+        user.status = nicks[1]
+        user.city = "Kazan"
+        user.phone = phones[1]
+        user.email = emails[1]
+        user.password = "Admin1"
+        users.append(user)
+        user = User(name: "Роман Сницарюк", avatar: #imageLiteral(resourceName: "3"))
+        user.status = nicks[2]
+        user.city = "Kazan"
+        user.phone = phones[2]
+        user.email = emails[2]
+        user.password = "Admin1"
+        users.append(user)
+        return users
     }
     
     private func generatePosts() -> [Post] {

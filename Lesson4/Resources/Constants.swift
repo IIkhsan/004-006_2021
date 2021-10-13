@@ -12,6 +12,8 @@ enum Constants: String {
     case feedsSeque = "goFeedsSegue"
     // Seque для перехода на контроллер детального просмотра
     case detailedPostSeque = "goDetailedPost"
+    // Seque для перехода на контроллер изменения данных
+    case editingAccountSeque = "goEditingAccountSegue"
     // Имя пустого лайка
     case likeName = "like"
     // Имя filled лайка

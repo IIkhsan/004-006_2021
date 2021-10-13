@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController, UserExistenceDelegate {
     //MARK: - UI
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
@@ -23,7 +23,7 @@ class AccountViewController: UIViewController {
     //MARK: - Var
     private var posts: [Post] = []
     private let dataManager = DataManager()
-    private var user: User?
+    var user: User?
     
     //MARK: - VC's cycle
     override func viewDidLoad() {
@@ -31,6 +31,12 @@ class AccountViewController: UIViewController {
         configure()
         obtainPostsData()
         obtainUserData()
+    }
+    
+    //MARK: - Button's actions
+    @IBAction func changeStatusButtonTapped(_ sender: Any) {
+        guard let user = user else { return }
+        performSegue(withIdentifier: Constants.editingAccountSeque.rawValue, sender: user)
     }
     
     //MARK: - Table's method
@@ -61,15 +67,9 @@ class AccountViewController: UIViewController {
     }
     
     private func obtainUserData() {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.dataManager.generateUsers { data in
-                DispatchQueue.main.async {
-                    strongSelf.user = data.first
-                    strongSelf.configureProfile()
-                }
-            }
-        }
+        let tabBar = tabBarController as! MainTabBarViewController
+        user = tabBar.user
+        configureProfile()
     }
     
     // Set up elements
@@ -98,6 +98,10 @@ class AccountViewController: UIViewController {
                 let post = sender as? Post {
                     viewController.post = post
         }
+        if segue.identifier == Constants.editingAccountSeque.rawValue, let viewController = segue.destination as? EditingAccountViewController, let user = sender as? User {
+            viewController.user = user
+            viewController.editingAccountDelegate = self
+        }
     }
 }
 
@@ -112,5 +116,14 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? NewsTableViewCell else { return UITableViewCell() }
         cell.configure(posts[indexPath.row])
         return cell
+    }
+}
+
+//MARK: - Edit account delegate
+extension AccountViewController: EditingAccountDelegate {
+    
+    func editProfile(_ user: User) {
+        self.user = user
+        configureProfile()
     }
 }
