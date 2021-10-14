@@ -17,6 +17,8 @@
 		A324596F270C74E100EFA88D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324596E270C74E100EFA88D /* FeedViewController.swift */; };
 		A3245973270C793200EFA88D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3245972270C793200EFA88D /* PostTableViewCell.swift */; };
 		A3245979270C80F500EFA88D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3245978270C80F500EFA88D /* Post.swift */; };
+		A36B7E6327184C2500AA1DB4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E6227184C2500AA1DB4 /* FeedService.swift */; };
+		A36B7E652718593B00AA1DB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E642718593B00AA1DB4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A324596E270C74E100EFA88D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A3245972270C793200EFA88D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A3245978270C80F500EFA88D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A36B7E6227184C2500AA1DB4 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		A36B7E642718593B00AA1DB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,51 +68,77 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
-				A3245963270C5E0300EFA88D /* Presentations */,
-				5EE6900E27036B9400F5C170 /* Info.plist */,
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
-				5EE6900927036B9400F5C170 /* Assets.xcassets */,
+				A36B7E5C27148DF400AA1DB4 /* Presentation */,
+				A36B7E6027148E9400AA1DB4 /* Services */,
+				A36B7E5B27148C7100AA1DB4 /* Resource */,
 				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
 				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
-				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
 			path = Lesson4;
 			sourceTree = "<group>";
 		};
-		A3245963270C5E0300EFA88D /* Presentations */ = {
+		A36B7E5B27148C7100AA1DB4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				A3245966270C630A00EFA88D /* ProfilePresentation */,
-				A3245965270C62FF00EFA88D /* FeedPresentation */,
-				A3245964270C62EB00EFA88D /* LoginPresentation */,
+				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
+				5EE6900E27036B9400F5C170 /* Info.plist */,
+				5EE6900927036B9400F5C170 /* Assets.xcassets */,
 			);
-			path = Presentations;
+			path = Resource;
 			sourceTree = "<group>";
 		};
-		A3245964270C62EB00EFA88D /* LoginPresentation */ = {
+		A36B7E5C27148DF400AA1DB4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				A36B7E5F27148E5C00AA1DB4 /* Profile */,
+				A36B7E5E27148E5300AA1DB4 /* Login */,
+				A36B7E5D27148E0000AA1DB4 /* Feed */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A36B7E5D27148E0000AA1DB4 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				A36B7E61271558EE00AA1DB4 /* Views */,
+				A324596E270C74E100EFA88D /* FeedViewController.swift */,
+				A3245978270C80F500EFA88D /* Post.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		A36B7E5E27148E5300AA1DB4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				A324596A270C6B2C00EFA88D /* LoginViewController.swift */,
 			);
-			path = LoginPresentation;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		A3245965270C62FF00EFA88D /* FeedPresentation */ = {
-			isa = PBXGroup;
-			children = (
-				A3245978270C80F500EFA88D /* Post.swift */,
-				A324596E270C74E100EFA88D /* FeedViewController.swift */,
-				A3245972270C793200EFA88D /* PostTableViewCell.swift */,
-			);
-			path = FeedPresentation;
-			sourceTree = "<group>";
-		};
-		A3245966270C630A00EFA88D /* ProfilePresentation */ = {
+		A36B7E5F27148E5C00AA1DB4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				A324596C270C746F00EFA88D /* ProfileViewController.swift */,
+				A36B7E642718593B00AA1DB4 /* User.swift */,
 			);
-			path = ProfilePresentation;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A36B7E6027148E9400AA1DB4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A36B7E6227184C2500AA1DB4 /* FeedService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A36B7E61271558EE00AA1DB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3245972270C793200EFA88D /* PostTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A324596B270C6B2C00EFA88D /* LoginViewController.swift in Sources */,
+				A36B7E6327184C2500AA1DB4 /* FeedService.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				A3245979270C80F500EFA88D /* Post.swift in Sources */,
 				A324596F270C74E100EFA88D /* FeedViewController.swift in Sources */,
+				A36B7E652718593B00AA1DB4 /* User.swift in Sources */,
 				A324596D270C746F00EFA88D /* ProfileViewController.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 				A3245973270C793200EFA88D /* PostTableViewCell.swift in Sources */,
@@ -336,7 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				INFOPLIST_FILE = Lesson4/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -356,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
-				INFOPLIST_FILE = Lesson4/Info.plist;
+				INFOPLIST_FILE = Lesson4/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

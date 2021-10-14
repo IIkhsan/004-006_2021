@@ -8,14 +8,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+    //MARK: - UI
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //MARK: - Button's actions
     @IBAction func loginButton(_ sender: Any) {
         if mailTextField.text == "123", passwordTextField.text == "123" {
             performSegue(withIdentifier: "loginSegue", sender: nil)

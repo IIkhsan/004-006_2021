@@ -50,7 +50,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYW-MB-Wcm">
                                         <rect key="frame" x="0.0" y="53" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -136,7 +136,7 @@
                                         <rect key="frame" x="0.0" y="159.5" width="374" height="47"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Change profile information">
+                                        <buttonConfiguration key="configuration" style="plain" title="Change status ">
                                             <color key="baseForegroundColor" systemColor="linkColor"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -285,6 +285,17 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="eq2-Fu-W1U"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="jnI-wD-Ce7" id="0p4-FI-y4J"/>
+                        <outlet property="educationLabel" destination="UMz-JS-m4o" id="cg2-3B-COS"/>
+                        <outlet property="instagramLabel" destination="629-8c-UyR" id="PCA-Rg-4ai"/>
+                        <outlet property="martialStatusLabel" destination="SY3-5y-ET3" id="n6b-Ri-bRl"/>
+                        <outlet property="nickLabel" destination="Yb9-8Y-pO6" id="ySQ-bi-EdF"/>
+                        <outlet property="phoneNumberLabel" destination="KMJ-Zx-wca" id="3gO-ad-VRE"/>
+                        <outlet property="profileImageView" destination="VVZ-2H-Wmc" id="dXn-me-eVv"/>
+                        <outlet property="statusLabel" destination="xyC-XU-Uzf" id="xF3-hN-x3R"/>
+                        <outlet property="workLabel" destination="huU-B6-JPS" id="oA9-fS-UDE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KyE-N7-ZQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -352,10 +363,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="contentImage" destination="R9p-GC-I8L" id="W5m-6f-XXn"/>
-                                            <outlet property="infoLabel" destination="yfM-ny-z4w" id="6aV-3Z-JO6"/>
-                                            <outlet property="profileImage" destination="FwL-6m-gql" id="O8H-pY-QsH"/>
-                                            <outlet property="profileNameLabel" destination="Ahy-mx-U0m" id="bU3-xR-pVP"/>
+                                            <outlet property="contentImage" destination="R9p-GC-I8L" id="WxP-CA-T2q"/>
+                                            <outlet property="infoLabel" destination="yfM-ny-z4w" id="VmF-O4-bta"/>
+                                            <outlet property="profileImage" destination="FwL-6m-gql" id="I32-fm-Ygs"/>
+                                            <outlet property="profileNameLabel" destination="Ahy-mx-U0m" id="PS2-Cy-MPn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
