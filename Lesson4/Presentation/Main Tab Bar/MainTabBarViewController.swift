@@ -8,9 +8,10 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController, UserExistenceDelegate {
-    
+    //MARK: - Properties
     var user: User?
     
+    //MARK: - VC cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

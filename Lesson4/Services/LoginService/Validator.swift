@@ -30,19 +30,29 @@ class Validator: ValidationService {
     //MARK: - Validation's methods
     func isValidEmail(_ email: String?) -> Bool {
         guard let email = email else { return false }
-        let range = NSRange(location: 0, length: email.utf16.count)
-        let regularExpression = try! NSRegularExpression(pattern: emailRegualerExpressionPattern)
-        return regularExpression.firstMatch(in: email, options: [], range: range) != nil
+        do {
+            let range = NSRange(location: 0, length: email.utf16.count)
+            let regularExpression = try NSRegularExpression(pattern: emailRegualerExpressionPattern)
+            return regularExpression.firstMatch(in: email, options: [], range: range) != nil
+        } catch {
+            print("NSRegularExpression Error")
+            return false
+        }
     }
 
     func isValidPassword(_ password: String?) -> Bool {
         guard let password = password else { return false }
         if password.count < 6 { return false }
-        let containsOnlyLatinChars = password.range(of: "\\P{Latin}", options: .regularExpression)
-        let range = NSRange(location: 0, length: password.utf16.count)
-        let regularExpression = try! NSRegularExpression(pattern: passwordRegularExpressionPattern)
-        let containsRegularExpression = regularExpression.firstMatch(in: password, options: [], range: range)
-        return containsOnlyLatinChars != nil && containsRegularExpression != nil
+        do {
+            let containsOnlyLatinChars = password.range(of: "\\P{Latin}", options: .regularExpression)
+            let range = NSRange(location: 0, length: password.utf16.count)
+            let regularExpression = try NSRegularExpression(pattern: passwordRegularExpressionPattern)
+            let containsRegularExpression = regularExpression.firstMatch(in: password, options: [], range: range)
+            return containsOnlyLatinChars != nil && containsRegularExpression != nil
+        } catch {
+            print("NSRegularExpression Error")
+            return false
+        }
     }
     
     func isRightData(_ email: String?, _ password: String?) -> User? {
