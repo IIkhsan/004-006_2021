@@ -17,8 +17,9 @@
 		A324596F270C74E100EFA88D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324596E270C74E100EFA88D /* FeedViewController.swift */; };
 		A3245973270C793200EFA88D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3245972270C793200EFA88D /* PostTableViewCell.swift */; };
 		A3245979270C80F500EFA88D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3245978270C80F500EFA88D /* Post.swift */; };
-		A36B7E6327184C2500AA1DB4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E6227184C2500AA1DB4 /* FeedService.swift */; };
+		A36B7E6327184C2500AA1DB4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E6227184C2500AA1DB4 /* DataManager.swift */; };
 		A36B7E652718593B00AA1DB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E642718593B00AA1DB4 /* User.swift */; };
+		A36B7E672719D87B00AA1DB4 /* ChangeStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B7E662719D87B00AA1DB4 /* ChangeStatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		A324596E270C74E100EFA88D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A3245972270C793200EFA88D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A3245978270C80F500EFA88D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		A36B7E6227184C2500AA1DB4 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		A36B7E6227184C2500AA1DB4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A36B7E642718593B00AA1DB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A36B7E662719D87B00AA1DB4 /* ChangeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				A324596C270C746F00EFA88D /* ProfileViewController.swift */,
 				A36B7E642718593B00AA1DB4 /* User.swift */,
+				A36B7E662719D87B00AA1DB4 /* ChangeStatusViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -128,7 +131,7 @@
 		A36B7E6027148E9400AA1DB4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A36B7E6227184C2500AA1DB4 /* FeedService.swift */,
+				A36B7E6227184C2500AA1DB4 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -211,8 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36B7E672719D87B00AA1DB4 /* ChangeStatusViewController.swift in Sources */,
 				A324596B270C6B2C00EFA88D /* LoginViewController.swift in Sources */,
-				A36B7E6327184C2500AA1DB4 /* FeedService.swift in Sources */,
+				A36B7E6327184C2500AA1DB4 /* DataManager.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				A3245979270C80F500EFA88D /* Post.swift in Sources */,
 				A324596F270C74E100EFA88D /* FeedViewController.swift in Sources */,
