@@ -9,7 +9,7 @@ import UIKit
 
 class FeedsViewController: UIViewController, UserIdentifiable {
     // MARK: - properties
-    var user: User?
+    weak var user: User?
     var feedManager = FeedsManager()
     var feeds: [Feed] = []
     

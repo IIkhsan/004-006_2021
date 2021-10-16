@@ -23,6 +23,8 @@
 		B92F8238271B2D740051D493 /* ContentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F8235271B2D730051D493 /* ContentDetailsViewController.swift */; };
 		B92F8239271B2D740051D493 /* MixedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F8236271B2D740051D493 /* MixedDetailsViewController.swift */; };
 		B92F823A271B2D740051D493 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F8237271B2D740051D493 /* ImageDetailsViewController.swift */; };
+		B92F823C271B62B60051D493 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F823B271B62B60051D493 /* EditProfileViewController.swift */; };
+		B92F823F271B7C960051D493 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F823E271B7C960051D493 /* Validator.swift */; };
 		B94417F627164250009751DD /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94417F527164250009751DD /* AuthViewController.swift */; };
 		B94417F827164312009751DD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94417F727164312009751DD /* AuthManager.swift */; };
 		B94417FC27164D3A009751DD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94417FB27164D3A009751DD /* AuthService.swift */; };
@@ -58,6 +60,8 @@
 		B92F8235271B2D730051D493 /* ContentDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailsViewController.swift; sourceTree = "<group>"; };
 		B92F8236271B2D740051D493 /* MixedDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedDetailsViewController.swift; sourceTree = "<group>"; };
 		B92F8237271B2D740051D493 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		B92F823B271B62B60051D493 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		B92F823E271B7C960051D493 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		B94417F527164250009751DD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B94417F727164312009751DD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B94417FB27164D3A009751DD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -139,9 +143,18 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		B92F823D271B7C870051D493 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B92F823E271B7C960051D493 /* Validator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B94417F127163DA1009751DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B92F823D271B7C870051D493 /* Utils */,
 				B95E53C62716B14D0091D7D0 /* Protocols */,
 				B94417FD27164DA9009751DD /* Entities */,
 				B94417FA27164D29009751DD /* Services */,
@@ -169,6 +182,7 @@
 				B944180627167F3F009751DD /* ProfileViewController.swift */,
 				B944180827167F4E009751DD /* FeedsViewController.swift */,
 				B92F8230271B1C110051D493 /* MainTabBarController.swift */,
+				B92F823B271B62B60051D493 /* EditProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +329,8 @@
 				B944180927167F4E009751DD /* FeedsViewController.swift in Sources */,
 				B92F8238271B2D740051D493 /* ContentDetailsViewController.swift in Sources */,
 				B94417FF27164E50009751DD /* User.swift in Sources */,
+				B92F823C271B62B60051D493 /* EditProfileViewController.swift in Sources */,
+				B92F823F271B7C960051D493 /* Validator.swift in Sources */,
 				B95E53CE2716C5BB0091D7D0 /* FeedsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

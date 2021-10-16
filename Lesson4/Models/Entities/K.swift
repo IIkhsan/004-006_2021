@@ -11,6 +11,7 @@ struct K {
     // MARK: - segue identifiers
     static let gotoMain = "gotoMain"
     static let gotoAuth = "gotoAuth"
+    static let gotoProfileEdit = "editProfile"
     // details segues
     static let gotoContentDetails = "gotoContent"
     static let gotoDetails = "gotoBoth"

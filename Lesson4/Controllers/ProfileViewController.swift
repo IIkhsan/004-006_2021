@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ProfileViewControllerDelegate {
+    func updateUserDetails(_ sender: Any?, withNewUser user: User);
+}
+
+
 class ProfileViewController: UIViewController, UserIdentifiable {
     
     // MARK: - IBOutlets
@@ -16,7 +21,7 @@ class ProfileViewController: UIViewController, UserIdentifiable {
     @IBOutlet weak var emailLabel: UILabel!
     
     // MARK: - private properties
-    var user: User?
+    weak var user: User?
     
     // MARK: - lifecycle methods
     override func viewDidLoad() {
@@ -30,12 +35,18 @@ class ProfileViewController: UIViewController, UserIdentifiable {
             if let authVC = segue.destination as? AuthViewController {
                 authVC.autoLogin = false
             }
+        } else if segue.identifier == K.gotoProfileEdit {
+            if let editProfileVC = segue.destination as? EditProfileViewController {
+                editProfileVC.user = sender as? User
+                editProfileVC.delegate = self
+            }
         }
     }
     
     // MARK: - IBActions
     
     @IBAction func onEditProfilePressed(_ sender: UIButton) {
+        performSegue(withIdentifier: K.gotoProfileEdit, sender: user)
     }
     
     @IBAction func onLogoutPressed(_ sender: UIButton) {
@@ -55,5 +66,32 @@ class ProfileViewController: UIViewController, UserIdentifiable {
         nameLabel.text = user?.name
         emailLabel.text = user?.email
         profileImageView.image = user?.image
+    }
+}
+// MARK: - ProfileViewControllerDelegate
+// updates the profileView screen when updated by other screens
+extension ProfileViewController: ProfileViewControllerDelegate {
+    func updateUserDetails(_ sender: Any?, withNewUser user: User) {
+        self.user = user
+        
+        // close the sender
+        if let sender = sender as? UIViewController {
+            sender.dismiss(animated: true, completion: nil)
+        }
+        
+        // update the data
+        updateUserInfo()
+        
+        K.delay(bySeconds: 0.6) { [weak self] in
+            DispatchQueue.main.async {
+                // create the alert
+                let alert = UIAlertController(title: "Delegate Called",
+                                              message: "Delegate was called and user has been updated",
+                                              preferredStyle: .actionSheet)
+                let defaultAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+                alert.addAction(defaultAction)
+                self?.present(alert, animated: true) // present the alert
+            }
+        }
     }
 }
