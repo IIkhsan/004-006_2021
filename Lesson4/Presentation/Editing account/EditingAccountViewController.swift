@@ -16,7 +16,7 @@ class EditingAccountViewController: UIViewController, UserExistenceDelegate {
     @IBOutlet weak var userPhoneTextLabel: UITextField!
     
     //MARK: - Properties
-    var editingAccountDelegate: EditingAccountDelegate?
+    weak var editingAccountDelegate: EditingAccountDelegate?
     var user: User?
     
     //MARK: - VC's cycle
