@@ -21,6 +21,11 @@
 		925CEFF4270E3216005BA81F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CEFF3270E3216005BA81F /* RegistrationViewController.swift */; };
 		9275A68427141DC300D74F1B /* UserGlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A68327141DC300D74F1B /* UserGlobalVars.swift */; };
 		9275A6882714255800D74F1B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A6872714255800D74F1B /* PostService.swift */; };
+		928A713A271B3C2B00BA29C4 /* NicknameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A7139271B3C2B00BA29C4 /* NicknameHelper.swift */; };
+		928A7143271B465E00BA29C4 /* NameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A7142271B465E00BA29C4 /* NameHelper.swift */; };
+		928A7146271B477000BA29C4 /* PhoneNumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A7145271B477000BA29C4 /* PhoneNumberHelper.swift */; };
+		928A714B271B486700BA29C4 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A714A271B486700BA29C4 /* LoginHelper.swift */; };
+		928A714E271B494200BA29C4 /* PasswordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A714D271B494100BA29C4 /* PasswordHelper.swift */; };
 		92A1FB5F27172E1F0040EB4D /* ChangeInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1FB5E27172E1F0040EB4D /* ChangeInformationViewController.swift */; };
 		92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */; };
 		92A6290D270ADAE30076DEC2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290C270ADAE30076DEC2 /* Post.swift */; };
@@ -44,6 +49,11 @@
 		925CEFF3270E3216005BA81F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9275A68327141DC300D74F1B /* UserGlobalVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGlobalVars.swift; sourceTree = "<group>"; };
 		9275A6872714255800D74F1B /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		928A7139271B3C2B00BA29C4 /* NicknameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameHelper.swift; sourceTree = "<group>"; };
+		928A7142271B465E00BA29C4 /* NameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHelper.swift; sourceTree = "<group>"; };
+		928A7145271B477000BA29C4 /* PhoneNumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHelper.swift; sourceTree = "<group>"; };
+		928A714A271B486700BA29C4 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		928A714D271B494100BA29C4 /* PasswordHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordHelper.swift; sourceTree = "<group>"; };
 		92A1FB5E27172E1F0040EB4D /* ChangeInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeInformationViewController.swift; sourceTree = "<group>"; };
 		92A6290A270ADABC0076DEC2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		92A6290C270ADAE30076DEC2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -82,6 +92,7 @@
 			children = (
 				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
 				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
+				928A7137271B3C0B00BA29C4 /* Helpers */,
 				9275A6852714252B00D74F1B /* Services */,
 				9275A68127141D9300D74F1B /* Global */,
 				925CEFE6270E18F5005BA81F /* Models */,
@@ -231,6 +242,58 @@
 			path = PostServices;
 			sourceTree = "<group>";
 		};
+		928A7137271B3C0B00BA29C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A714C271B492F00BA29C4 /* PasswordHelpers */,
+				928A7149271B485A00BA29C4 /* LoginHelpers */,
+				928A7144271B475800BA29C4 /* PhoneNumberHelpers */,
+				928A7141271B464D00BA29C4 /* NameHelpers */,
+				928A7138271B3C1600BA29C4 /* NicknameHelpers */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		928A7138271B3C1600BA29C4 /* NicknameHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A7139271B3C2B00BA29C4 /* NicknameHelper.swift */,
+			);
+			path = NicknameHelpers;
+			sourceTree = "<group>";
+		};
+		928A7141271B464D00BA29C4 /* NameHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A7142271B465E00BA29C4 /* NameHelper.swift */,
+			);
+			path = NameHelpers;
+			sourceTree = "<group>";
+		};
+		928A7144271B475800BA29C4 /* PhoneNumberHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A7145271B477000BA29C4 /* PhoneNumberHelper.swift */,
+			);
+			path = PhoneNumberHelpers;
+			sourceTree = "<group>";
+		};
+		928A7149271B485A00BA29C4 /* LoginHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A714A271B486700BA29C4 /* LoginHelper.swift */,
+			);
+			path = LoginHelpers;
+			sourceTree = "<group>";
+		};
+		928A714C271B492F00BA29C4 /* PasswordHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				928A714D271B494100BA29C4 /* PasswordHelper.swift */,
+			);
+			path = PasswordHelpers;
+			sourceTree = "<group>";
+		};
 		92A1FB5D27172DF70040EB4D /* ChangeInformationPresentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,9 +374,14 @@
 			files = (
 				9239242C270752B9005C0E38 /* StartScreenViewController.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
+				928A714B271B486700BA29C4 /* LoginHelper.swift in Sources */,
 				92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */,
 				925CEFF4270E3216005BA81F /* RegistrationViewController.swift in Sources */,
+				928A7143271B465E00BA29C4 /* NameHelper.swift in Sources */,
+				928A714E271B494200BA29C4 /* PasswordHelper.swift in Sources */,
+				928A7146271B477000BA29C4 /* PhoneNumberHelper.swift in Sources */,
 				9239242F270754B0005C0E38 /* FeedViewController.swift in Sources */,
+				928A713A271B3C2B00BA29C4 /* NicknameHelper.swift in Sources */,
 				92A6290D270ADAE30076DEC2 /* Post.swift in Sources */,
 				925CEFEE270E1E6B005BA81F /* ProfileViewController.swift in Sources */,
 				92A1FB5F27172E1F0040EB4D /* ChangeInformationViewController.swift in Sources */,

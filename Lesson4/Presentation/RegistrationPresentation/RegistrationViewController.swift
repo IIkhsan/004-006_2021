@@ -35,11 +35,61 @@ class RegistrationViewController: UIViewController {
               let town = townTextField.text,
               let secondName = secondNameTextField.text else { return }
         
+        checkFields(nickname: nickname, firstName: firstName, secondName: secondName, phoneNumber: phoneNumber, login: login, password: password)
+        
         idNow += 1
         let newUser = User(id: idNow, firstName: firstName, secondName: secondName, nickname: nickname, number: phoneNumber, placeOfWork: placeOfWork, town: town, avatar: "aa.jpg")
         db[[login, password]] = newUser
         userNow = newUser
         
         performSegue(withIdentifier: "RegisterTabBarSegue", sender: nil)
+    }
+    
+    // MARK: - Private functions
+    private func checkFields(nickname: String, firstName: String, secondName: String, phoneNumber: String, login: String, password: String) {
+        if !isNicknameValide(nickname: nickname) {
+            nicknameTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+            showAlert(title: "Nickname alert", description: "Nickname length must be at least 4 and contains only english letters")
+        } else {
+            nicknameTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+        
+        if !isNameValide(name: firstName) {
+            firstNameTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+            showAlert(title: "First name alert", description: "First name should contains only english letters")
+        } else {
+            firstNameTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+        
+        if !isNameValide(name: secondName) {
+            secondNameTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+            showAlert(title: "First name alert", description: "Second name should contains only english letters")
+        } else {
+            secondNameTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+        
+        if !isLoginValide(login: login) {
+            loginTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+            showAlert(title: "Login alert", description: "Login should contains valide email")
+        } else {
+            loginTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+        
+        if !isPasswordValide(password: password) {
+            passwordTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+            showAlert(title: "Password alert", description: "Password should contains at lest one digit and it's length must be at least 6 characters")
+        } else {
+            passwordTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+    }
+    
+    private func showAlert(title: String, description: String) {
+        let alertController = UIAlertController(title: title, message: description, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Close", style: .destructive) { action in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
