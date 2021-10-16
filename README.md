@@ -55,6 +55,12 @@ https://github.com/raywenderlich/swift-style-guide
 4. Редактирование статуса пользователя через делегат на новом экране
 5. Использовать TabBarController для экрана профиля и ленты.
 
+https://gist.github.com/IIkhsan/465f6e211308f6af6bb73e15a6c81be3 - регулярные выражения для валидации
+https://gist.github.com/IIkhsan/4ca17552ae790e2b6d5dc283962fe53a - замыкания
+https://gist.github.com/IIkhsan/6d2d643f3dfb6963f6bc90bbd079fa76 - делегаты
+https://developer.apple.com/documentation/uikit/windows_and_screens/getting_the_user_s_attention_with_alerts_and_action_sheets - UIAllertController usage
+https://developer.apple.com/documentation/uikit/uialertcontroller - класс UIAlertController
+
 #### Ссылки
 
 * style guide: https://github.com/raywenderlich/swift-style-guide
