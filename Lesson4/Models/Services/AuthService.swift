@@ -11,9 +11,9 @@ struct AuthService {
     
     /// mock list of users
     private let users = [
-        User(id: "user1", name: "Evans Owamoyo", email: "lordvidex.prime@gmail.com", password: "lordvidex", image: UIImage(named: "user1")),
-        User(id: "user2", name: "Collin Burrows", email: "hobbs@gmail.com", password: "collhobbs", image: UIImage(named: "user2")),
-        User(id: "user3", name: "James Brown", email: "jeanclaude@yahoo.com", password: "jeanclaude", image: UIImage(named: "user3")),
+        User(id: "user1", name: "Evans Owamoyo", email: "lordvidex.prime@gmail.com", password: "lordvidex123", image: UIImage(named: "user1")),
+        User(id: "user2", name: "Collin Burrows", email: "admin@uno.com", password: "admin123", image: UIImage(named: "user2")),
+        User(id: "user3", name: "James Brown", email: "root@uno.com", password: "admin123", image: UIImage(named: "user3")),
     ]
     
     /// logs in a user with email and password

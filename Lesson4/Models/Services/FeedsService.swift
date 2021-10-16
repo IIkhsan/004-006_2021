@@ -30,7 +30,7 @@ struct FeedsService {
     
     // image getter
     private static func randomImage() -> UIImage? {
-        UIImage(named: "post\(Int.random(in: 1...11))")
+        UIImage(named: "feed\(Int.random(in: 1...11))")
     }
     
     
@@ -55,7 +55,8 @@ struct FeedsService {
     
     // MARK: - public interface functions
     public func getFeeds(for userId: String, completion: @escaping (([Feed]) -> Void)) {
-        sleep(3)
-        completion(feeds[userId] ?? [])
+        K.delay(bySeconds: 3) {
+            completion(feeds[userId] ?? [])
+        }
     }
 }

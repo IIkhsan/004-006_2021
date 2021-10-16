@@ -7,10 +7,18 @@
 
 import UIKit
 
-struct User {
+class User {
     let id: String
-    let name: String
+    var name: String
     var email: String
     var password: String
     var image: UIImage?
+    
+    init(id: String, name: String, email: String, password: String, image: UIImage?) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.password = password
+        self.image = image
+    }
 }

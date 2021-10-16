@@ -21,10 +21,6 @@ protocol AuthManagerDelegate {
     /// action that should be performed when authentication has completed and user has logged in
     /// `user` is null if user was not found
     func authenticated(_ manager: AuthManager, as user: User?)
-    
-    /// action that should be performed when validation fails
-    func validatedWithError(_ manager: AuthManager, error: String)
-    
 }
 
 
@@ -54,17 +50,6 @@ struct AuthManager {
     /// updates `AuthManagerDelegate`
     func login(email: String, password: String) {
         
-        // validations
-        if let emailError = validateEmail(email) {
-            delegate?.validatedWithError(self, error: emailError)
-            return
-        }
-        
-        if let passwordError = validatePassword(password) {
-            delegate?.validatedWithError(self, error: passwordError)
-            return
-        }
-        
         // fetching data started
         delegate?.startLoading(self)
         
@@ -81,13 +66,5 @@ struct AuthManager {
         })
         
         
-    }
-    
-    private func validateEmail(_ email: String) -> String? {
-        return nil
-    }
-    
-    private func validatePassword(_ password: String) -> String? {
-        return nil
     }
 }

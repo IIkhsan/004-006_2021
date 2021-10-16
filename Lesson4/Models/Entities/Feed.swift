@@ -22,7 +22,7 @@ struct Feed {
         } else if image != nil && content != nil {
             return .both
         } else {
-            fatalError("Post must contain either content or image or both")
+            fatalError("Feed must contain either content or image or both")
         }
     }
     

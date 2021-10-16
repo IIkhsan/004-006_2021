@@ -9,8 +9,13 @@ import Foundation
 
 // MARK: - FeedsManagerDelegate
 protocol FeedsManagerDelegate {
+    /// function called when feeds have been loaded with `feeds` an array of [Feed] items
     func feedManager(_ manager: FeedsManager, didLoadFeeds feeds: [Feed]);
+    
+    /// function called when loading for feeds have started
     func didStartLoadingFeeds(_ manager: FeedsManager)
+    
+    /// function called when loader should stop
     func didFinishLoadingFeeds(_ manager: FeedsManager)
 }
 
@@ -24,8 +29,10 @@ struct FeedsManager {
         
         // get the feeds and update the delegates after fetch
         feedsService.getFeeds(for: userId) { feeds in
-            delegate?.didFinishLoadingFeeds(self)
-            delegate?.feedManager(self, didLoadFeeds: feeds)
+            DispatchQueue.main.async {
+                delegate?.didFinishLoadingFeeds(self)
+                delegate?.feedManager(self, didLoadFeeds: feeds)
+            }
         }
     }
 }
