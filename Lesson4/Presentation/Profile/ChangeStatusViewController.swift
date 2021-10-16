@@ -23,14 +23,11 @@ class ChangeStatusViewController: UIViewController {
     //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     //MARK: - Save status action
     @IBAction func saveStatusActionButton(_ sender: Any) {
-        guard var currentUser = currentUser else {
-            return
-        }
+        guard var currentUser = currentUser else { return }
         currentUser.status = statusTextField.text ?? ""
         delegate?.changeData(user: currentUser)
         dismiss(animated: true)

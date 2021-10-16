@@ -69,6 +69,7 @@ class ProfileViewController: UIViewController {
 
 }
 
+//MARK: - Change status view controller delegate
 extension ProfileViewController: ChangeStatusViewControllerDelegate {
     func changeData(user: User) {
         currentUser = user
