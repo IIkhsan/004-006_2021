@@ -47,6 +47,15 @@ class RegistrationViewController: UIViewController {
     
     // MARK: - Private functions
     private func checkFields(nickname: String, firstName: String, secondName: String, phoneNumber: String, login: String, password: String) {
+        for key in db.keys {
+            if key[0] == login {
+                loginTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+                showAlert(title: "Login alert", description: "Login is already in use!")
+            } else {
+                loginTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+            }
+        }
+        
         if !isNicknameValide(nickname: nickname) {
             nicknameTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
             showAlert(title: "Nickname alert", description: "Nickname length must be at least 4 and contains only english letters")
@@ -68,6 +77,17 @@ class RegistrationViewController: UIViewController {
             secondNameTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
         }
         
+        if phoneNumber != "" {
+            if !isPhoneNumberValide(phoneNumber: phoneNumber) {
+                phoneNumberTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
+                showAlert(title: "Phone number alert", description: "Phone number should contains only digits and it's length must be 11 characters")
+            } else {
+                phoneNumberTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+            }
+        } else {
+            phoneNumberTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
+        }
+        
         if !isLoginValide(login: login) {
             loginTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
             showAlert(title: "Login alert", description: "Login should contains valide email")
@@ -77,7 +97,7 @@ class RegistrationViewController: UIViewController {
         
         if !isPasswordValide(password: password) {
             passwordTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
-            showAlert(title: "Password alert", description: "Password should contains at lest one digit and it's length must be at least 6 characters")
+            showAlert(title: "Password alert", description: "Password should contains at least one digit and it's length must be at least 6 characters")
         } else {
             passwordTextField.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.0/255)
         }
