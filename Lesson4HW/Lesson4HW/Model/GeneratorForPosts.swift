@@ -55,7 +55,7 @@ class GeneratorForPosts {
     /// This method create post without image to person wich log in
     func generateForPersonSecond() -> Post {
         return generateTabel(fotoInTable: fotoes.randomElement(),
-                             textInTable: textsInPosts.randomElement(),
+                             textInTable: textsInPosts[2],
                              nameInTable: ViewController.personHowLogIn[0].name,
                              imageInTable: " ",
                              dataInPost: dateInPost.randomElement())

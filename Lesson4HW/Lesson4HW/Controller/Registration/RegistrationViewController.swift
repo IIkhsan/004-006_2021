@@ -61,7 +61,6 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberTextField.keyboardType = .numberPad
         buttonSaveProfileNoAction.layer.cornerRadius = buttonSaveProfileNoAction.frame.height / 2
     }
     
