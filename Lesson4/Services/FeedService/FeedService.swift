@@ -9,10 +9,12 @@ import UIKit
 
 final class FeedService {
     
+    /// Property
     var textArray: [String] = []
     var data: [() -> Post] = []
+    var photos = ["6","7","8","9","10","11","12"]
     
-    func addNewPost (completion: @escaping (() -> Post)) {
+    func addNewPost(completion: @escaping (() -> Post)) {
         data.append(completion)
     }
     
@@ -26,11 +28,11 @@ final class FeedService {
         
         readFromFile()
         addNewPost { [weak self] in
-            return Post(communityImage: UIImage(named: "1"), communityTitle: "Cказки на ночь", publicationDate: formatteddate, article: self?.textArray[0] ?? "", postImage: UIImage(named: "image1"))
+            return Post(communityImage: UIImage(named: "1"), communityTitle: "Cказки на ночь", publicationDate: formatteddate, article: self?.textArray[0] ?? "", postImage: UIImage(named: self?.photos.randomElement() ?? "6"))
         }
         
-        addNewPost {
-            return Post(communityImage: UIImage(named: "2"), communityTitle: "Картина", publicationDate: formatteddate, article: "", postImage: UIImage(named: "image1"))
+        addNewPost { [weak self] in
+            return Post(communityImage: UIImage(named: "2"), communityTitle: "Картина", publicationDate: formatteddate, article: "", postImage: UIImage(named: self?.photos.randomElement() ?? "6"))
         }
         
         addNewPost { [weak self] in
@@ -38,15 +40,15 @@ final class FeedService {
         }
         
         addNewPost { [weak self] in
-            return Post(communityImage: UIImage(named: "4"), communityTitle: "Cказки на утро", publicationDate: formatteddate, article: self?.textArray[2] ?? "", postImage: UIImage(named: "image1"))
+            return Post(communityImage: UIImage(named: "4"), communityTitle: "Cказки на утро", publicationDate: formatteddate, article: self?.textArray[2] ?? "", postImage: UIImage(named: self?.photos.randomElement() ?? "6"))
         }
         
         addNewPost { [weak self] in
             return Post(communityImage: UIImage(named: "5"), communityTitle: "Cказки", publicationDate: formatteddate, article: self?.textArray[3] ?? "", postImage: UIImage(named: ""))
         }
         
-        addNewPost {
-            return Post(communityImage: UIImage(named: "1"), communityTitle: "Каркарыч", publicationDate: formatteddate, article: "", postImage: UIImage(named: "image1"))
+        addNewPost { [weak self] in
+            return Post(communityImage: UIImage(named: "1"), communityTitle: "Каркарыч", publicationDate: formatteddate, article: "", postImage: UIImage(named: self?.photos.randomElement() ?? "6"))
         }
     }
     

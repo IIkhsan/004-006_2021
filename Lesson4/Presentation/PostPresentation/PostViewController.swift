@@ -8,7 +8,7 @@
 import UIKit
 
 class PostViewController: UIViewController {
-    
+    /// Dependency
     var post: Post?
     
     override func viewDidLoad() {

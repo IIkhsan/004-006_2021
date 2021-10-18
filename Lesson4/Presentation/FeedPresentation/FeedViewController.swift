@@ -28,7 +28,7 @@ class FeedViewController: UIViewController {
         for a in service.data {
             posts.append(a())
         }
-        
+        posts.shuffle()
         guard let feedView = view as? FeedView else { return }
         feedView.feedTableView.delegate = self
         feedView.feedTableView.dataSource = self
