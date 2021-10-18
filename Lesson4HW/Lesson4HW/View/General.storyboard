@@ -111,7 +111,7 @@
                         <outlet property="tableView" destination="CLP-8X-ihl" id="j0R-e8-pdg"/>
                         <outlet property="townOfLivingLabel" destination="0OM-fy-dZZ" id="eYD-M8-mTW"/>
                         <outlet property="webStasusLabel" destination="6em-tL-fzs" id="tMz-qc-NTy"/>
-                        <segue destination="c3e-P4-mEA" kind="show" id="Wj7-1u-4Ny"/>
+                        <segue destination="c3e-P4-mEA" kind="show" identifier="profile" id="Wj7-1u-4Ny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPf-6O-3Ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -346,7 +346,7 @@
                     <navigationItem key="navigationItem" title="News" id="aMh-TM-7fX"/>
                     <connections>
                         <outlet property="tableView" destination="vCQ-LO-XUj" id="WVL-E4-mXW"/>
-                        <segue destination="tAJ-j8-2KI" kind="push" id="jH6-dp-WbV"/>
+                        <segue destination="tAJ-j8-2KI" kind="show" identifier="Feeds" id="jH6-dp-WbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJw-xf-TfY" sceneMemberID="firstResponder"/>
