@@ -15,10 +15,7 @@
 		5E0B809826FA2BAF00F7BB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0B809626FA2BAF00F7BB92 /* LaunchScreen.storyboard */; };
 		5E0B80A226FA315C00F7BB92 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0B80A126FA315C00F7BB92 /* Post.swift */; };
 		5E0B80A626FA3B2800F7BB92 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0B80A526FA3B2800F7BB92 /* PostDetailViewController.swift */; };
-		CF8ABC2626FE674500E6C24B /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8ABC2426FE674500E6C24B /* TextTableViewCell.xib */; };
-		CF8ABC2A26FE682B00E6C24B /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8ABC2826FE682B00E6C24B /* ImageTableViewCell.xib */; };
 		CF8ABC2D26FE683A00E6C24B /* TextAndImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8ABC2B26FE683A00E6C24B /* TextAndImageTableViewCell.swift */; };
-		CF8ABC2E26FE683A00E6C24B /* TextAndImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8ABC2C26FE683A00E6C24B /* TextAndImageTableViewCell.xib */; };
 		CF8ABC442719B9A600E6C24B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8ABC432719B9A500E6C24B /* Database.swift */; };
 		CF8ABC472719B9CA00E6C24B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8ABC462719B9CA00E6C24B /* User.swift */; };
 		CF8ABC4C2719C17300E6C24B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8ABC4B2719C17300E6C24B /* TabBarController.swift */; };
@@ -39,10 +36,7 @@
 		5E0B809926FA2BAF00F7BB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0B80A126FA315C00F7BB92 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5E0B80A526FA3B2800F7BB92 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
-		CF8ABC2426FE674500E6C24B /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
-		CF8ABC2826FE682B00E6C24B /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		CF8ABC2B26FE683A00E6C24B /* TextAndImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndImageTableViewCell.swift; sourceTree = "<group>"; };
-		CF8ABC2C26FE683A00E6C24B /* TextAndImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAndImageTableViewCell.xib; sourceTree = "<group>"; };
 		CF8ABC432719B9A500E6C24B /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CF8ABC462719B9CA00E6C24B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CF8ABC4B2719C17300E6C24B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -113,9 +107,6 @@
 		CF8ABC492719BA2600E6C24B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CF8ABC2C26FE683A00E6C24B /* TextAndImageTableViewCell.xib */,
-				CF8ABC2826FE682B00E6C24B /* ImageTableViewCell.xib */,
-				CF8ABC2426FE674500E6C24B /* TextTableViewCell.xib */,
 				5E0B809126FA2BAE00F7BB92 /* Main.storyboard */,
 				5E0B809626FA2BAF00F7BB92 /* LaunchScreen.storyboard */,
 			);
@@ -227,11 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8ABC2A26FE682B00E6C24B /* ImageTableViewCell.xib in Resources */,
 				5E0B809826FA2BAF00F7BB92 /* LaunchScreen.storyboard in Resources */,
 				5E0B809526FA2BAF00F7BB92 /* Assets.xcassets in Resources */,
-				CF8ABC2626FE674500E6C24B /* TextTableViewCell.xib in Resources */,
-				CF8ABC2E26FE683A00E6C24B /* TextAndImageTableViewCell.xib in Resources */,
 				5E0B809326FA2BAE00F7BB92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
