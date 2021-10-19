@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 struct Post {
-    let user: User
+    let accountImage: UIImage
+    let accountName: String
+    let username: String
     let postText: String?
     let postDate: String
     let postImage: UIImage?

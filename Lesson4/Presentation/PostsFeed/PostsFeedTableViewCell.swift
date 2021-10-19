@@ -10,7 +10,6 @@ import UIKit
 class PostsFeedTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var accountImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var accountNameLabel: UILabel!
@@ -19,31 +18,28 @@ class PostsFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     
     // MARK: - Init
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    //Funcions
-    
+    //MARK: - Functions
     func config(post: Post){
-        accountImageView.image = post.user.accountImage
-        usernameLabel.text = post.user.username
-        accountNameLabel.text = post.user.accountName
+        accountImageView.image = post.accountImage
+        usernameLabel.text = post.username
+        accountNameLabel.text = post.accountName
         postTextLabel.text = post.postText
         dateLabel.text = post.postDate
         postImageView.image = post.postImage
         makeImageViewRound(image: accountImageView)
     }
     
-    //Private funcion
-    
+    //Private function
     private func makeImageViewRound(image: UIImageView) {
-            image.layer.cornerRadius = image.frame.size.width / 2
+        image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
     }
 }

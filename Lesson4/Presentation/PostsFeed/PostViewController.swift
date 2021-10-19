@@ -2,7 +2,7 @@
 //  PostViewController.swift
 //  Lesson4
 //
-//  Created by Эльмира Байгулова on 10.10.2021.
+//  Created by Эльмира Байгулова on 19.10.2021.
 //
 
 import UIKit
@@ -10,7 +10,6 @@ import UIKit
 class PostViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var accountImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var accountNameLabel: UILabel!
@@ -18,24 +17,21 @@ class PostViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     
-    //Property
-    
+    // MARK: - Var
     var post: Post?
     
     // MARK: -  View Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
     
-    //Private funcions
-    
+    //Private Functions
     private func config() {
         guard let post = post else { return }
-        accountImage.image = post.user.accountImage
-        usernameLabel.text = post.user.username
-        accountNameLabel.text = post.user.accountName
+        accountImage.image = post.accountImage
+        usernameLabel.text = post.username
+        accountNameLabel.text = post.accountName
         postTextLabel.text = post.postText
         dateLabel.text = post.postDate
         postImageView.image = post.postImage
@@ -43,7 +39,7 @@ class PostViewController: UIViewController {
     }
     
     private func makeImageViewRound(image: UIImageView) {
-            image.layer.cornerRadius = image.frame.size.width / 2
+        image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
     }
 }

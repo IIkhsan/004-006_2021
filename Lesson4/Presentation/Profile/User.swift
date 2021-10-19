@@ -9,8 +9,12 @@ import Foundation
 import UIKit
 
 struct User {
+    var eMail: String
+    var password: String
     var username: String
-    var accountName: String?
+    var accountName: String
+    var status: String
     var accountImage: UIImage?
+    var profileHeader: UIImage?
 }
-    
+
