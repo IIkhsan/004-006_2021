@@ -3,9 +3,13 @@ import UIKit
 
 class Database {
     
+    // MARK: - Init
+    
     init(){
         currentUser = users[0]
     }
+    
+    // MARK: - Properties
     
     var currentUser: User
     

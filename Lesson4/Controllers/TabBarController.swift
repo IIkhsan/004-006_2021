@@ -9,14 +9,18 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    func exit() {
-        navigationController?.popViewController(animated: true)
-    }
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.tabBar.tintColor = .black
+    }
+    
+    // MARK: - Action
+    
+    func exit() {
+        navigationController?.popViewController(animated: true)
     }
 }

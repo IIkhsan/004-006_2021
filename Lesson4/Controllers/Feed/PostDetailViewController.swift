@@ -13,7 +13,7 @@ protocol PostDetailViewControllerDelegate: AnyObject {
 
 class PostDetailViewController: UIViewController {
     
-    // UI
+    // MARK: - UI Outlets
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
@@ -21,16 +21,18 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var pictureImageView: UIImageView?
     
     
-    // Properties
+    // MARK: - Properties
     var post: Post?
     weak var delegate: PostDetailViewControllerDelegate?
 
-    // - MARK: - View lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
+    
+    // MARK: - Init
     
     private func configure() {
         guard let post = post else { return }

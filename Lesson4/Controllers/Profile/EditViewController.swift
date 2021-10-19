@@ -8,17 +8,25 @@
 import UIKit
 
 class EditViewController: UIViewController {
+    
+    // MARK: - UI Outlets
 
     @IBOutlet weak var newNameTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     
+    // MARK: - Delegate
+    
     weak var changeNameDelegate: ChangeNameDelegate?
+    
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    // MARK: - Actions
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard newNameTextField.text != "" else { return }

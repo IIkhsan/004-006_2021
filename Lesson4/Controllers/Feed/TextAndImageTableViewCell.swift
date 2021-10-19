@@ -8,7 +8,13 @@
 import UIKit
 
 class TextAndImageTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
+    
     var post: Post?
+    
+    // MARK: - UI Outlets
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
@@ -16,14 +22,14 @@ class TextAndImageTableViewCell: UITableViewCell {
     @IBOutlet weak var pictureImageView: UIImageView!
     
     
-
+    // MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    
+    
+    // MARK: - Init
     
     func configure(post: Post?) {
         guard let post = post else { return }
@@ -40,6 +46,12 @@ class TextAndImageTableViewCell: UITableViewCell {
         if pictureImageView.image == nil {
             pictureImageView.isHidden = true
         }
+    }
+    
+    // MARK: - Action
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
 }

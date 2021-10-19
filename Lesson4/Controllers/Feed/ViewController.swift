@@ -3,9 +3,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - UI Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    
     var posts = data.posts
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
