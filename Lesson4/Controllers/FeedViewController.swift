@@ -20,7 +20,6 @@ class FeedViewController: UIViewController {
         prepareContent()
         tableView.dataSource = self
         tableView.delegate = self
-    
     }
     
     private func prepareContent() {

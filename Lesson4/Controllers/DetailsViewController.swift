@@ -8,6 +8,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    
+    //Outlets
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!

@@ -8,6 +8,7 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
+    
     //Outlets
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
