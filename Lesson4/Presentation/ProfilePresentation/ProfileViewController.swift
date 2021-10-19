@@ -36,6 +36,8 @@ class ProfileViewController: UIViewController {
     @IBAction func changePersonalInformationButtonAction(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(identifier: "ChangeInformationViewController") as! ChangeInformationViewController
+        
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -44,5 +46,16 @@ class ProfileViewController: UIViewController {
         avatarImageView.image = UIImage(named: userNow.avatar)
         nicknameLabel.text = userNow.nickname
         fullNameLabel.text = userNow.firstName + " " + userNow.secondName
+    }
+}
+
+// MARK: - ChangeInformationViewControllerDelegate
+extension ProfileViewController: ChangeInformationViewControllerDelegate {
+    func changeUserNow(user: User) {
+        for key in db.keys {
+            if db[key]?.id == userNow.id {
+                userNow = db[key] ?? userNow
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@
 		92A6290F270ADC190076DEC2 /* PostInformation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6290E270ADC190076DEC2 /* PostInformation .swift */; };
 		92B2CA71271D8F340051CCF0 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2CA70271D8F340051CCF0 /* LoginHelper.swift */; };
 		92B2CA74271D8F700051CCF0 /* NicknameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2CA73271D8F700051CCF0 /* NicknameHelper.swift */; };
+		92D70EB9271F2EDA007C6F33 /* ChangeInformationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D70EB8271F2EDA007C6F33 /* ChangeInformationViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		92A6290E270ADC190076DEC2 /* PostInformation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostInformation .swift"; sourceTree = "<group>"; };
 		92B2CA70271D8F340051CCF0 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		92B2CA73271D8F700051CCF0 /* NicknameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameHelper.swift; sourceTree = "<group>"; };
+		92D70EB8271F2EDA007C6F33 /* ChangeInformationViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeInformationViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				92A1FB5E27172E1F0040EB4D /* ChangeInformationViewController.swift */,
+				92D70EB8271F2EDA007C6F33 /* ChangeInformationViewControllerDelegate.swift */,
 			);
 			path = ChangeInformationPresentation;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				925CEFF1270E242A005BA81F /* DetailProfileViewController.swift in Sources */,
 				92A6290B270ADABC0076DEC2 /* FeedTableViewCell.swift in Sources */,
 				92305813270B7FBF008666FA /* DetailFeedViewController.swift in Sources */,
+				92D70EB9271F2EDA007C6F33 /* ChangeInformationViewControllerDelegate.swift in Sources */,
 				9275A68427141DC300D74F1B /* UserGlobalVars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

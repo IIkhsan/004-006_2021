@@ -15,10 +15,15 @@ class ChangeInformationViewController: UIViewController {
     @IBOutlet weak var townTextField: UITextField!
     @IBOutlet weak var secondNameTextField: UITextField!
     @IBOutlet weak var placeOfWorkTextField: UITextField!
+    
+    // Dependency
+    weak var delegate: ChangeInformationViewControllerDelegate?
 
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
     }
     
     // MARK: - Action functions
@@ -41,15 +46,23 @@ class ChangeInformationViewController: UIViewController {
                 db[key]?.town = town
                 db[key]?.secondName = secondName
                 db[key]?.placeOfWork = placeOfWork
-                
-                userNow = db[key] ?? userNow
             }
         }
         
+        delegate?.changeUserNow(user: userNow)
         performSegue(withIdentifier: "ChangeInformationSegue", sender: nil)
     }
     
     // MARK: - Private functions
+    private func configure() {
+        nicknameTextField.text = userNow.nickname
+        firstNameTextField.text = userNow.firstName
+        secondNameTextField.text = userNow.secondName
+        phoneNumberTextField.text = userNow.number
+        townTextField.text = userNow.town
+        placeOfWorkTextField.text = userNow.placeOfWork
+    }
+    
     private func checkFields(nickname: String, firstName: String, secondName: String, phoneNumber: String) {
         if !isNicknameValide(nickname: nickname) {
             nicknameTextField.backgroundColor = UIColor(red: 100.0/255, green: 0.0/255, blue: 0.0/255, alpha: 50.0/255)
