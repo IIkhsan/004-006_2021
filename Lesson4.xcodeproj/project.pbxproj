@@ -136,9 +136,8 @@
 		CF8ABC56271EB5E000E6C24B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				5E0B808F26FA2BAE00F7BB92 /* ViewController.swift */,
+				CFBBBB87271F69BB0024FF1F /* TableView */,
 				5E0B80A526FA3B2800F7BB92 /* PostDetailViewController.swift */,
-				CF8ABC2B26FE683A00E6C24B /* TextAndImageTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -159,6 +158,15 @@
 				5E0B809426FA2BAF00F7BB92 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFBBBB87271F69BB0024FF1F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				5E0B808F26FA2BAE00F7BB92 /* ViewController.swift */,
+				CF8ABC2B26FE683A00E6C24B /* TextAndImageTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

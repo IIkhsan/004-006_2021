@@ -119,21 +119,21 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="297" id="jnq-jm-mCa" customClass="TextAndImageTableViewCell" customModule="Lesson4" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="297"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="300" id="jnq-jm-mCa" customClass="TextAndImageTableViewCell" customModule="Lesson4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jnq-jm-mCa" id="MCc-LY-bg4">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="297"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-tH-C5f">
-                                                    <rect key="frame" x="8" y="8" width="304" height="281"/>
+                                                    <rect key="frame" x="8" y="8" width="304" height="284"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-Lp-NcX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="69.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="72.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOm-sJ-GrD">
-                                                                    <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="11.5" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="Xc9-23-hD4"/>
                                                                         <constraint firstAttribute="width" constant="50" id="ZPg-AG-MhP"/>
@@ -146,7 +146,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-je-Iqt">
-                                                                    <rect key="frame" x="58" y="25" width="246" height="19.5"/>
+                                                                    <rect key="frame" x="58" y="26.5" width="246" height="19.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW0-ZL-2us">
                                                                             <rect key="frame" x="0.0" y="0.0" width="147" height="19.5"/>
@@ -167,22 +167,19 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-iE-Fe3">
-                                                            <rect key="frame" x="0.0" y="75" width="304" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-iE-Fe3">
+                                                            <rect key="frame" x="0.0" y="78" width="304" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEC-T2-Jmy">
-                                                            <rect key="frame" x="0.0" y="102" width="304" height="179"/>
+                                                            <rect key="frame" x="0.0" y="105" width="304" height="179"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="jEC-T2-Jmy" secondAttribute="height" multiplier="304:179" id="QfF-1J-zb0"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="jEC-T2-Jmy" secondAttribute="bottom" id="kqJ-TV-2eo"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
