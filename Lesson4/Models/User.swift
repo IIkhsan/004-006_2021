@@ -1,0 +1,17 @@
+//
+//  User.swift
+//  Lesson4
+//
+//  Created by Милана Махсотова on 09.10.2021.
+//
+
+import Foundation
+import UIKit
+
+struct User {
+    var name: String
+    var avatarImage: UIImage
+    var hometown: String
+    var numberOfFriends: String
+    var lastActivity: String
+}
