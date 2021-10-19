@@ -15,11 +15,17 @@
 		EB6B6C7027103AD300EE1DCB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6C6F27103AD300EE1DCB /* ProfileViewController.swift */; };
 		EB6B6C7427105DAC00EE1DCB /* ProfilePostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6C7327105DAC00EE1DCB /* ProfilePostsTableViewCell.swift */; };
 		EB6B6C7727107D4900EE1DCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6C7627107D4900EE1DCB /* LoginViewController.swift */; };
-		EB880983270C3FB300F3BE57 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB880982270C3FB300F3BE57 /* UserModel.swift */; };
-		EB880985270C3FC100F3BE57 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB880984270C3FC100F3BE57 /* PostModel.swift */; };
+		EB880983270C3FB300F3BE57 /* UserDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB880982270C3FB300F3BE57 /* UserDatasource.swift */; };
+		EB880985270C3FC100F3BE57 /* PostStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB880984270C3FC100F3BE57 /* PostStruct.swift */; };
 		EB880987270C43E500F3BE57 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB880986270C43E500F3BE57 /* FeedViewController.swift */; };
 		EB88098D270C930B00F3BE57 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB88098C270C930B00F3BE57 /* PostViewController.swift */; };
 		EB88098F270CBF4400F3BE57 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB88098E270CBF4400F3BE57 /* PostTableViewCell.swift */; };
+		EB88950A271712DF00D73417 /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB889509271712DF00D73417 /* UserStruct.swift */; };
+		EB88950D2717252400D73417 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB88950C2717252400D73417 /* DataManager.swift */; };
+		EB8895102718A83B00D73417 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB88950F2718A83B00D73417 /* ValidationManager.swift */; };
+		EB8895152718C7FA00D73417 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8895142718C7FA00D73417 /* SignUpViewController.swift */; };
+		EB8895182719B54A00D73417 /* EditProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8895172719B54A00D73417 /* EditProfileInfoViewController.swift */; };
+		EBACC90A271DE2AF0001D14F /* CellConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACC909271DE2AF0001D14F /* CellConfigurationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +39,17 @@
 		EB6B6C6F27103AD300EE1DCB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EB6B6C7327105DAC00EE1DCB /* ProfilePostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostsTableViewCell.swift; sourceTree = "<group>"; };
 		EB6B6C7627107D4900EE1DCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EB880982270C3FB300F3BE57 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		EB880984270C3FC100F3BE57 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		EB880982270C3FB300F3BE57 /* UserDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatasource.swift; sourceTree = "<group>"; };
+		EB880984270C3FC100F3BE57 /* PostStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStruct.swift; sourceTree = "<group>"; };
 		EB880986270C43E500F3BE57 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EB88098C270C930B00F3BE57 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		EB88098E270CBF4400F3BE57 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		EB889509271712DF00D73417 /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
+		EB88950C2717252400D73417 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EB88950F2718A83B00D73417 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		EB8895142718C7FA00D73417 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EB8895172719B54A00D73417 /* EditProfileInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInfoViewController.swift; sourceTree = "<group>"; };
+		EBACC909271DE2AF0001D14F /* CellConfigurationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +85,8 @@
 				5EE6901A27037D7D00F5C170 /* Presentation */,
 				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
 				5EE6900E27036B9400F5C170 /* Info.plist */,
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
 				5EE6900927036B9400F5C170 /* Assets.xcassets */,
 				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
-				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
 			path = Lesson4;
 			sourceTree = "<group>";
@@ -84,7 +94,7 @@
 		5EE6901727037D3300F5C170 /* FeedPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				EB880980270C3F9D00F3BE57 /* Models */,
+				EB889507271712A500D73417 /* Structs */,
 				EB88097F270C3F9000F3BE57 /* Cells */,
 				EB88097E270C3F8700F3BE57 /* Controllers */,
 			);
@@ -94,6 +104,9 @@
 		5EE6901A27037D7D00F5C170 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EBACC908271DE29C0001D14F /* Helpers */,
+				EB88950B2717251400D73417 /* Model */,
+				EB8895062717127300D73417 /* View */,
 				EB6B6C752710743500EE1DCB /* UserLoginPresentation */,
 				EB88097D270C3DC500F3BE57 /* ProfilePresentation */,
 				5EE6901727037D3300F5C170 /* FeedPresentation */,
@@ -105,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6B6C6F27103AD300EE1DCB /* ProfileViewController.swift */,
+				EB8895172719B54A00D73417 /* EditProfileInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,7 +134,7 @@
 		EB6B6C752710743500EE1DCB /* UserLoginPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				EB6B6C7627107D4900EE1DCB /* LoginViewController.swift */,
+				EB8895132718C7C500D73417 /* Controllers */,
 			);
 			path = UserLoginPresentation;
 			sourceTree = "<group>";
@@ -128,6 +142,7 @@
 		EB88097D270C3DC500F3BE57 /* ProfilePresentation */ = {
 			isa = PBXGroup;
 			children = (
+				EB889508271712C300D73417 /* Structs */,
 				EB6B6C7127105D7B00EE1DCB /* Cells */,
 				EB6B6C6E27103ABF00EE1DCB /* Controllers */,
 				EB880981270C3FA500F3BE57 /* Models */,
@@ -152,20 +167,63 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		EB880980270C3F9D00F3BE57 /* Models */ = {
+		EB880981270C3FA500F3BE57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EB880984270C3FC100F3BE57 /* PostModel.swift */,
+				EB880982270C3FB300F3BE57 /* UserDatasource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EB880981270C3FA500F3BE57 /* Models */ = {
+		EB8895062717127300D73417 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EB880982270C3FB300F3BE57 /* UserModel.swift */,
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
-			path = Models;
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB889507271712A500D73417 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				EB880984270C3FC100F3BE57 /* PostStruct.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		EB889508271712C300D73417 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				EB889509271712DF00D73417 /* UserStruct.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		EB88950B2717251400D73417 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB88950C2717252400D73417 /* DataManager.swift */,
+				EB88950F2718A83B00D73417 /* ValidationManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB8895132718C7C500D73417 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B6C7627107D4900EE1DCB /* LoginViewController.swift */,
+				EB8895142718C7FA00D73417 /* SignUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EBACC908271DE29C0001D14F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EBACC909271DE2AF0001D14F /* CellConfigurationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,14 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBACC90A271DE2AF0001D14F /* CellConfigurationHelper.swift in Sources */,
 				EB88098F270CBF4400F3BE57 /* PostTableViewCell.swift in Sources */,
+				EB88950D2717252400D73417 /* DataManager.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
-				EB880985270C3FC100F3BE57 /* PostModel.swift in Sources */,
+				EB880985270C3FC100F3BE57 /* PostStruct.swift in Sources */,
 				EB88098D270C930B00F3BE57 /* PostViewController.swift in Sources */,
 				EB6B6C7427105DAC00EE1DCB /* ProfilePostsTableViewCell.swift in Sources */,
 				EB880987270C43E500F3BE57 /* FeedViewController.swift in Sources */,
-				EB880983270C3FB300F3BE57 /* UserModel.swift in Sources */,
+				EB88950A271712DF00D73417 /* UserStruct.swift in Sources */,
+				EB8895152718C7FA00D73417 /* SignUpViewController.swift in Sources */,
+				EB880983270C3FB300F3BE57 /* UserDatasource.swift in Sources */,
+				EB8895182719B54A00D73417 /* EditProfileInfoViewController.swift in Sources */,
 				EB6B6C7027103AD300EE1DCB /* ProfileViewController.swift in Sources */,
+				EB8895102718A83B00D73417 /* ValidationManager.swift in Sources */,
 				EB6B6C7727107D4900EE1DCB /* LoginViewController.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 			);

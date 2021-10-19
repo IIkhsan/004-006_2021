@@ -8,29 +8,34 @@
 import UIKit
 
 class PostViewController: UIViewController {
-
-    @IBOutlet weak var avatarImage: UIImageView!
+    //MARK: - IBOutlets
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
+    //MARK: - Vars
+    var post: Post?
+    //MARK: - UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configureDetails()
     }
-    func configure(avatarImage: String, name: String, postInfo: String, postImage: String, postText: String){
-        if postImage == "" {
-            self.postImage.image = nil
-        } else {
-            self.postImage.image = UIImage(named: postImage)
-        }
-        self.avatarImage.image = UIImage(named: avatarImage)
-        nameLabel.text = name
-        dateLabel.text = postInfo
-        postTextLabel.text = postText
-    }
-
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //MARK: - Post View Controller configuration methods
+    /// Configure PostViewController's IBOutlets
+    func configureDetails() {
+        guard let post = post else { return }
+        avatarImageView.image = UIImage(named: post.avatarImage)
+        nameLabel.text = post.name
+        dateLabel.text = post.date
+        postTextLabel.text = post.text
+        postImageView.image = UIImage(named: post.image)
+        
+    }
 }

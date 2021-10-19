@@ -8,33 +8,39 @@
 import UIKit
 
 class ProfilePostsTableViewCell: UITableViewCell {
-
+    //MARK: - IBOutlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var userPostImageViewConstraint: NSLayoutConstraint!
     
+    //MARK: - Table View Cell methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
-    func configure(avatarImage: String, name: String, date: String, postImage: String, postText: String){
-        if postImage == "" {
-            self.postImageView.image = nil
-        } else {
-            self.postImageView.image = UIImage(named: postImage)
+    
+    //MARK: - Cell configuration methods
+    /// Post cell's IBOutlets configure
+    /// - Parameter post: post to be displayed
+    func userPostConfigure(post: Post){
+        let cellConfigurationHelper: CellConfigurationHelper = CellConfigurationHelper()
+        avatarImageView.image = UIImage(named: post.avatarImage)
+        usernameLabel.text = post.name
+        dateLabel.text = post.date
+        postTextLabel.text = post.text
+        postImageView.image = cellConfigurationHelper.makePostImage(postImage: post.image)
+        
+        if post.image == "" {
+            userPostImageViewConstraint.constant = 0
         }
-        self.avatarImageView.image = UIImage(named: avatarImage)
-        usernameLabel.text = name
-        dateLabel.text = date
-        postTextLabel.text = postText
     }
 }

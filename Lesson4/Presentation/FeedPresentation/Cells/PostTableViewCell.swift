@@ -4,43 +4,38 @@
 //
 //  Created by Danil Gerasimov on 05.10.2021.
 //
-/*
- @IBOutlet weak var avatarImage: UIImageView!
- @IBOutlet weak var nameLabel: UILabel!
- @IBOutlet weak var postInfoLabel: UILabel!
- @IBOutlet weak var postImage: UIImageView!
- @IBOutlet weak var postTextLabel: UILabel!
- */
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var avatarImage: UIImageView!
+    //MARK: - IBOutlets
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var postImageViewConstraint: NSLayoutConstraint!
     
+    //MARK: - TableView cell's methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    func configure(avatarImage: String, name: String, date: String, postImage: String, postText: String){
-        if postImage == "" {
-            self.postImage.image = nil
-        } else {
-            self.postImage.image = UIImage(named: postImage)
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    //MARK: - Cell configuration methods
+    /// Confgiure  post cell's IBOutlets
+    /// - Parameter post: post to be displayed
+    func postConfigure(post: Post){
+        let cellConfigurationHelper:CellConfigurationHelper = CellConfigurationHelper()
+        avatarImageView.image = UIImage(named: post.avatarImage)
+        nameLabel.text = post.name
+        dateLabel.text = post.date
+        postTextLabel.text = post.text
+        postImageView.image = cellConfigurationHelper.makePostImage(postImage: post.image)
+        
+        if post.image == "" {
+            postImageViewConstraint.constant = 0
         }
-        self.avatarImage.image = UIImage(named: avatarImage)
-        nameLabel.text = name
-        dateLabel.text = date
-        postTextLabel.text = postText
     }
 }
