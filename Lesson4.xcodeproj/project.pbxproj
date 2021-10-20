@@ -9,25 +9,63 @@
 /* Begin PBXBuildFile section */
 		5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6900027036B9200F5C170 /* AppDelegate.swift */; };
 		5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6900227036B9200F5C170 /* SceneDelegate.swift */; };
-		5EE6900527036B9200F5C170 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6900427036B9200F5C170 /* ViewController.swift */; };
 		5EE6900827036B9200F5C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900627036B9200F5C170 /* Main.storyboard */; };
 		5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900927036B9400F5C170 /* Assets.xcassets */; };
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
-		5EE6901527037B1D00F5C170 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6901427037B1D00F5C170 /* TableViewCell.swift */; };
-		5EE6901C27037DC000F5C170 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6901B27037DC000F5C170 /* UserModel.swift */; };
+		E513AEFE271F6EA400B578D0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AEFD271F6EA400B578D0 /* Person.swift */; };
+		E513AF00271F6EB200B578D0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AEFF271F6EB200B578D0 /* Post.swift */; };
+		E513AF02271F6EC600B578D0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF01271F6EC600B578D0 /* Alert.swift */; };
+		E513AF04271F6EDF00B578D0 /* GeneratorForProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF03271F6EDF00B578D0 /* GeneratorForProfile.swift */; };
+		E513AF06271F6EF200B578D0 /* GeneratorForPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF05271F6EF200B578D0 /* GeneratorForPosts.swift */; };
+		E513AF08271F6F0500B578D0 /* ValidPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF07271F6F0500B578D0 /* ValidPassword.swift */; };
+		E513AF0A271F6F1B00B578D0 /* ValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF09271F6F1B00B578D0 /* ValidEmail.swift */; };
+		E513AF0C271F6F3600B578D0 /* SaverOfProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF0B271F6F3600B578D0 /* SaverOfProfile.swift */; };
+		E513AF0E271F6F5700B578D0 /* CheckerLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF0D271F6F5700B578D0 /* CheckerLogIn.swift */; };
+		E513AF10271F6F6C00B578D0 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF0F271F6F6C00B578D0 /* PostService.swift */; };
+		E513AF13271F6FB100B578D0 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E513AF12271F6FB100B578D0 /* General.storyboard */; };
+		E513AF15271F6FD900B578D0 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E513AF14271F6FD900B578D0 /* Registration.storyboard */; };
+		E513AF17271F700F00B578D0 /* ChangeStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E513AF16271F700F00B578D0 /* ChangeStatus.storyboard */; };
+		E513AF1B271F707E00B578D0 /* ChangeStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF1A271F707E00B578D0 /* ChangeStatusViewController.swift */; };
+		E513AF1F271F70E100B578D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF1E271F70E100B578D0 /* ViewController.swift */; };
+		E513AF22271F711800B578D0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF21271F711800B578D0 /* RegistrationViewController.swift */; };
+		E513AF25271F714600B578D0 /* ProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF24271F714600B578D0 /* ProfleViewController.swift */; };
+		E513AF27271F715900B578D0 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF26271F715900B578D0 /* ProfileTableViewCell.swift */; };
+		E513AF29271F717900B578D0 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF28271F717900B578D0 /* DetailProfileViewController.swift */; };
+		E513AF2C271F71D700B578D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2B271F71D700B578D0 /* FeedViewController.swift */; };
+		E513AF2E271F71E600B578D0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2D271F71E600B578D0 /* DetailViewCell.swift */; };
+		E513AF30271F71F600B578D0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2F271F71F600B578D0 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EE68FFD27036B9200F5C170 /* Lesson4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE6900027036B9200F5C170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE6900227036B9200F5C170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EE6900427036B9200F5C170 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EE6900727036B9200F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EE6900927036B9400F5C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE6900C27036B9400F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EE6901427037B1D00F5C170 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		5EE6901B27037DC000F5C170 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E513AEFD271F6EA400B578D0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E513AEFF271F6EB200B578D0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E513AF01271F6EC600B578D0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E513AF03271F6EDF00B578D0 /* GeneratorForProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorForProfile.swift; sourceTree = "<group>"; };
+		E513AF05271F6EF200B578D0 /* GeneratorForPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorForPosts.swift; sourceTree = "<group>"; };
+		E513AF07271F6F0500B578D0 /* ValidPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPassword.swift; sourceTree = "<group>"; };
+		E513AF09271F6F1B00B578D0 /* ValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidEmail.swift; sourceTree = "<group>"; };
+		E513AF0B271F6F3600B578D0 /* SaverOfProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverOfProfile.swift; sourceTree = "<group>"; };
+		E513AF0D271F6F5700B578D0 /* CheckerLogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerLogIn.swift; sourceTree = "<group>"; };
+		E513AF0F271F6F6C00B578D0 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		E513AF12271F6FB100B578D0 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
+		E513AF14271F6FD900B578D0 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		E513AF16271F700F00B578D0 /* ChangeStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeStatus.storyboard; sourceTree = "<group>"; };
+		E513AF1A271F707E00B578D0 /* ChangeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusViewController.swift; sourceTree = "<group>"; };
+		E513AF1E271F70E100B578D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E513AF21271F711800B578D0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		E513AF24271F714600B578D0 /* ProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfleViewController.swift; sourceTree = "<group>"; };
+		E513AF26271F715900B578D0 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		E513AF28271F717900B578D0 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
+		E513AF2B271F71D700B578D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E513AF2D271F71E600B578D0 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		E513AF2F271F71F600B578D0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +98,11 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6901A27037D7D00F5C170 /* Presentation */,
+				E513AEFC271F6E8500B578D0 /* Model */,
+				E513AF18271F703600B578D0 /* Conroller */,
+				E513AF11271F6F9700B578D0 /* View */,
 				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
 				5EE6900E27036B9400F5C170 /* Info.plist */,
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
 				5EE6900927036B9400F5C170 /* Assets.xcassets */,
 				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
 				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
@@ -71,30 +110,88 @@
 			path = Lesson4;
 			sourceTree = "<group>";
 		};
-		5EE6901727037D3300F5C170 /* FeedPresentation */ = {
+		E513AEFC271F6E8500B578D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6901427037B1D00F5C170 /* TableViewCell.swift */,
-				5EE6900427036B9200F5C170 /* ViewController.swift */,
-				5EE6901B27037DC000F5C170 /* UserModel.swift */,
+				E513AEFD271F6EA400B578D0 /* Person.swift */,
+				E513AEFF271F6EB200B578D0 /* Post.swift */,
+				E513AF01271F6EC600B578D0 /* Alert.swift */,
+				E513AF03271F6EDF00B578D0 /* GeneratorForProfile.swift */,
+				E513AF05271F6EF200B578D0 /* GeneratorForPosts.swift */,
+				E513AF07271F6F0500B578D0 /* ValidPassword.swift */,
+				E513AF09271F6F1B00B578D0 /* ValidEmail.swift */,
+				E513AF0B271F6F3600B578D0 /* SaverOfProfile.swift */,
+				E513AF0D271F6F5700B578D0 /* CheckerLogIn.swift */,
+				E513AF0F271F6F6C00B578D0 /* PostService.swift */,
 			);
-			path = FeedPresentation;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5EE6901927037D7000F5C170 /* UserSettingsPresentation */ = {
+		E513AF11271F6F9700B578D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E513AF12271F6FB100B578D0 /* General.storyboard */,
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				E513AF14271F6FD900B578D0 /* Registration.storyboard */,
+				E513AF16271F700F00B578D0 /* ChangeStatus.storyboard */,
 			);
-			path = UserSettingsPresentation;
+			path = View;
 			sourceTree = "<group>";
 		};
-		5EE6901A27037D7D00F5C170 /* Presentation */ = {
+		E513AF18271F703600B578D0 /* Conroller */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6901927037D7000F5C170 /* UserSettingsPresentation */,
-				5EE6901727037D3300F5C170 /* FeedPresentation */,
+				E513AF2A271F71BB00B578D0 /* Feeds */,
+				E513AF23271F712F00B578D0 /* Profile */,
+				E513AF20271F710500B578D0 /* Registration */,
+				E513AF1C271F709000B578D0 /* Elementary Screen */,
+				E513AF19271F706400B578D0 /* Change Status */,
 			);
-			path = Presentation;
+			path = Conroller;
+			sourceTree = "<group>";
+		};
+		E513AF19271F706400B578D0 /* Change Status */ = {
+			isa = PBXGroup;
+			children = (
+				E513AF1A271F707E00B578D0 /* ChangeStatusViewController.swift */,
+			);
+			path = "Change Status";
+			sourceTree = "<group>";
+		};
+		E513AF1C271F709000B578D0 /* Elementary Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E513AF1E271F70E100B578D0 /* ViewController.swift */,
+			);
+			path = "Elementary Screen";
+			sourceTree = "<group>";
+		};
+		E513AF20271F710500B578D0 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E513AF21271F711800B578D0 /* RegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		E513AF23271F712F00B578D0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E513AF24271F714600B578D0 /* ProfleViewController.swift */,
+				E513AF26271F715900B578D0 /* ProfileTableViewCell.swift */,
+				E513AF28271F717900B578D0 /* DetailProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E513AF2A271F71BB00B578D0 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				E513AF2B271F71D700B578D0 /* FeedViewController.swift */,
+				E513AF2D271F71E600B578D0 /* DetailViewCell.swift */,
+				E513AF2F271F71F600B578D0 /* CustomTableViewCell.swift */,
+			);
+			path = Feeds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +251,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E513AF17271F700F00B578D0 /* ChangeStatus.storyboard in Resources */,
+				E513AF15271F6FD900B578D0 /* Registration.storyboard in Resources */,
 				5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */,
 				5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */,
 				5EE6900827036B9200F5C170 /* Main.storyboard in Resources */,
+				E513AF13271F6FB100B578D0 /* General.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,11 +267,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE6900527036B9200F5C170 /* ViewController.swift in Sources */,
-				5EE6901527037B1D00F5C170 /* TableViewCell.swift in Sources */,
+				E513AEFE271F6EA400B578D0 /* Person.swift in Sources */,
+				E513AF0A271F6F1B00B578D0 /* ValidEmail.swift in Sources */,
+				E513AF08271F6F0500B578D0 /* ValidPassword.swift in Sources */,
+				E513AF30271F71F600B578D0 /* CustomTableViewCell.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
-				5EE6901C27037DC000F5C170 /* UserModel.swift in Sources */,
+				E513AF2C271F71D700B578D0 /* FeedViewController.swift in Sources */,
+				E513AF1F271F70E100B578D0 /* ViewController.swift in Sources */,
+				E513AF0E271F6F5700B578D0 /* CheckerLogIn.swift in Sources */,
+				E513AF0C271F6F3600B578D0 /* SaverOfProfile.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
+				E513AF10271F6F6C00B578D0 /* PostService.swift in Sources */,
+				E513AF29271F717900B578D0 /* DetailProfileViewController.swift in Sources */,
+				E513AF22271F711800B578D0 /* RegistrationViewController.swift in Sources */,
+				E513AF02271F6EC600B578D0 /* Alert.swift in Sources */,
+				E513AF27271F715900B578D0 /* ProfileTableViewCell.swift in Sources */,
+				E513AF00271F6EB200B578D0 /* Post.swift in Sources */,
+				E513AF25271F714600B578D0 /* ProfleViewController.swift in Sources */,
+				E513AF1B271F707E00B578D0 /* ChangeStatusViewController.swift in Sources */,
+				E513AF2E271F71E600B578D0 /* DetailViewCell.swift in Sources */,
+				E513AF04271F6EDF00B578D0 /* GeneratorForProfile.swift in Sources */,
+				E513AF06271F6EF200B578D0 /* GeneratorForPosts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				INFOPLIST_FILE = Lesson4/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,7 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				INFOPLIST_FILE = Lesson4/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

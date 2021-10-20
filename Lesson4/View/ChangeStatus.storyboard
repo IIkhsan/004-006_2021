@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="elt-5x-qrt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Change Status View Controller-->
+        <scene sceneID="0oh-6l-oLh">
+            <objects>
+                <viewController storyboardIdentifier="ChangeStatus" id="elt-5x-qrt" customClass="ChangeStatusViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pHp-1i-msq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Придумайте новый статус" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl4-GE-3JU">
+                                <rect key="frame" x="20" y="64" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxO-nI-8md">
+                                <rect key="frame" x="20" y="147" width="374" height="31"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить статус"/>
+                                <connections>
+                                    <action selector="changeStatusButton:" destination="elt-5x-qrt" eventType="touchUpInside" id="5Jz-Lq-LJE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-No-aQn">
+                                <rect key="frame" x="20" y="105" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jap-FS-UkS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZX7-No-aQn" firstAttribute="top" secondItem="Sl4-GE-3JU" secondAttribute="bottom" constant="20.5" id="720-Bf-91i"/>
+                            <constraint firstItem="Jap-FS-UkS" firstAttribute="trailing" secondItem="DxO-nI-8md" secondAttribute="trailing" constant="20" id="G8H-e4-xPs"/>
+                            <constraint firstItem="Sl4-GE-3JU" firstAttribute="leading" secondItem="Jap-FS-UkS" secondAttribute="leading" constant="20" id="MVt-91-zVJ"/>
+                            <constraint firstItem="Jap-FS-UkS" firstAttribute="trailing" secondItem="ZX7-No-aQn" secondAttribute="trailing" constant="20" id="Ohm-99-Yio"/>
+                            <constraint firstItem="DxO-nI-8md" firstAttribute="leading" secondItem="Jap-FS-UkS" secondAttribute="leading" constant="20" id="Rw2-gs-iZZ"/>
+                            <constraint firstItem="Jap-FS-UkS" firstAttribute="trailing" secondItem="Sl4-GE-3JU" secondAttribute="trailing" constant="20" id="fQj-Tc-8M4"/>
+                            <constraint firstItem="ZX7-No-aQn" firstAttribute="leading" secondItem="Jap-FS-UkS" secondAttribute="leading" constant="20" id="fh3-L3-jb1"/>
+                            <constraint firstItem="DxO-nI-8md" firstAttribute="top" secondItem="ZX7-No-aQn" secondAttribute="bottom" constant="8" symbolic="YES" id="gUF-EJ-GZJ"/>
+                            <constraint firstItem="Sl4-GE-3JU" firstAttribute="top" secondItem="Jap-FS-UkS" secondAttribute="top" constant="20" id="xKT-ki-3hx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeStatusButtonNoAction" destination="DxO-nI-8md" id="i5D-we-eLz"/>
+                        <outlet property="statusTextField" destination="ZX7-No-aQn" id="Fzx-V5-tTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hoe-PV-WWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
