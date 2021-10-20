@@ -7,6 +7,7 @@ class Database {
     
     init(){
         currentUser = users[0]
+        configure()
     }
     
     // MARK: - Properties
@@ -25,9 +26,28 @@ class Database {
                             .init(author: "Netflix", timestamp: "2 ч. назад", profilePicture: UIImage(named: "netflix") ?? UIImage(), content: "Отис и Руби — любимая пара третьего сезона среди поклонников сериала «Сексуальное просвещение».", contentPicture: UIImage(named: "sex") ?? UIImage()),
                          .init(author: "Медуза", timestamp: "1 ч. назад", profilePicture: #imageLiteral(resourceName: "meduza"), content: "ДАННОЕ СООБЩЕНИЕ (МАТЕРИАЛ) СОЗДАНО И (ИЛИ) РАСПРОСТРАНЕНО ИНОСТРАННЫМ СРЕДСТВОМ МАССОВОЙ ИНФОРМАЦИИ, ВЫПОЛНЯЮЩИМ ФУНКЦИИ ИНОСТРАННОГО АГЕНТА, И (ИЛИ) РОССИЙСКИМ ЮРИДИЧЕСКИМ ЛИЦОМ, ВЫПОЛНЯЮЩИМ ФУНКЦИИ ИНОСТРАННОГО АГЕНТА.", contentPicture: nil)]
     
-    var users: [User] = [.init(name: "unterlantas", email: "unterlantas@mail.ru", password: "Unterlantas1", profileImage: UIImage(named: "unterlantasava") ?? UIImage()),
-                         .init(name: "den4ik540", email: "den4ik540@mail.ru", password: "Den4ik5401", profileImage: UIImage(named: "den4ik540ava") ?? UIImage()),
-                         .init(name: "ilyas_kzn", email: "ilyas_kzn@mail.ru", password: "Ilyas_kzn1", profileImage: UIImage(named: "ilyas_kznava") ?? UIImage())]
+    var users: [User] = [.init(name: "unterlantas", email: "unterlantas@mail.ru", password: "Unterlantas1", profileImage: UIImage(named: "unterlantasava") ?? UIImage(), posts: []),
+                         .init(name: "den4ik540", email: "den4ik540@mail.ru", password: "Den4ik5401", profileImage: UIImage(named: "den4ik540ava") ?? UIImage(), posts: []),
+                         .init(name: "ilyas_kzn", email: "ilyas_kzn@mail.ru", password: "Ilyas_kzn1", profileImage: UIImage(named: "ilyas_kznava") ?? UIImage(), posts: [])]
+    
+    func configure() {
+        for i in 0...3 {
+            users[0].posts.append(posts[i])
+        }
+        
+        for i in 4...7 {
+            users[1].posts.append(posts[i])
+        }
+        
+        for i in 7...10 {
+            users[2].posts.append(posts[i])
+        }
+    }
+    
 }
 
-var data = Database()
+    var data = Database()
+
+
+
+    

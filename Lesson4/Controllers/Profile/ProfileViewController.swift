@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.image = data.currentUser.profileImage
-        profileImageView.layer.cornerRadius = 30
+        profileImageView.layer.cornerRadius = 50
     }
     
     override func viewDidAppear(_ animated: Bool) {

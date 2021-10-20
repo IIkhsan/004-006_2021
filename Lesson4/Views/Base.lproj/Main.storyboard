@@ -173,10 +173,10 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEC-T2-Jmy">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEC-T2-Jmy">
                                                             <rect key="frame" x="0.0" y="105" width="304" height="179"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="jEC-T2-Jmy" secondAttribute="height" multiplier="304:179" id="QfF-1J-zb0"/>
+                                                                <constraint firstAttribute="width" secondItem="jEC-T2-Jmy" secondAttribute="height" multiplier="304:179" id="zrI-YY-gwe"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>

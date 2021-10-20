@@ -9,16 +9,18 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
     
+    // MARK: - UI Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repasswordTextField: UITextField!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-  
+    // MARK: - Action
     @IBAction func createAccountAction(_ sender: UIButton) {
         let alertAlreadyExists = UIAlertController(title: "Ошибка", message: "Пользователь с указанным email уже существует", preferredStyle: .alert)
         alertAlreadyExists.addAction(UIAlertAction(title: "Ок", style: .cancel, handler: .none))
@@ -39,13 +41,19 @@ class RegistrationViewController: UIViewController {
         }
         
         if validation(email: email, password: password, repassword: repassword) {
-            data.users.append(User.init(name: name, email: email, password: password, profileImage: UIImage(named: "defaultava") ?? UIImage()))
+            var randomPosts: [Post] = []
+            for _ in 0...4 {
+                randomPosts.append(data.posts.randomElement() ?? data.posts[0])
+            }
+            
+            data.users.append(User.init(name: name, email: email, password: password, profileImage: UIImage(named: "defaultava") ?? UIImage(), posts: randomPosts))
             navigationController?.popToRootViewController(animated: true)
         } else {
             self.present(alertWrongParameters, animated: true)
         }
     }
     
+    // MARK: - Function
     func validation(email: String, password: String, repassword: String) -> Bool{
         let range = NSRange(location: 0, length: email.utf16.count)
         guard let regexForEmail = try? NSRegularExpression(pattern: "[A-Za-z0-9]@[A-Za-z0-9].[a-z]") else { return false }
