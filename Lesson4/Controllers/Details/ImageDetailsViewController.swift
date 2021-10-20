@@ -11,6 +11,7 @@ class ImageDetailsViewController: FeedDetailsViewController {
     }
     
     override func updateConstraint(_ constraint: NSLayoutConstraint) {
+        super.updateConstraint(constraint)
         let headerHeight: CGFloat = 100
         let imageHeight = contentImageView.frame.height
         let space: CGFloat = 100

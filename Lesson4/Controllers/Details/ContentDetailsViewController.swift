@@ -12,6 +12,7 @@ class ContentDetailsViewController: FeedDetailsViewController {
     }
     
     override func updateConstraint(_ constraint: NSLayoutConstraint) {
+        super.updateConstraint(constraint)
         let headerHeight: CGFloat = 100
         let contentHeight = contentLabel.frame.height
         constraint.constant = max(constraint.constant,

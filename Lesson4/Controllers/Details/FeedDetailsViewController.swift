@@ -29,5 +29,8 @@ class FeedDetailsViewController: UIViewController {
     }
     
     // TODO: (3) dynamic height for views
-    func updateConstraint(_ constraint: NSLayoutConstraint) {}
+    func updateConstraint(_ constraint: NSLayoutConstraint) {
+        // should be at most the view height at first
+       constraint.constant = min(constraint.constant, view.frame.height)
+    }
 }

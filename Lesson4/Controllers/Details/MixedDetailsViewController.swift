@@ -11,6 +11,7 @@ class MixedDetailsViewController: ContentDetailsViewController {
     }
     
     override func updateConstraint(_ constraint: NSLayoutConstraint) {
+        super.updateConstraint(constraint)
         let contentHeight = contentImageView.frame.height + contentLabel.frame.height + 50
         let headerHeight: CGFloat = 100
         let space: CGFloat = 100
