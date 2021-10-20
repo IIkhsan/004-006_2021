@@ -356,13 +356,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-5Z-Bpz">
-                                <rect key="frame" x="110" y="66" width="100" height="100"/>
+                                <rect key="frame" x="95" y="44" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NAd-5Z-Bpz" secondAttribute="height" multiplier="1:1" id="0jk-cf-y6K"/>
+                                    <constraint firstAttribute="width" constant="130" id="arb-T3-gMy"/>
+                                    <constraint firstAttribute="height" constant="130" id="iqu-fN-ITu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-6b-bCQ">
-                                <rect key="frame" x="110" y="182" width="100" height="20.5"/>
+                                <rect key="frame" x="95" y="182" width="130" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -372,10 +374,10 @@
                         <viewLayoutGuide key="safeArea" id="NY6-Q7-TDC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7RF-6b-bCQ" firstAttribute="top" secondItem="NAd-5Z-Bpz" secondAttribute="bottom" constant="16" id="0Ge-R6-qws"/>
-                            <constraint firstItem="NAd-5Z-Bpz" firstAttribute="top" secondItem="NY6-Q7-TDC" secondAttribute="top" constant="22" id="T7S-Nq-6ej"/>
+                            <constraint firstItem="7RF-6b-bCQ" firstAttribute="top" secondItem="NAd-5Z-Bpz" secondAttribute="bottom" constant="8" id="0Ge-R6-qws"/>
+                            <constraint firstItem="NAd-5Z-Bpz" firstAttribute="top" secondItem="NY6-Q7-TDC" secondAttribute="top" id="T7S-Nq-6ej"/>
                             <constraint firstItem="7RF-6b-bCQ" firstAttribute="trailing" secondItem="NAd-5Z-Bpz" secondAttribute="trailing" id="mMP-DK-5Hf"/>
-                            <constraint firstItem="NAd-5Z-Bpz" firstAttribute="leading" secondItem="NY6-Q7-TDC" secondAttribute="leading" constant="110" id="o75-Dr-oDV"/>
+                            <constraint firstItem="NAd-5Z-Bpz" firstAttribute="leading" secondItem="NY6-Q7-TDC" secondAttribute="leading" constant="95" id="o75-Dr-oDV"/>
                             <constraint firstItem="NAd-5Z-Bpz" firstAttribute="centerX" secondItem="e3d-Pa-A2G" secondAttribute="centerX" id="q2z-Z3-0Tf"/>
                             <constraint firstItem="7RF-6b-bCQ" firstAttribute="leading" secondItem="NAd-5Z-Bpz" secondAttribute="leading" id="vVv-fO-ApS"/>
                         </constraints>

@@ -31,15 +31,15 @@ class Database {
                          .init(name: "ilyas_kzn", email: "ilyas_kzn@mail.ru", password: "Ilyas_kzn1", profileImage: UIImage(named: "ilyas_kznava") ?? UIImage(), posts: [])]
     
     func configure() {
-        for i in 0...3 {
+        for i in 0...5 {
             users[0].posts.append(posts[i])
         }
         
-        for i in 4...7 {
+        for i in 4...9 {
             users[1].posts.append(posts[i])
         }
         
-        for i in 7...10 {
+        for i in 6...10 {
             users[2].posts.append(posts[i])
         }
     }
