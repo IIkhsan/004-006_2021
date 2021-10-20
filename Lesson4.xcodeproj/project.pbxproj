@@ -11,6 +11,10 @@
 		5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6900227036B9200F5C170 /* SceneDelegate.swift */; };
 		5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900927036B9400F5C170 /* Assets.xcassets */; };
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
+		74D32AF527203C8C00BBFF03 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D32AEF27203C8C00BBFF03 /* ProfileViewController.swift */; };
+		74D32AF627203C8C00BBFF03 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D32AF127203C8C00BBFF03 /* ProfileModel.swift */; };
+		74D32AF727203C8C00BBFF03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D32AF327203C8C00BBFF03 /* ProfileView.swift */; };
+		74D32AF827203C8C00BBFF03 /* Profile .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D32AF427203C8C00BBFF03 /* Profile .storyboard */; };
 		74DDFC1E272035A000919962 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC1D272035A000919962 /* DataGenerator.swift */; };
 		74DDFC20272035DA00919962 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC1F272035DA00919962 /* DataService.swift */; };
 		74DDFC4F2720368E00919962 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC242720368E00919962 /* DetailModel.swift */; };
@@ -29,10 +33,6 @@
 		74DDFC5C2720368E00919962 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC3B2720368E00919962 /* FeedViewController.swift */; };
 		74DDFC5D2720368E00919962 /* PostTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC3D2720368E00919962 /* PostTableViewCellDelegate.swift */; };
 		74DDFC5E2720368E00919962 /* FeedModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC3E2720368E00919962 /* FeedModelDelegate.swift */; };
-		74DDFC5F2720368E00919962 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC412720368E00919962 /* ProfileViewController.swift */; };
-		74DDFC602720368E00919962 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC432720368E00919962 /* ProfileModel.swift */; };
-		74DDFC612720368E00919962 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC452720368E00919962 /* ProfileView.swift */; };
-		74DDFC622720368E00919962 /* Profile .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDFC462720368E00919962 /* Profile .storyboard */; };
 		74DDFC632720368E00919962 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC492720368E00919962 /* LogInModel.swift */; };
 		74DDFC642720368E00919962 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDFC4B2720368E00919962 /* LogInView.swift */; };
 		74DDFC652720368E00919962 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDFC4C2720368E00919962 /* LogIn.storyboard */; };
@@ -49,6 +49,10 @@
 		5EE6900927036B9400F5C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE6900C27036B9400F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74D32AEF27203C8C00BBFF03 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		74D32AF127203C8C00BBFF03 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		74D32AF327203C8C00BBFF03 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		74D32AF427203C8C00BBFF03 /* Profile .storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Profile .storyboard"; sourceTree = "<group>"; };
 		74DDFC1D272035A000919962 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		74DDFC1F272035DA00919962 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		74DDFC242720368E00919962 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
@@ -67,10 +71,6 @@
 		74DDFC3B2720368E00919962 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		74DDFC3D2720368E00919962 /* PostTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		74DDFC3E2720368E00919962 /* FeedModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModelDelegate.swift; sourceTree = "<group>"; };
-		74DDFC412720368E00919962 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		74DDFC432720368E00919962 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		74DDFC452720368E00919962 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		74DDFC462720368E00919962 /* Profile .storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Profile .storyboard"; sourceTree = "<group>"; };
 		74DDFC492720368E00919962 /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		74DDFC4B2720368E00919962 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		74DDFC4C2720368E00919962 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
@@ -122,6 +122,41 @@
 			path = Lesson4;
 			sourceTree = "<group>";
 		};
+		74D32AED27203C8C00BBFF03 /* Profile  */ = {
+			isa = PBXGroup;
+			children = (
+				74D32AEE27203C8C00BBFF03 /* Controller */,
+				74D32AF027203C8C00BBFF03 /* Model */,
+				74D32AF227203C8C00BBFF03 /* View */,
+			);
+			path = "Profile ";
+			sourceTree = "<group>";
+		};
+		74D32AEE27203C8C00BBFF03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74D32AEF27203C8C00BBFF03 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		74D32AF027203C8C00BBFF03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74D32AF127203C8C00BBFF03 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74D32AF227203C8C00BBFF03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74D32AF327203C8C00BBFF03 /* ProfileView.swift */,
+				74D32AF427203C8C00BBFF03 /* Profile .storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		74DDFC1C2720358500919962 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,10 +169,10 @@
 		74DDFC212720360200919962 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				74D32AED27203C8C00BBFF03 /* Profile  */,
 				74DDFC222720368E00919962 /* Detail */,
 				74DDFC322720368E00919962 /* Feed */,
 				74DDFC472720368E00919962 /* Log In */,
-				74DDFC3F2720368E00919962 /* Profile  */,
 				74DDFC2A2720368E00919962 /* ProfileStatusEdit */,
 			);
 			path = Presentation;
@@ -258,41 +293,6 @@
 				74DDFC3E2720368E00919962 /* FeedModelDelegate.swift */,
 			);
 			path = DelegateProtocols;
-			sourceTree = "<group>";
-		};
-		74DDFC3F2720368E00919962 /* Profile  */ = {
-			isa = PBXGroup;
-			children = (
-				74DDFC402720368E00919962 /* Controller */,
-				74DDFC422720368E00919962 /* Model */,
-				74DDFC442720368E00919962 /* View */,
-			);
-			path = "Profile ";
-			sourceTree = "<group>";
-		};
-		74DDFC402720368E00919962 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				74DDFC412720368E00919962 /* ProfileViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		74DDFC422720368E00919962 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				74DDFC432720368E00919962 /* ProfileModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		74DDFC442720368E00919962 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				74DDFC452720368E00919962 /* ProfileView.swift */,
-				74DDFC462720368E00919962 /* Profile .storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		74DDFC472720368E00919962 /* Log In */ = {
@@ -416,7 +416,7 @@
 				5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */,
 				5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */,
 				74DDFC582720368E00919962 /* Feed.storyboard in Resources */,
-				74DDFC622720368E00919962 /* Profile .storyboard in Resources */,
+				74D32AF827203C8C00BBFF03 /* Profile .storyboard in Resources */,
 				74DDFC5A2720368E00919962 /* PostTableViewCell.xib in Resources */,
 				74DDFC562720368E00919962 /* PostStatusEdit.storyboard in Resources */,
 				74DDFC652720368E00919962 /* LogIn.storyboard in Resources */,
@@ -438,21 +438,21 @@
 				74DDFC522720368E00919962 /* DetailPostViewController.swift in Sources */,
 				74DDFC5E2720368E00919962 /* FeedModelDelegate.swift in Sources */,
 				74DDFC532720368E00919962 /* ProfileStatusEditDelegateProtocol.swift in Sources */,
+				74D32AF727203C8C00BBFF03 /* ProfileView.swift in Sources */,
 				74DDFC542720368E00919962 /* ProfileStatusEditViewController.swift in Sources */,
 				74DDFC552720368E00919962 /* ProfileStatusEditView.swift in Sources */,
 				74DDFC502720368E00919962 /* DetailView.swift in Sources */,
-				74DDFC5F2720368E00919962 /* ProfileViewController.swift in Sources */,
 				74DDFC5C2720368E00919962 /* FeedViewController.swift in Sources */,
-				74DDFC602720368E00919962 /* ProfileModel.swift in Sources */,
 				74DDFC4F2720368E00919962 /* DetailModel.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 				74DDFC6E272036D600919962 /* LayerManager.swift in Sources */,
+				74D32AF627203C8C00BBFF03 /* ProfileModel.swift in Sources */,
+				74D32AF527203C8C00BBFF03 /* ProfileViewController.swift in Sources */,
 				74DDFC20272035DA00919962 /* DataService.swift in Sources */,
 				74DDFC642720368E00919962 /* LogInView.swift in Sources */,
 				74DDFC5B2720368E00919962 /* FeedView.swift in Sources */,
 				74DDFC5D2720368E00919962 /* PostTableViewCellDelegate.swift in Sources */,
-				74DDFC612720368E00919962 /* ProfileView.swift in Sources */,
 				74DDFC572720368E00919962 /* FeedModel.swift in Sources */,
 				74DDFC592720368E00919962 /* PostTableViewCell.swift in Sources */,
 				74DDFC6C272036D600919962 /* User.swift in Sources */,
