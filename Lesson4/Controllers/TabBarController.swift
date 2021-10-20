@@ -8,8 +8,13 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
+    //   MARK: - Properties
+    
     var user:User?
+    
+    
+    //   MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +22,4 @@ class TabBarController: UITabBarController {
         navigationItem.hidesBackButton = true
         navigationItem.title = "Tveatter"
     }
-    
-
-    
 }

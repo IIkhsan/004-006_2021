@@ -9,17 +9,27 @@ import UIKit
 
 final class DataManager {
     
+    //   MARK: - Properties
+    
+    var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? defaultUsersNames
+    
+    
     //MARK: - Private properties
     
     private let texts: [String] = ["Помните, с какой уверенностью вы все говорите об увеличении производства, росте выпуска продукции? У нас в стране есть свои «знаменитости» в области экономики. Их имена прочно вошли в историю отечественной промышленности: Павел Дмитриевич Хохряков, Петр Васильевич Мосягин, Владимир Павлович Тихонов, Анатолий Георгиевич Сергеев, Виктор Семенович Комаров.",
                                    "Привет! Рада всем, кто заглянул на мой канал! Сегодня я покажу вам, как приготовить суп с чечевицей и нутом. Это очень вкусный и сытный суп, который готовится без мяса, но получается очень сытным.", "Ага! То есть мы сейчас пойдём и что-нибудь по дороге сожжём? – Нет, не стоит. Там, в лесу, осталось много чего интересного. Мы сейчас сходим туда, заберём, что нужно, а потом пойдём домой. Нам нужно успеть до заката, иначе мы не успеем вернуться засветло."]
     private let images:[UIImage] = [#imageLiteral(resourceName: "camera-1868773_1280"), #imageLiteral(resourceName: "201321061558118131"), #imageLiteral(resourceName: "mult-ava-instagram-2") , #imageLiteral(resourceName: "c13e60c5db62cea5b1f394883c7a90c7"), #imageLiteral(resourceName: "ryan-lepage"),#imageLiteral(resourceName: "1202399791_preview_15034743_1798112143788452_7709561090543190016_n")]
     
-    var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
-    
     private let postsCount = 10
     
     private var posts: [Post] = []
+    
+    
+    //   MARK: - Default users data
+    
+    static let defaultUsersNames = ["admin", "user2020", "helloWorld"]
+    static let defaultUsersEmails = ["admin@admin.ru", "username12@yandex.ru", "helloworld@google.com"]
+    static let defaultUsersPasswords = ["qwerty123", "solved500", "hello2world"]
     
     
     //MARK: - Get user data
@@ -30,9 +40,9 @@ final class DataManager {
             return nil
         }
         
-        let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
-        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? []
-        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? []
+        let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? defaultUsersNames
+        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? defaultUsersEmails
+        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? defaultUsersPasswords
         
         let user: User = User(username: usernames[userId], email: emails[userId], password: passwords[userId])
         
@@ -50,7 +60,7 @@ final class DataManager {
         guard let userId:Int = UserDefaults.standard.object(forKey: "currentUserId") as? Int
         else {return}
         
-        var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
+        var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? defaultUsersNames
         usernames[userId] = username
         
         UserDefaults.standard.set(usernames, forKey: "usernames")
@@ -60,7 +70,7 @@ final class DataManager {
         guard let userId:Int = UserDefaults.standard.object(forKey: "currentUserId") as? Int
         else {return}
         
-        var emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? []
+        var emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? defaultUsersEmails
         emails[userId] = email
         
         UserDefaults.standard.set(emails, forKey: "emails")
@@ -70,7 +80,7 @@ final class DataManager {
         guard let userId:Int = UserDefaults.standard.object(forKey: "currentUserId") as? Int
         else {return}
         
-        var passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? []
+        var passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? defaultUsersPasswords
         passwords[userId] = password
         
         UserDefaults.standard.set(passwords, forKey: "passwords")
@@ -94,7 +104,7 @@ final class DataManager {
     
     private func reloadCurrentUserName() -> [Post]{
         guard let userId = UserDefaults.standard.object(forKey: "currentUserId") as? Int else {return []}
-        let names:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
+        let names:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? DataManager.defaultUsersNames
         
         let newName = names[userId]
         for post in posts {

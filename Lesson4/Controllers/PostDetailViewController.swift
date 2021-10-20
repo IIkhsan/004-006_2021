@@ -11,7 +11,7 @@ import UIKit
 class PostDetailViewController: UIViewController {
     
     //    MARK: - Outlets
-
+    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postTextView: UITextView!
@@ -20,17 +20,16 @@ class PostDetailViewController: UIViewController {
     
     
     //    MARK: - Properties
-
+    
     var post: Post?
     
     
     //    MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
-        
         let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
             rect = rect.union(view.frame)
         }

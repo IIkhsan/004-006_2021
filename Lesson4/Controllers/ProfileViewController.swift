@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    
     //    MARK: - Properties
     
     var user:User?
@@ -26,6 +27,7 @@ class ProfileViewController: UIViewController {
         configure()
         navigationItem.title = "Профиль"
     }
+    
     
     //    MARK: - Actions
     
@@ -54,6 +56,9 @@ class ProfileViewController: UIViewController {
         emailLabel.text = user?.email
     }
 }
+
+
+//   MARK: - Delegate
 
 extension ProfileViewController: EditUserDelegate{
     func reloadUserData(user: User?) {

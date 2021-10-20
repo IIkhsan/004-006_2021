@@ -102,9 +102,9 @@ class SignUpViewController: UIViewController {
     
     private func saveUserData(user: User){
         
-        var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
-        var emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? []
-        var passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? []
+        var usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? DataManager.defaultUsersNames
+        var emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? DataManager.defaultUsersEmails
+        var passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? DataManager.defaultUsersPasswords
         
         usernames.append(user.username ?? "")
         emails.append(user.email ?? "")
@@ -124,6 +124,9 @@ class SignUpViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+
+//   MARK: - Delegate
 
 extension SignUpViewController: ValidatorDelegate{
     

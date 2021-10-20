@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     
     
     //    MARK: - Properties
-
+    
     var validator: Validator = Validator()
     
     
@@ -56,9 +56,9 @@ class SignInViewController: UIViewController {
     
     private func authorizeUser(_ username: String, _ password: String) -> User?{
         
-        let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? []
-        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? []
-        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? []
+        let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? DataManager.defaultUsersNames
+        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? DataManager.defaultUsersEmails
+        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? DataManager.defaultUsersPasswords
         
         guard let userId = usernames.firstIndex(of: username) else {
             showValidationAlert(message: "The password is wrong")
@@ -82,7 +82,11 @@ class SignInViewController: UIViewController {
     
 }
 
-extension SignInViewController:ValidatorDelegate{
+
+//   MARK: - Delegate
+
+extension SignInViewController: ValidatorDelegate{
+    
     func showValidationAlert(message: String) {
         
         let dismissAction = UIAlertAction(title: "Ок", style: .default, handler: {action in action.isEnabled = false})

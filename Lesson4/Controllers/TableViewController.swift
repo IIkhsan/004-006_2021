@@ -17,7 +17,6 @@ class TableViewController: UIViewController {
     //    MARK: - Private properties
     
     private let dataManager = DataManager()
-    
     private var posts:[Post] = []
     
     
@@ -88,21 +87,8 @@ extension TableViewController : UITableViewDataSource{
         navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let image = posts[indexPath.row].image
-//        guard let imageCrop = image?.cropImage() else {return tableView.frame.width}
-//        return tableView.frame.width / imageCrop
-//    }
 }
 
 extension TableViewController : UITableViewDelegate{
-   
+    
 }
-
-//extension UIImage{
-//    func cropImage() -> CGFloat {
-//        let widthRatio = CGFloat(self.size.width / self.size.height)
-//        return widthRatio
-//    }
-//}

@@ -14,9 +14,7 @@ protocol EditUserDelegate {
 
 class EditUserViewController: UIViewController {
     
-    var user:User?
-    var delegate: EditUserDelegate?
-    var validator:Validator = Validator()
+    //   MARK: - Outlets
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -24,16 +22,22 @@ class EditUserViewController: UIViewController {
     @IBOutlet weak var retypePasswordTextField: UITextField!
     
     
+    //   MARK: - Properties
+    
+    var user:User?
+    var delegate: EditUserDelegate?
+    var validator:Validator = Validator()
+    
+    
+    //   MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
-    func configure() {
-        usernameTextField.text = user?.username
-        emailTextField.text = user?.email
-        validator.delegate = self
-    }
+    
+    //   MARK: - Actions
     
     @IBAction func changeUsernameButtonPressed(_ sender: Any) {
         guard let delegate = delegate else {return}
@@ -75,15 +79,17 @@ class EditUserViewController: UIViewController {
     }
     
     
-    private func showValidationAlert(message: String?){
-        
-        let dismissAction = UIAlertAction(title: "Ок", style: .default, handler: {action in action.isEnabled = false})
-        let alertController = UIAlertController(title: "Валидация", message: message, preferredStyle: .alert)
-        alertController.addAction(dismissAction)
-        present(alertController, animated: true, completion: nil)
-        
+    //   MARK: - Functions
+    
+    func configure() {
+        usernameTextField.text = user?.username
+        emailTextField.text = user?.email
+        validator.delegate = self
     }
 }
+
+
+//   MARK: - Delegate
 
 extension EditUserViewController:ValidatorDelegate{
     
