@@ -41,10 +41,14 @@ class TextAndImageTableViewCell: UITableViewCell {
         
         if contentLabel.text == nil {
             contentLabel.isHidden = true
+        } else {
+            contentLabel.isHidden = false
         }
         
         if pictureImageView.image == nil {
             pictureImageView.isHidden = true
+        } else {
+            pictureImageView.isHidden = false
         }
     }
     
