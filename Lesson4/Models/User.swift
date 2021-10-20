@@ -8,7 +8,7 @@
 import UIKit
 
 struct User {
-    let username: String
+    let email: String
     let password: String
     let avatarImage: UIImage?
     let fullName: String

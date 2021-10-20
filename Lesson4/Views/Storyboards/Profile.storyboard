@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Username-->
+        <!--Email-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,7 +182,7 @@
                             <constraint firstItem="AXS-Uv-LSF" firstAttribute="leading" secondItem="6MZ-Ly-Mgr" secondAttribute="trailing" constant="15" id="yfb-HG-hx8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Username" id="H4P-uq-OaE">
+                    <navigationItem key="navigationItem" title="Email" id="H4P-uq-OaE">
                         <barButtonItem key="backBarButtonItem" title="            " id="Qip-OX-9Ly"/>
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="Q9N-UB-8VW">
                             <connections>
@@ -214,7 +214,7 @@
             </objects>
             <point key="canvasLocation" x="1936.2318840579712" y="113.31521739130436"/>
         </scene>
-        <!--Username-->
+        <!--Email-->
         <scene sceneID="f5S-YH-9fr">
             <objects>
                 <viewController storyboardIdentifier="EditProfileViewController" id="OUx-QY-074" customClass="EditProfileViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
@@ -389,7 +389,7 @@
                             <constraint firstItem="cfB-Kv-aw8" firstAttribute="leading" secondItem="dBT-Ud-SoU" secondAttribute="trailing" constant="15" id="zT4-09-jmN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Username" id="qYq-XO-lpc">
+                    <navigationItem key="navigationItem" title="Email" id="qYq-XO-lpc">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="2cu-Xu-Jt3">
                             <connections>
                                 <action selector="didTapSaveBarButton:" destination="OUx-QY-074" id="4FH-Id-n6m"/>

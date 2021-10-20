@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // Outlets
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     // Properties
@@ -48,12 +48,12 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func didTapLoginButton(_ sender: UIButton) {
-        let username = usernameTextField.text
+        let email = emailTextField.text
         let password = passwordTextField.text
-        let user = users.filter({ $0.username == username }).first
+        let user = users.filter({ $0.email == email }).first
         
         guard let user = user else {
-            showOkAlert(title: "Wrong login", description: "User with such username is not found")
+            showOkAlert(title: "Wrong login", description: "User with such email is not found")
             return
         }
         

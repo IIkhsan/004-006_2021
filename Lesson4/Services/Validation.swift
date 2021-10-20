@@ -40,19 +40,19 @@ extension NSRegularExpression {
 
 protocol CanValidateData {
     
-    func validate(fullName: String, username: String?, password: String?, confirmedPassword: String?) -> (String, String)?
+    func validate(fullName: String, email: String?, password: String?, confirmedPassword: String?) -> (String, String)?
 }
 
 extension CanValidateData {
     
-    func validate(fullName: String, username: String?, password: String?, confirmedPassword: String?) -> (String, String)? {
+    func validate(fullName: String, email: String?, password: String?, confirmedPassword: String?) -> (String, String)? {
         guard fullName.split(separator: " ").count > 1,
               fullName.count > 0 else {
             return ("Full name field is incorrect",
                     "Please enter your full name, separating the first and last names with a space")
         }
-        if let username = username, !isValidEmail(username) {
-            return ("Username must be valid email", "Please try again")
+        if let email = email, !isValidEmail(email) {
+            return ("email must be valid email", "Please try again")
         }
         if let password = password, let confirmedPassword = confirmedPassword {
             guard isValidPassword(password) else {

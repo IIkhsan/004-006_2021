@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController, ForUser {
     private func configureUserData() {
         guard let user = user else { return }
         
-        navigationItem.title = user.username
+        navigationItem.title = user.email
         
         avatarImageView.image = user.avatarImage
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height / 2

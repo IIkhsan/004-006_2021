@@ -41,7 +41,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-7x-ytD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-7x-ytD">
                                 <rect key="frame" x="30" y="387" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -75,8 +75,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="Q8Z-7x-ytD" id="arg-jM-diU"/>
                         <outlet property="passwordTextField" destination="yED-p1-1u2" id="4WC-uq-2ey"/>
-                        <outlet property="usernameTextField" destination="Q8Z-7x-ytD" id="Ge9-fi-Mgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy6-Ea-Ibh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +112,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-ye-5Ng">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-ye-5Ng">
                                         <rect key="frame" x="0.0" y="42" width="384" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -184,11 +184,11 @@
                         <outlet property="confirmPasswordTextField" destination="Ny9-o0-5lC" id="Zod-UH-cfN"/>
                         <outlet property="countOfFriendsTextField" destination="h2H-hN-GsE" id="3d0-ih-ipA"/>
                         <outlet property="educationTextField" destination="J02-R8-GdI" id="VJb-B3-TvH"/>
+                        <outlet property="emailTextField" destination="fO0-ye-5Ng" id="wQ3-Dh-KqK"/>
                         <outlet property="followersCountTextField" destination="5e2-35-fg3" id="urA-pY-S4V"/>
                         <outlet property="fullNameTextField" destination="MRT-a1-qqN" id="Wsg-Py-8bx"/>
                         <outlet property="passwordTextField" destination="XNU-2c-jy9" id="qow-dD-SGY"/>
                         <outlet property="statusTextField" destination="BdI-ip-y8C" id="siD-rW-wYw"/>
-                        <outlet property="usernameTextField" destination="fO0-ye-5Ng" id="fmb-LV-ywv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDt-ex-Ium" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

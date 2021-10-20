@@ -12,7 +12,7 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
     // Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var countOfFriendsTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var educationTextField: UITextField!
@@ -36,9 +36,9 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
     // MARK: - Actions
     
     @IBAction func didTapSignUpButton(_ sender: UIButton) {
-        guard let fullName = fullNameTextField.text, let username = usernameTextField.text,
+        guard let fullName = fullNameTextField.text, let email = emailTextField.text,
               let password = passwordTextField.text, let confirmedPassword = confirmPasswordTextField.text else { return }
-        if let (alertTitle, alertDescription) = validate(fullName: fullName, username: username,
+        if let (alertTitle, alertDescription) = validate(fullName: fullName, email: email,
                                                password: password, confirmedPassword: confirmedPassword) {
             showOkAlert(title: alertTitle, description: alertDescription)
             return
@@ -46,7 +46,7 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
         guard let loginViewController = navigationController?.viewControllers.first as? LoginViewController else { return }
         
         let newUser = User(
-            username: username, password: password,
+            email: email, password: password,
             avatarImage: avatarImageView.image, fullName: fullName,
             status: statusTextField.text, lastActivity: "Online",
             friendsCount: countOfFriendsTextField.text,

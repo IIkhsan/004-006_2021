@@ -45,7 +45,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
     private func configureUserData() {
         guard let user = user else { return }
         
-        navigationItem.title = user.username
+        navigationItem.title = user.email
         
         avatarImageView.image = user.avatarImage
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height / 2
@@ -83,13 +83,13 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
     
     @IBAction func didTapSaveBarButton(_ sender: UIBarButtonItem) {
         guard let fullName = fullNameTextField.text else { return }
-        if let (title, description) = validate(fullName: fullName, username: nil, password: nil, confirmedPassword: nil) {
+        if let (title, description) = validate(fullName: fullName, email: nil, password: nil, confirmedPassword: nil) {
             showOkAlert(title: title, description: description)
             return
         }
         
         let updatedUser = User(
-            username: user?.username ?? "", password: user?.password ?? "",
+            email: user?.email ?? "", password: user?.password ?? "",
             avatarImage: avatarImageView.image, fullName: fullName,
             status: statusTextField.text, lastActivity: lastActivityTextField.text,
             friendsCount: friendsCountTextField.text, city: cityTextField.text,
