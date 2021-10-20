@@ -35,7 +35,7 @@ struct AuthManager {
     func silentLogin() {
         delegate?.startLoading(self)
         
-        K.delay(bySeconds: 0.5) {
+        AppConstants.delay(bySeconds: 0.5) {
             
             let user = authService.silentLogin()
             
@@ -54,7 +54,7 @@ struct AuthManager {
         delegate?.startLoading(self)
         
         // mock internet connection
-        K.delay(bySeconds: 1.5, closure: {
+        AppConstants.delay(bySeconds: 1.5, closure: {
             // get data and return user
             let user = authService.login(email: email, password: password)
             

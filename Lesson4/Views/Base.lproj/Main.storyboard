@@ -889,19 +889,19 @@
     </scenes>
     <designables>
         <designable name="RVV-rH-DYV">
-            <size key="intrinsicContentSize" width="69.5" height="24"/>
+            <size key="intrinsicContentSize" width="95.5" height="20"/>
         </designable>
         <designable name="Wk5-o9-Tjn">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="48" height="34"/>
         </designable>
         <designable name="nPS-y1-Nc6">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="48" height="34"/>
         </designable>
         <designable name="qCX-if-Up4">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="48" height="34"/>
         </designable>
         <designable name="vXF-VF-16D">
-            <size key="intrinsicContentSize" width="48.5" height="25.5"/>
+            <size key="intrinsicContentSize" width="74.5" height="21.5"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

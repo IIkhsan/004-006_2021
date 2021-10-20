@@ -31,11 +31,11 @@ class ProfileViewController: UIViewController, UserIdentifiable {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.gotoAuth {
+        if segue.identifier == AppConstants.gotoAuth {
             if let authVC = segue.destination as? AuthViewController {
                 authVC.autoLogin = false
             }
-        } else if segue.identifier == K.gotoProfileEdit {
+        } else if segue.identifier == AppConstants.gotoProfileEdit {
             if let editProfileVC = segue.destination as? EditProfileViewController {
                 editProfileVC.user = sender as? User
                 editProfileVC.delegate = self
@@ -46,11 +46,11 @@ class ProfileViewController: UIViewController, UserIdentifiable {
     // MARK: - IBActions
     
     @IBAction func onEditProfilePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.gotoProfileEdit, sender: user)
+        performSegue(withIdentifier: AppConstants.gotoProfileEdit, sender: user)
     }
     
     @IBAction func onLogoutPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.gotoAuth, sender: nil)
+        performSegue(withIdentifier: AppConstants.gotoAuth, sender: nil)
     }
     
     // MARK: - Helper functions
@@ -82,7 +82,7 @@ extension ProfileViewController: ProfileViewControllerDelegate {
         // update the data
         updateUserInfo()
         
-        K.delay(bySeconds: 0.6) { [weak self] in
+        AppConstants.delay(bySeconds: 0.6) { [weak self] in
             DispatchQueue.main.async {
                 // create the alert
                 let alert = UIAlertController(title: "Delegate Called",

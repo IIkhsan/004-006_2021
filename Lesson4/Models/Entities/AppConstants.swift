@@ -1,5 +1,5 @@
 //
-//  K.swift
+//  Constants.swift
 //  Lesson4
 //
 //  Created by Evans Owamoyo on 13.10.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct K {
+struct AppConstants {
     // MARK: - segue identifiers
     static let gotoMain = "gotoMain"
     static let gotoAuth = "gotoAuth"

@@ -55,7 +55,7 @@ struct FeedsService {
     
     // MARK: - public interface functions
     public func getFeeds(for userId: String, completion: @escaping (([Feed]) -> Void)) {
-        K.delay(bySeconds: 3) {
+        AppConstants.delay(bySeconds: 3) {
             completion(feeds[userId] ?? [])
         }
     }

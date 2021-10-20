@@ -27,9 +27,9 @@ class FeedsViewController: UIViewController, UserIdentifiable {
         getFeeds(for: user)
         
         // register cells with their identifiers
-        registerNib(K.feedCell, with: K.feedCell)
-        registerNib(K.feedCell_Image, with: K.feedCell_Image)
-        registerNib(K.feedCell_Content, with: K.feedCell_Content)
+        registerNib(AppConstants.feedCell, with: AppConstants.feedCell)
+        registerNib(AppConstants.feedCell_Image, with: AppConstants.feedCell_Image)
+        registerNib(AppConstants.feedCell_Content, with: AppConstants.feedCell_Content)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,7 +57,7 @@ class FeedsViewController: UIViewController, UserIdentifiable {
             
             // create action
             let action1 = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-                if let authVC = self?.storyboard?.instantiateViewController(withIdentifier: K.authVC) {
+                if let authVC = self?.storyboard?.instantiateViewController(withIdentifier: AppConstants.authVC) {
                     DispatchQueue.main.async {
                         self?.navigationController?.setViewControllers([authVC], animated: true)
                     }
@@ -94,11 +94,11 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
         let feed = feeds[indexPath.row]
         switch feed.type {
             case .imageOnly:
-                performSegue(withIdentifier: K.gotoImageDetails, sender: feed)
+                performSegue(withIdentifier: AppConstants.gotoImageDetails, sender: feed)
             case .contentOnly:
-                performSegue(withIdentifier: K.gotoContentDetails, sender: feed)
+                performSegue(withIdentifier: AppConstants.gotoContentDetails, sender: feed)
             case .both:
-                performSegue(withIdentifier: K.gotoDetails, sender: feed)
+                performSegue(withIdentifier: AppConstants.gotoDetails, sender: feed)
         }
     }
     
@@ -106,9 +106,9 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
         let feed = feeds[indexPath.row]
         let cell: FeedCellDelegate?
         switch feed.type {
-            case .contentOnly: cell = getFeedCell(withIdentifier: K.feedCell_Content, for: indexPath, as: FeedCell_Content.self)
-            case .imageOnly: cell = getFeedCell(withIdentifier: K.feedCell_Image, for: indexPath, as: FeedCell_Image.self)
-            case .both: cell = getFeedCell(withIdentifier: K.feedCell, for: indexPath, as: FeedCell.self)
+            case .contentOnly: cell = getFeedCell(withIdentifier: AppConstants.feedCell_Content, for: indexPath, as: FeedCell_Content.self)
+            case .imageOnly: cell = getFeedCell(withIdentifier: AppConstants.feedCell_Image, for: indexPath, as: FeedCell_Image.self)
+            case .both: cell = getFeedCell(withIdentifier: AppConstants.feedCell, for: indexPath, as: FeedCell.self)
         }
         
         if let cell = cell {

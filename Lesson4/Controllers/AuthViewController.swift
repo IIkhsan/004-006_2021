@@ -39,7 +39,7 @@ class AuthViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // cherry pick the segue to the main screen
-        if segue.identifier == K.gotoMain {
+        if segue.identifier == AppConstants.gotoMain {
             
             // guard against optional values
             guard let tabVC = segue.destination as? UITabBarController,
@@ -114,7 +114,7 @@ extension AuthViewController: AuthManagerDelegate {
     
     func authenticated(_ manager: AuthManager, as user: User?) {
         if let user = user {
-            performSegue(withIdentifier: K.gotoMain, sender: user)
+            performSegue(withIdentifier: AppConstants.gotoMain, sender: user)
         } else {
             Validator.shared.showError("Username or password is incorrect or user does not exist", from: self)
         }
