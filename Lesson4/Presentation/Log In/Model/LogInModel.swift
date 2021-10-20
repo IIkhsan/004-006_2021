@@ -33,10 +33,8 @@ class LogInModel {
             let range = NSRange(location: 0, length: password.utf16.count)
             let regexLength = try NSRegularExpression(pattern: lengthPattern, options: [])
             if regexLength.firstMatch(in: password, options: [], range: range) == nil {
-                print(false)
                 return (false, "Password must be longer than 6 symbols")
             }
-            print(true)
             let regexLatinSymbols = try NSRegularExpression(pattern: latinSymbolsOnlyPattern, options: [])
             if regexLatinSymbols.firstMatch(in: password, options: [], range: range) == nil {
                 return (false, "Password must contain only latin symbols")
