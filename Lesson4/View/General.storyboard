@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -253,7 +253,7 @@
                             <rect key="frame" x="86" y="62.666666666666671" width="17.333333333333329" height="20.000000000000007"/>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nBt-Te-q54">
-                            <rect key="frame" x="8" y="202" width="30" height="29.333333333333343"/>
+                            <rect key="frame" x="8" y="202.66666666666669" width="30" height="29.333333333333343"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="Pii-pZ-L6H"/>
                                 <constraint firstAttribute="height" constant="30" id="xX8-DY-n4j"/>
@@ -266,8 +266,8 @@
                                 <constraint firstAttribute="height" constant="30" id="m3m-Wj-ISA"/>
                             </constraints>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot.radiowaves.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7LV-cc-K2D">
-                            <rect key="frame" x="8" y="265.33333333333331" width="30" height="24.333333333333314"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave.3.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7LV-cc-K2D">
+                            <rect key="frame" x="8" y="264" width="30" height="27.000000000000028"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="6nT-gl-0WE"/>
                                 <constraint firstAttribute="height" constant="30" id="g2u-oq-ItN"/>
@@ -292,23 +292,22 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-8T-TT5">
-                            <rect key="frame" x="106.33333333333334" y="63" width="287.66666666666663" height="18"/>
+                            <rect key="frame" x="106.33333333333334" y="64" width="287.66666666666663" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Придумайте себе статус" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSh-Ck-oba">
-                            <rect key="frame" x="8" y="90" width="398" height="20.333333333333329"/>
+                            <rect key="frame" x="8" y="91" width="398" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIQ-up-fmN">
-                            <rect key="frame" x="8" y="165" width="398" height="31"/>
+                            <rect key="frame" x="8" y="166" width="398" height="30"/>
                             <color key="backgroundColor" name="AccentColor"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Изменить статус"/>
+                            <state key="normal" title="Изменить статус"/>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="0XM-xQ-f5x"/>
@@ -317,6 +316,7 @@
                         <constraint firstAttribute="trailing" secondItem="TQC-Wh-HEK" secondAttribute="trailing" constant="20" id="128-0f-IOs"/>
                         <constraint firstItem="OHS-8T-TT5" firstAttribute="leading" secondItem="VAK-58-V0c" secondAttribute="trailing" constant="3" id="410-BD-yeQ"/>
                         <constraint firstAttribute="bottom" secondItem="ndI-f6-7PL" secondAttribute="bottom" constant="11" id="6LK-8r-oH0"/>
+                        <constraint firstItem="OHS-8T-TT5" firstAttribute="top" secondItem="TQC-Wh-HEK" secondAttribute="bottom" constant="29" id="8K0-tM-79E"/>
                         <constraint firstAttribute="trailing" secondItem="Rh3-gK-gJW" secondAttribute="trailing" constant="20" id="9w7-Ej-pW7"/>
                         <constraint firstItem="v6w-tu-ffY" firstAttribute="leading" secondItem="et4-zV-yFo" secondAttribute="leading" constant="8" id="G5o-Yy-xxs"/>
                         <constraint firstItem="7LV-cc-K2D" firstAttribute="leading" secondItem="et4-zV-yFo" secondAttribute="leading" constant="8" id="KOW-fw-WFD"/>
@@ -345,7 +345,6 @@
                         <constraint firstItem="O99-lw-Kfq" firstAttribute="leading" secondItem="et4-zV-yFo" secondAttribute="leading" constant="8" id="r4e-t8-vd1"/>
                         <constraint firstItem="TQC-Wh-HEK" firstAttribute="top" secondItem="et4-zV-yFo" secondAttribute="top" constant="11" id="rsn-Qc-uua"/>
                         <constraint firstItem="QyR-ni-02L" firstAttribute="leading" secondItem="v6w-tu-ffY" secondAttribute="trailing" constant="17" id="sxw-2A-viT"/>
-                        <constraint firstItem="OHS-8T-TT5" firstAttribute="top" secondItem="TQC-Wh-HEK" secondAttribute="bottom" constant="28" id="w1G-72-TPC"/>
                     </constraints>
                 </view>
             </objects>
@@ -481,7 +480,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="448" id="2eo-hr-Dk0" customClass="CustomTableViewCell" customModule="Lesson4">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="448"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="448"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2eo-hr-Dk0" id="ctC-yy-AZP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
@@ -589,12 +588,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dot.radiowaves.up.forward" catalog="system" width="128" height="112"/>
         <image name="graduationcap" catalog="system" width="128" height="106"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="iphone.homebutton" catalog="system" width="108" height="128"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="wave.3.right" catalog="system" width="84" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
