@@ -14,6 +14,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postAccountImg: UIImageView!
     @IBOutlet weak var postAccountName: UILabel!
     @IBOutlet weak var postAccountStatus: UILabel!
+
     
     
     override func awakeFromNib() {

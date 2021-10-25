@@ -51,8 +51,9 @@ class User {
         thirdUser.posts.append(Post(image: UIImage.init(named: "stephjianni_photo_6"), text: nil))
         thirdUser.posts.append(Post(image: nil, text: "Where’s Waldo but Waldo wearing a more modern shade of mustard?"))
         thirdUser.posts.append(Post(image: nil, text: "❤️ I’m so lucky to have found you in this crazy world. There will never be enough words to tell you how much I love you. You are unlike anyone else I’ve ever known and I’m so grateful to get to spend this life with you. I can’t wait to see what this next year has in store and I know that all your amazing hard work will continue to pay off in ways we couldn’t even imagine! Thank you for continually making me laugh, for being my forever dance partner and for always being there no matter what life throws our way. Life isn’t always rainbows and sunshine, but with you, it’s pretty darn close."))
-
     }
+    
+    static var loggedInUser: User  = User.all_users[2]
     
     var name: String
     var profileImg: UIImage

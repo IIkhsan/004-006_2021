@@ -21,8 +21,6 @@ class InstagramFeed: UIViewController {
         addRandomPosts()
         
     }
-    
-
 }
 
 extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{

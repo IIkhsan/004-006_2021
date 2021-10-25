@@ -24,7 +24,7 @@ class ProfileFeed: UIViewController {
 extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return User.loggedInUser.posts.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +37,14 @@ extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
             }
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "accountInformation") as! AccountInformationTableViewCell
+        let user = User.loggedInUser
+        let post = user.posts[indexPath.row - 2]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardProfilePost") as! PostTableViewCell
+        cell.postText?.text = post.text
+        cell.postImg?.image = post.image
+        cell.postAccountName.text = user.name
+        cell.postAccountImg.image = user.profileImg
+        cell.postAccountStatus.text = user.status
         return cell
     }
     
@@ -50,6 +57,10 @@ extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
                 return 150
             }
         }
-        return 250
+        
+        if User.loggedInUser.posts[indexPath.row - 2].image != nil {
+            return 650
+        }
+        return 200
     }
 }
