@@ -21,7 +21,7 @@ class AccountInformationTableViewCell: UITableViewCell {
         accountImg.layer.cornerRadius = accountImg.frame.height  / 2
         editButton.layer.cornerRadius = 8
         
-        let loggedInUser = User.loggedInUser
+        let loggedInUser = User.all_users[User.loggedInUserId]
         
         accountImg.image = loggedInUser.profileImg
         accountName.text = loggedInUser.name

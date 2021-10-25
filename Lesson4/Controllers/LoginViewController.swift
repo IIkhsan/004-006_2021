@@ -52,6 +52,11 @@ class LoginViewController: UIViewController {
             getAlert(title: "Ошибка входа", message: "Неверный логин или пароль!")
             return
         }
+        User.setLoggedInUserId(mail: loginTextField.text ?? " ")
+    }
+    
+    @IBAction func getUsersPassword(_ sender: Any) {
+        getAlert(title: "Пароли", message: "tattebakery@yandex.ru : pwwEQ5mL\n brianmcw@mail.ru : 7sfqCKYN\n stephjianni@gmail.com : JpS8nFEd")
     }
     
     func getAlert(title: String, message: String) {

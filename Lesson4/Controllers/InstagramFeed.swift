@@ -51,8 +51,10 @@ extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{
     
     func addRandomPosts() {
         for _ in 0..<Int.random(in: 7...18) {
-            let randomUser = User.all_users[Int.random(in: 0..<User.all_users.count)]
-            let randomPost = randomUser.posts[Int.random(in: 0..<randomUser.posts.count)]
+            let randomUserID = Int.random(in: 0..<User.all_users.count)
+            let randomUser = User.all_users[randomUserID]
+            let countOfRandomUserPosts = User.all_posts[randomUserID].count
+            let randomPost = User.all_posts[randomUserID][Int.random(in: 0..<countOfRandomUserPosts)]
             allPosts.append(randomPost)
             usersInOrder.append(randomUser)
         }
