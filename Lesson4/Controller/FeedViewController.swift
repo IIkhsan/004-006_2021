@@ -9,42 +9,51 @@ import UIKit
 
 class FeedViewController: UITableViewController {
     
+    // MARK: - Properties
+    var dataManager = DataManager()
     var user: User!
-    
-    var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        posts.append(Post(authorName: "Alex", authorAvatar: #imageLiteral(resourceName: "Image-3"), text: "Александр Усик победил Энтони Джошуа и стал чемпионом мира в супертяжёлом Бой, прошедший в Лондоне, продлился все 12 раундов. Все трое судей отдали Усику - 117:112, 116:112, 115:113. Таким образом, Усик завоевал титул мира по версиям Всемирной боксёрской ассоциации (WBA), Всемирной боксёрской  (WBO), Международной федерации (IBF) и боксёрской организации (IBO) в супертяжёлом весе.", image: nil))
-        posts.append(Post(authorName: "Alex", authorAvatar: #imageLiteral(resourceName: "Image-3"), text: "Александр Усик победил Энтони Джошуа и стал чемпионом мира в супертяжёлом Бой, прошедший в Лондоне, продлился все 12 раундов. Все трое судей отдали Усику - 117:112, 116:112, 115:113. Таким образом, Усик завоевал титул мира по версиям Всемирной боксёрской ассоциации (WBA), Всемирной боксёрской  (WBO), Международной федерации (IBF) и боксёрской организации (IBO) в супертяжёлом весе.", image: #imageLiteral(resourceName: "Image-3")))
-        posts.append(Post(authorName: "Alex", authorAvatar: #imageLiteral(resourceName: "Image-2"), text: nil, image: #imageLiteral(resourceName: "Image-2")))
-        posts.append(Post(authorName: "Alex", authorAvatar: #imageLiteral(resourceName: "Image-3"), text: nil, image: #imageLiteral(resourceName: "Image-1")))
-        
         tableView.registerCustomCell(PostTableViewCell.self)
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return user.posts?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.cellIdentifier(), for: indexPath) as? PostTableViewCell else { return PostTableViewCell()}
         
-        let post = posts[indexPath.row]
-
+        guard let post = user.posts?[indexPath.row] else{
+            return cell
+        }
         cell.configure(with: post)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = user.posts?[indexPath.row]
+        
+        let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsViewController.post = post
+        
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsViewController", let post = sender as? Post {
+            let destinationController = segue.destination as? DetailsViewController
+            
+            destinationController?.post = post
+        }
+    }
 }
 
-protocol CustomCell {
-    
-    static func cellIdentifier() -> String
-    
-    static func cellNib() -> UINib?
-}
-
+// MARK: - Extenstion realization protocol CUSTOMCELL
 extension UITableView{
     func registerCustomCell(_ cell: CustomCell.Type) {
         self.register(cell.cellNib(), forCellReuseIdentifier: cell.cellIdentifier())

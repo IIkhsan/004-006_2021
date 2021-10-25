@@ -13,7 +13,13 @@
 		5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900927036B9400F5C170 /* Assets.xcassets */; };
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
 		5EE6901C27037DC000F5C170 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6901B27037DC000F5C170 /* User.swift */; };
-		A262F6DE27064CEF00216B02 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F6DD27064CEF00216B02 /* LoginViewController.swift */; };
+		A213C6B3271C5AE80053AC5D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213C6B2271C5AE80053AC5D /* DetailsViewController.swift */; };
+		A213C6B5271C67530053AC5D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213C6B4271C67530053AC5D /* ProfileViewController.swift */; };
+		A216C62D271D4F0800D826D1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216C62C271D4F0800D826D1 /* DataManager.swift */; };
+		A223307B2721B33500FC5AA0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A223307A2721B33500FC5AA0 /* Validation.swift */; };
+		A223307E2721CAE700FC5AA0 /* ProfileEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A223307D2721CAE700FC5AA0 /* ProfileEditorViewController.swift */; };
+		A240B320271D8EE30086D405 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F6DD27064CEF00216B02 /* LoginViewController.swift */; };
+		A2484A4B2726C12900BD9CB9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2484A4A2726C12900BD9CB9 /* Protocols.swift */; };
 		A262F6E02707466F00216B02 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F6DF2707466F00216B02 /* TabBarController.swift */; };
 		A262F6E22707495D00216B02 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F6E12707495D00216B02 /* FeedViewController.swift */; };
 		A262F6E527074AEF00216B02 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F6E327074AEF00216B02 /* PostTableViewCell.swift */; };
@@ -30,6 +36,12 @@
 		5EE6900C27036B9400F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE6901B27037DC000F5C170 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A213C6B2271C5AE80053AC5D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A213C6B4271C67530053AC5D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A216C62C271D4F0800D826D1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A223307A2721B33500FC5AA0 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		A223307D2721CAE700FC5AA0 /* ProfileEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorViewController.swift; sourceTree = "<group>"; };
+		A2484A4A2726C12900BD9CB9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		A262F6DD27064CEF00216B02 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A262F6DF2707466F00216B02 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A262F6E12707495D00216B02 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +80,8 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
+				A2484A492726C11900BD9CB9 /* Protocols */,
+				A216C62F271D861F00D826D1 /* Services */,
 				A262F6DC27064CA500216B02 /* Delegates */,
 				A262F6DB27064C8F00216B02 /* Controller */,
 				A262F6DA27064C8600216B02 /* View */,
@@ -77,6 +91,23 @@
 				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 			);
 			path = Lesson4;
+			sourceTree = "<group>";
+		};
+		A216C62F271D861F00D826D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A216C62C271D4F0800D826D1 /* DataManager.swift */,
+				A223307A2721B33500FC5AA0 /* Validation.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A2484A492726C11900BD9CB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A2484A4A2726C12900BD9CB9 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A262F6D927064C6100216B02 /* Models */ = {
@@ -104,6 +135,9 @@
 				A262F6DD27064CEF00216B02 /* LoginViewController.swift */,
 				A262F6DF2707466F00216B02 /* TabBarController.swift */,
 				A262F6E12707495D00216B02 /* FeedViewController.swift */,
+				A213C6B2271C5AE80053AC5D /* DetailsViewController.swift */,
+				A213C6B4271C67530053AC5D /* ProfileViewController.swift */,
+				A223307D2721CAE700FC5AA0 /* ProfileEditorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,13 +222,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2484A4B2726C12900BD9CB9 /* Protocols.swift in Sources */,
 				A262F6E527074AEF00216B02 /* PostTableViewCell.swift in Sources */,
-				A262F6DE27064CEF00216B02 /* LoginViewController.swift in Sources */,
+				A216C62D271D4F0800D826D1 /* DataManager.swift in Sources */,
+				A213C6B5271C67530053AC5D /* ProfileViewController.swift in Sources */,
+				A213C6B3271C5AE80053AC5D /* DetailsViewController.swift in Sources */,
+				A223307B2721B33500FC5AA0 /* Validation.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				A2CF0C75270B488100041722 /* Post.swift in Sources */,
 				5EE6901C27037DC000F5C170 /* User.swift in Sources */,
 				A262F6E02707466F00216B02 /* TabBarController.swift in Sources */,
 				A262F6E22707495D00216B02 /* FeedViewController.swift in Sources */,
+				A223307E2721CAE700FC5AA0 /* ProfileEditorViewController.swift in Sources */,
+				A240B320271D8EE30086D405 /* LoginViewController.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,16 +382,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = 83DZ5UD4QS;
 				INFOPLIST_FILE = Lesson4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.playground.autolayouts.Lesson4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playground.Lesson4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -362,16 +404,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = 83DZ5UD4QS;
 				INFOPLIST_FILE = Lesson4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.playground.autolayouts.Lesson4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playground.Lesson4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
