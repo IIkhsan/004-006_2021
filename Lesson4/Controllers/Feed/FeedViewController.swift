@@ -8,16 +8,18 @@
 import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     //MARK: - Properties
+    
     fileprivate let cellIdentifier = "customCellIdentifier"
+    fileprivate let segueIdentifier = "segueIdentifier"
     private let dataManager = DataManager()
     private var posts: [Post] = []    
     
     //MARK: - IBOutlets
+    
     @IBOutlet weak var feedTabBarItem: UITabBarItem!
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +32,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func configure() {
         feedTabBarItem?.badgeColor = UIColor.black
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 100
     }
     
     private func getPosts() {
-        DispatchQueue.global(qos: .utility).sync { [weak self] in
-            guard let strongSelf =  self else { return }
-            strongSelf.dataManager.getPosts { data in
-                DispatchQueue.main.async {
-                    strongSelf.posts = data
-                    strongSelf.tableView.reloadData()
-                }
-            }
+        dataManager.getPosts { posts in
+            self.posts = posts
+            self.tableView.reloadData()
         }
     }
     
@@ -63,18 +62,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
-        performSegue(withIdentifier: "segueIdentifier", sender: post)
+        performSegue(withIdentifier: segueIdentifier, sender: post)
         tableView.deselectRow(at: indexPath, animated: true)
-    }
+    }    
     
-   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueIdentifier", let viewController = segue.destination as? PostDetailViewController,
-        let post = sender as? Post {
+        if segue.identifier == segueIdentifier, let viewController = segue.destination as? PostDetailViewController,
+           let post = sender as? Post {
             viewController.post = post
         }
     }
- 
 }
-
-

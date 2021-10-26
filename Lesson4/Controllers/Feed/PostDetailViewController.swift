@@ -10,19 +10,22 @@ import UIKit
 class PostDetailViewController: UIViewController {
     
     //MARK: - IBOutlets
-
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imagePostView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     
     //MARK: - Properties
+    
     var post: Post!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
+    
+    //MARK: - Private Functions
     
     private func configure() {
         avatarImageView.image = post.avatarImage
@@ -30,5 +33,4 @@ class PostDetailViewController: UIViewController {
         descriptionLabel.text = post.description
         imagePostView.image = post.imagePost
     }
-
 }

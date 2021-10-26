@@ -22,7 +22,9 @@ class CustomTableViewCell: UITableViewCell {
     }
 
     private func configure() {
+        descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         descriptionLabel.numberOfLines = 5
+        avatarImageView.makeRoundAvatar()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

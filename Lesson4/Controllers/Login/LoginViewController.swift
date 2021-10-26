@@ -8,7 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    //MARK: - IBOUtlets
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
@@ -16,18 +17,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    //MARK: - Action login button
     @IBAction func loginButtonPressed(_ sender: Any) {
-        
         let error = validateFields()
-        
-        if (error) {
+        if (!error) {
             showAlert(title: "Invalid email or password", message: "Please, try again")
         } else {
             //тут проедполагается работа с бд и добавление пользователя
         }
-        
     }
     
+    //MARK: - Private Fucntions
     private func validateFields() -> Bool {
         
         let email = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -36,16 +36,6 @@ class LoginViewController: UIViewController {
         if Validator.isEmailValid(email) && Validator.isPasswordValid(password) {
             return true
         }
-        
         return false
-    }
-}
-
-extension UIViewController {
-    public func showAlert(title: String?, message: String?) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 }

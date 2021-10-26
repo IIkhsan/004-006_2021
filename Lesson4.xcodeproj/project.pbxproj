@@ -21,9 +21,14 @@
 		CC85438B271EF10A00CE66B5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85438A271EF10A00CE66B5 /* Validator.swift */; };
 		CC854395271EFDBB00CE66B5 /* GeneratePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC854394271EFDBB00CE66B5 /* GeneratePosts.swift */; };
 		CC854399271F36A600CE66B5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC854398271F36A600CE66B5 /* DataManager.swift */; };
+		CC870FA527219108003045E0 /* RounderImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC870FA427219108003045E0 /* RounderImages.swift */; };
+		CC870FA727219285003045E0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC870FA627219285003045E0 /* Alert.swift */; };
+		CC870FA9272192E0003045E0 /* GenerateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC870FA8272192E0003045E0 /* GenerateUser.swift */; };
 		CCACBF072713652900DB65BC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACBF062713652900DB65BC /* FeedViewController.swift */; };
 		CCACBF0A27136A9A00DB65BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACBF0927136A9A00DB65BC /* ProfileViewController.swift */; };
 		CCACBF0C27136ED600DB65BC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACBF0B27136ED600DB65BC /* TabBarController.swift */; };
+		CCACEA74272847F500AEDA70 /* EditingUserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACEA73272847F500AEDA70 /* EditingUserInformationViewController.swift */; };
+		CCACEA79272849BD00AEDA70 /* DataTransferProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACEA78272849BD00AEDA70 /* DataTransferProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +48,14 @@
 		CC85438A271EF10A00CE66B5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		CC854394271EFDBB00CE66B5 /* GeneratePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePosts.swift; sourceTree = "<group>"; };
 		CC854398271F36A600CE66B5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CC870FA427219108003045E0 /* RounderImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RounderImages.swift; sourceTree = "<group>"; };
+		CC870FA627219285003045E0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CC870FA8272192E0003045E0 /* GenerateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUser.swift; sourceTree = "<group>"; };
 		CCACBF062713652900DB65BC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CCACBF0927136A9A00DB65BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CCACBF0B27136ED600DB65BC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CCACEA73272847F500AEDA70 /* EditingUserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingUserInformationViewController.swift; sourceTree = "<group>"; };
+		CCACEA78272849BD00AEDA70 /* DataTransferProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +88,8 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
-				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
+				CCACEA7A2728A0D900AEDA70 /* View */,
+				CCACEA752728499200AEDA70 /* Protocols */,
 				CC854393271EFC7D00CE66B5 /* Resources */,
 				CC854392271EFC1400CE66B5 /* Services */,
 				CC854390271EFBED00CE66B5 /* Helpers */,
@@ -103,7 +112,6 @@
 		CC85438C271EFB1E00CE66B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 				CCACBF0B27136ED600DB65BC /* TabBarController.swift */,
 				CC85438F271EFBDA00CE66B5 /* Login */,
 				CCACBF0827136A8600DB65BC /* Profile */,
@@ -117,7 +125,6 @@
 			children = (
 				CCACBF062713652900DB65BC /* FeedViewController.swift */,
 				CC75AEBF271C44DD00773ED7 /* PostDetailViewController.swift */,
-				CC1E1A952718458D006ED751 /* Cell */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -144,6 +151,9 @@
 			children = (
 				CC85438A271EF10A00CE66B5 /* Validator.swift */,
 				CC854394271EFDBB00CE66B5 /* GeneratePosts.swift */,
+				CC870FA427219108003045E0 /* RounderImages.swift */,
+				CC870FA627219285003045E0 /* Alert.swift */,
+				CC870FA8272192E0003045E0 /* GenerateUser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -168,8 +178,29 @@
 			isa = PBXGroup;
 			children = (
 				CCACBF0927136A9A00DB65BC /* ProfileViewController.swift */,
+				CCACEA73272847F500AEDA70 /* EditingUserInformationViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CCACEA752728499200AEDA70 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CCACEA78272849BD00AEDA70 /* DataTransferProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CCACEA7A2728A0D900AEDA70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC1E1A952718458D006ED751 /* Cell */,
+				5EE6900227036B9200F5C170 /* SceneDelegate.swift */,
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				5EE6900027036B9200F5C170 /* AppDelegate.swift */,
+				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,15 +274,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCACEA79272849BD00AEDA70 /* DataTransferProtocol.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				CC75AEC0271C44DD00773ED7 /* PostDetailViewController.swift in Sources */,
 				CCACBF072713652900DB65BC /* FeedViewController.swift in Sources */,
+				CCACEA74272847F500AEDA70 /* EditingUserInformationViewController.swift in Sources */,
+				CC870FA727219285003045E0 /* Alert.swift in Sources */,
 				CC854399271F36A600CE66B5 /* DataManager.swift in Sources */,
 				CCACBF0A27136A9A00DB65BC /* ProfileViewController.swift in Sources */,
 				CC75AEBC271C3DAF00773ED7 /* CustomTableViewCell.swift in Sources */,
+				CC870FA9272192E0003045E0 /* GenerateUser.swift in Sources */,
 				CC85438B271EF10A00CE66B5 /* Validator.swift in Sources */,
 				CC854387271EE5BB00CE66B5 /* User.swift in Sources */,
 				CCACBF0C27136ED600DB65BC /* TabBarController.swift in Sources */,
+				CC870FA527219108003045E0 /* RounderImages.swift in Sources */,
 				CC1E1A99271853F0006ED751 /* Post.swift in Sources */,
 				CC854389271EE86800CE66B5 /* LoginViewController.swift in Sources */,
 				CC854395271EFDBB00CE66B5 /* GeneratePosts.swift in Sources */,
