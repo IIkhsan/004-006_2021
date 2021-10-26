@@ -42,7 +42,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="7D7-g7-rR3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <action selector="passwordFieldChanged:" destination="MpY-Kj-han" eventType="editingDidBegin" id="p2Q-na-DPc"/>
                                                 </connections>
@@ -318,9 +318,12 @@
                                                         <constraint firstAttribute="height" constant="31" id="wda-JB-iix"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Редактировать">
+                                                    <buttonConfiguration key="configuration" style="plain" title="Выйти из аккаунта">
                                                         <color key="baseForegroundColor" systemColor="linkColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <segue destination="8kZ-GT-PsO" kind="unwind" unwindAction="unwindSegue:" id="Nde-t1-xcO"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n6p-17-zRj">
                                                     <rect key="frame" x="20" y="169" width="374" height="70"/>
@@ -637,6 +640,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3D-N1-vTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8kZ-GT-PsO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3469.5652173913045" y="-308.03571428571428"/>
         </scene>

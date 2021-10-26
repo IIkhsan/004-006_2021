@@ -9,14 +9,14 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var postText: UILabel?
     @IBOutlet weak var postImg: UIImageView?
     @IBOutlet weak var postAccountImg: UIImageView!
     @IBOutlet weak var postAccountName: UILabel!
     @IBOutlet weak var postAccountStatus: UILabel!
 
-    
-    
+    // MARK: - Override functions
     override func awakeFromNib() {
         super.awakeFromNib()
         postAccountImg.layer.cornerRadius = postAccountImg.frame.height / 2

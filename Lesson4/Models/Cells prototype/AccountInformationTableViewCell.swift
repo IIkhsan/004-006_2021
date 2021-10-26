@@ -9,12 +9,13 @@ import UIKit
 
 class AccountInformationTableViewCell: UITableViewCell {
 
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var accountStatus: UILabel!
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var accountImg: UIImageView!
     @IBOutlet weak var editButton: UIButton!
     
+    // MARK: - Override functions
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -9,11 +9,15 @@ import Foundation
 import UIKit
 
 class Post {
+    
+    //MARK: - Class Properties
     var image: UIImage?
     var text: String?
     
+    // MARK: - Initializer
     init(image: UIImage? = nil, text: String? = nil) {
         self.image = image
         self.text = text
     }
+    
 }

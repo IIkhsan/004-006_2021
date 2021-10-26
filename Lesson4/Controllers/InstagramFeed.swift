@@ -9,22 +9,28 @@ import UIKit
 
 class InstagramFeed: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var instagramFeed: UITableView!
-    var allPosts: [Post] = []
-    var usersInOrder: [User] = []
     
+    // MARK: - Private Properties
+    private var allPosts: [Post] = []
+    private var usersInOrder: [User] = []
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         instagramFeed.dataSource = self
         instagramFeed.delegate = self
         
         addRandomPosts()
-        
     }
 }
 
+// MARK: - InstagramFeed extensions
 extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{
     
+    // MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allPosts.count
     }
@@ -49,7 +55,8 @@ extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{
         return 200
     }
     
-    func addRandomPosts() {
+    // MARK: - private methods
+    private func addRandomPosts() {
         for _ in 0..<Int.random(in: 7...18) {
             let randomUserID = Int.random(in: 0..<User.all_users.count)
             let randomUser = User.all_users[randomUserID]
@@ -59,4 +66,5 @@ extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{
             usersInOrder.append(randomUser)
         }
     }
+    
 }

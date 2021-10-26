@@ -3,28 +3,37 @@ import UIKit
 
 class User {
     
+    // MARK: - Static Properties
     static var loginDetails: [String: String] = ["tattebakery@yandex.ru" : "pwwEQ5mL", "brianmcw@mail.ru" : "7sfqCKYN", "stephjianni@gmail.com" : "JpS8nFEd"]
     static var userIdFromMail = ["tattebakery@yandex.ru" : 0, "brianmcw@mail.ru" : 1, "stephjianni@gmail.com" : 2]
     static var all_users: [User] = []
     static var all_posts: [[Post]] = []
+    static var loggedInUserId: Int = 0
     
-    static func getUsersPosts(putPosts: @escaping((_ posts: [Post]) -> Void), userID: Int) {
+    // MARK: - Public Static Methods
+    public static func getUsersPosts(putPosts: @escaping((_ posts: [Post]) -> Void), userID: Int) {
         sleep(2)
         putPosts(User.all_posts[userID])
     }
     
-    static func сheckPassword(login: String, password: String) -> Bool {
+    public static func сheckPassword(login: String, password: String) -> Bool {
         return User.loginDetails[login] == password
     }
     
-    static func addInitialUsers() {
+    public static func addInitialUsers() {
         User.all_users.append(User(name: "tattebakery", profileImg: UIImage.init(named: "tattebakery_photo_account") ?? UIImage(),status: "Gathering around Breakfas"))
         User.all_users.append(User(name: "brianmcw", profileImg: UIImage.init(named: "brianmcw_photo_account") ?? UIImage(), status: "Boston photographer"))
         User.all_users.append(User(name: "stephjianni", profileImg: UIImage.init(named: "stephjianni_photo_account") ?? UIImage(), status: "Life enthusiast."))
         addContentForInitialUsers()
     }
     
+    public static func setLoggedInUserId(mail: String) {
+        User.loggedInUserId = userIdFromMail[mail] ?? 0
+    }
+    
+    // MARK: - Private Static Methods
     private static func addContentForInitialUsers() {
+        
         //add the posts of the first user
         all_posts.append([])
         all_posts[0].append(Post(image: UIImage.init(named: "tattebakery_photo_1"), text: "Back at it! With a glorious slice of Bourbon infused pumpkin pie with pecans and streusel on top! Our incredible pastry team roast fresh pumpkins in house creating this delicious Fall treat. 🙌🏻🍁🍂🥧🧡"))
@@ -60,17 +69,13 @@ class User {
         all_posts[2].append(Post(image: nil, text: "❤️ I’m so lucky to have found you in this crazy world. There will never be enough words to tell you how much I love you. You are unlike anyone else I’ve ever known and I’m so grateful to get to spend this life with you. I can’t wait to see what this next year has in store and I know that all your amazing hard work will continue to pay off in ways we couldn’t even imagine! Thank you for continually making me laugh, for being my forever dance partner and for always being there no matter what life throws our way. Life isn’t always rainbows and sunshine, but with you, it’s pretty darn close."))
     }
     
-    static var loggedInUserId: Int = 0
-    
-    static func setLoggedInUserId(mail: String) {
-        User.loggedInUserId = userIdFromMail[mail] ?? 0
-    }
-    
+    // MARK: - Class Properties
     var name: String
     var profileImg: UIImage
     var status: String
     var posts: [Post] = []
     
+    // MARK: - Initializer
     init(name: String, profileImg: UIImage, status: String) {
         self.name = name
         self.profileImg = profileImg

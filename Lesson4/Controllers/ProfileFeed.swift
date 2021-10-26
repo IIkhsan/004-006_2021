@@ -9,26 +9,37 @@ import UIKit
 
 class ProfileFeed: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var profileFeed: UITableView!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         profileFeed.dataSource = self
         profileFeed.delegate = self
-        
-        User.addInitialUsers()
+    
+        configureOfUsers()
         User.getUsersPosts(putPosts: loadPosts(_:), userID: User.loggedInUserId)
     }
-        
+    
     func loadPosts(_ posts: [Post]) {
         posts.forEach { post in
             User.all_users[User.loggedInUserId].posts.append(post)
         }
     }
+    
+    // MARK: - Private Methods
+    private func configureOfUsers() {
+        if User.all_users.count < 3{
+            User.addInitialUsers()
+        }
+    }
 }
 
+// MARK: - ProfileFeed extensions
 extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return User.all_users[User.loggedInUserId].posts.count + 2
     }
