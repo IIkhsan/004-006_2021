@@ -31,6 +31,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func configure() {
         feedTabBarItem?.badgeColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
+        tableView.backgroundColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.delegate = self
         tableView.dataSource = self

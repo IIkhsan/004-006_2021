@@ -23,6 +23,12 @@ class EditingUserInformationViewController: UIViewController, UITextFieldDelegat
         super.viewDidLoad()
         modifiedStatusTextField.delegate = self
         modifiedHometownTextField.delegate = self
+        configure()
+    }
+    //MARK: - Private Function
+    
+    private func configure() {
+        navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
     }
     
     //MARK: - TextFieldDelegate

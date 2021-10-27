@@ -23,14 +23,16 @@ class GeneratePosts {
             } else {
                 posts.append(Post(avatarImage: UIImage(named: images.randomElement()!)!, name: names.randomElement()!, imagePost: UIImage(named: images.randomElement()!)!, description: nil))
             }
-        }
+            
+            posts.append(Post(avatarImage: UIImage(named: images.randomElement()!)!, name: names.randomElement()!, imagePost: UIImage(named: images.randomElement()!)!, description: descriptions.randomElement()!))
+        }        
         return posts
     }
     
     public static func generatePostsForCurrentUser() -> [Post] {
         let curUser = GenerateUser.currentUser
         
-        if posts.count == 0 {
+        if posts.count != 0 {
             posts.removeAll()
         }
         

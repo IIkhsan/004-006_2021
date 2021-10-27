@@ -22,9 +22,11 @@ class CustomTableViewCell: UITableViewCell {
     }
 
     private func configure() {
+        self.backgroundColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         descriptionLabel.numberOfLines = 5
         avatarImageView.makeRoundAvatar()
+        nameLabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

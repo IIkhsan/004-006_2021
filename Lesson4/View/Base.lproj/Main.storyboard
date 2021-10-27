@@ -27,6 +27,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="61e-EO-TAJ" id="NBr-xD-5IM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="K5Z-EH-nnY" kind="show" identifier="segueIdentifier" id="bc4-Dm-WTh"/>
@@ -94,7 +95,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cPh-qA-9nj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89019608500000003" green="0.84705877299999999" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="S0L-bo-3os" firstAttribute="top" secondItem="rPV-li-BzK" secondAttribute="bottom" constant="8" symbolic="YES" id="5Iq-Ex-jB4"/>
                             <constraint firstItem="cPh-qA-9nj" firstAttribute="trailing" secondItem="HtG-r7-06E" secondAttribute="trailing" constant="20" id="5Va-CC-oE9"/>
@@ -187,7 +188,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fw4-sO-zYO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89019608500000003" green="0.84705877299999999" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fw4-sO-zYO" firstAttribute="trailing" secondItem="vKw-CB-LdU" secondAttribute="trailing" id="0xq-ce-E5Z"/>
                             <constraint firstItem="a2K-Ol-fap" firstAttribute="leading" secondItem="iyR-HJ-0yk" secondAttribute="leading" id="2NO-r5-Byi"/>
@@ -256,7 +257,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ASO-km-Qew"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89019608500000003" green="0.84705877299999999" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Hzj-q6-D0p" firstAttribute="leading" secondItem="ASO-km-Qew" secondAttribute="leading" constant="20" id="7Va-Ux-Auo"/>
                             <constraint firstItem="Hzj-q6-D0p" firstAttribute="top" secondItem="nQX-hz-FrG" secondAttribute="bottom" constant="20" id="8fZ-TY-tyK"/>
@@ -314,7 +315,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I0V-8U-MxJ"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89019608500000003" green="0.84705877299999999" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ZNE-hC-Cld" firstAttribute="centerX" secondItem="904-1E-Jdl" secondAttribute="centerX" id="0al-Ek-jqR"/>
                             <constraint firstItem="904-1E-Jdl" firstAttribute="leading" secondItem="I0V-8U-MxJ" secondAttribute="leading" constant="100" id="1mX-ie-Ofe"/>
@@ -347,7 +348,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3bw-u1-zcO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89019608500000003" green="0.84705877299999999" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>

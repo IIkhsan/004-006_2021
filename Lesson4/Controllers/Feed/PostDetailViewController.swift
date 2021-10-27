@@ -28,6 +28,9 @@ class PostDetailViewController: UIViewController {
     //MARK: - Private Functions
     
     private func configure() {
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        avatarImageView.makeRoundAvatar()
         avatarImageView.image = post.avatarImage
         nameLabel.text = post.name
         descriptionLabel.text = post.description

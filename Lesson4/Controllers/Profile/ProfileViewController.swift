@@ -53,6 +53,8 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
     }
     
     private func configure() {
+        tableView.backgroundColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
+        navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         profileTabBarItem?.badgeColor = UIColor.black
         nameLabel.font = UIFont.boldSystemFont(ofSize:20)
         hometownLabel.font = UIFont.systemFont(ofSize: 14)
