@@ -57,8 +57,8 @@ class SignInViewController: UIViewController {
     private func authorizeUser(_ username: String, _ password: String) -> User?{
         
         let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? DataManager.defaultUsersNames
-        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? DataManager.defaultUsersEmails
-        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? DataManager.defaultUsersPasswords
+        let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? DataManager.defaultUsersEmails
+        let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? DataManager.defaultUsersPasswords
         
         guard let userId = usernames.firstIndex(of: username) else {
             showValidationAlert(message: "The password is wrong")
