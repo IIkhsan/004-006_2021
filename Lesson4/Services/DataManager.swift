@@ -9,7 +9,6 @@ import Foundation
 
 class DataManager {
     
-    
     public func getPosts(completion: @escaping (_ posts: [Post]) -> Void) {
         sleep(3)
         completion(GeneratePosts.generate())

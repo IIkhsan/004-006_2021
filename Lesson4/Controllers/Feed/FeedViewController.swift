@@ -9,15 +9,15 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: - Properties
+    // MARK: - Dependencies
+    private let dataManager = DataManager()
+    private var posts: [Post] = []
     
+    // MARK: - Properties
     fileprivate let cellIdentifier = "customCellIdentifier"
     fileprivate let segueIdentifier = "segueIdentifier"
-    private let dataManager = DataManager()
-    private var posts: [Post] = []    
     
-    //MARK: - IBOutlets
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var feedTabBarItem: UITabBarItem!
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,8 +27,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         getPosts()
     }
     
-    //MARK: - Private functions
-    
+    // MARK: - Private functions
     private func configure() {
         feedTabBarItem?.badgeColor = UIColor.black
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
@@ -47,8 +46,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    //MARK: - UITabelView Delegate & DataSource
-    
+    // MARK: - UITabelView Delegate & DataSource
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }

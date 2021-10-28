@@ -9,7 +9,7 @@ import Foundation
 
 class Validator {
     
-    //MARK: - public functions
+    // MARK: - Public functions
     public static func isEmailValid(_ email: String) -> Bool {
         
         let emailTest = NSPredicate(format: "SELF MATCHES %@", ".+.@..+")

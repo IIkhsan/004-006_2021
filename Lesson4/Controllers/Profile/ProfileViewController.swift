@@ -9,17 +9,16 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewDelegate, UITableViewDataSource, DataTransferProtocol{
     
-    
-    //MARK: - Properties
-    
+    // MARK: - Dependencies
     private let dataManager = DataManager()
     private var user = User()
     private var postsOfCurrentUser: [Post] = []
+    
+    // MARK: - Properties
     fileprivate let cellIdentifier = "cellIdentifier"
     fileprivate let segueIdentifier = "segueIdentifier"
     
     //MARK: - IBOUtlets
-    
     @IBOutlet weak var profileTabBarItem: UITabBarItem!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -37,8 +36,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
         configure()
     }
     
-    //MARK: - Private Functions
-    
+    // MARK: - Private Functions
     private func getUser() {
         dataManager.getCurrentUser(){ user in
             self.user = user
@@ -75,8 +73,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
     
-    //MARK: - UITableViewDelegate & DataSource
-    
+    // MARK: - UITableViewDelegate & DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postsOfCurrentUser.count
     }
@@ -89,8 +86,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
         return cell
     }
     
-    //MARK: - DataTransferProtocol
-    
+    // MARK: - DataTransferProtocol    
     func didPressReturn(newStatus: String, newHometown: String, newName: String) {
         user.status = newStatus
         user.name = newName

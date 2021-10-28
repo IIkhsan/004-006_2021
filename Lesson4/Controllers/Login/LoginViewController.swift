@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //MARK: - Private Fucntions
+    //MARK: - Private Functions
     private func validateEmail() -> Bool {
         let email = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         

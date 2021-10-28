@@ -9,7 +9,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var imagePost: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +21,7 @@ class CustomTableViewCell: UITableViewCell {
         configure()
     }
 
+    // MARK: - Private Function
     private func configure() {
         self.backgroundColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -29,9 +30,7 @@ class CustomTableViewCell: UITableViewCell {
         nameLabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    // MARK: - Function to prepare data for a cell
     func prepareCell(post: Post) {
         if let image = post.imagePost {
             imagePost.image = image

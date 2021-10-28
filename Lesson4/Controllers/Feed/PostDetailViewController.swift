@@ -9,15 +9,13 @@ import UIKit
 
 class PostDetailViewController: UIViewController {
     
-    //MARK: - IBOutlets
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imagePostView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     
-    //MARK: - Properties
-    
+    // MARK: - Dependency
     var post: Post!
     
     override func viewDidLoad() {
@@ -25,8 +23,7 @@ class PostDetailViewController: UIViewController {
         configure()
     }
     
-    //MARK: - Private Functions
-    
+    // MARK: - Private Functions
     private func configure() {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         nameLabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)

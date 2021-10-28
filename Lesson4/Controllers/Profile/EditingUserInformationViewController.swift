@@ -9,12 +9,10 @@ import UIKit
 
 class EditingUserInformationViewController: UIViewController, UITextFieldDelegate {
     
-    //MARK: - Properties
-    
+    // MARK: - Properties
     var dataTransferDelegate: DataTransferProtocol?
     
-    //MARK: - IBOutlets
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var modifiedNameTextField: UITextField!
     @IBOutlet weak var modifiedHometownTextField: UITextField!
     @IBOutlet weak var modifiedStatusTextField: UITextField!
@@ -25,14 +23,12 @@ class EditingUserInformationViewController: UIViewController, UITextFieldDelegat
         modifiedHometownTextField.delegate = self
         configure()
     }
-    //MARK: - Private Function
-    
+    // MARK: - Private Function
     private func configure() {
         navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
     }
     
-    //MARK: - TextFieldDelegate
-    
+    // MARK: - TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let status = modifiedStatusTextField.text,
               let hometown = modifiedHometownTextField.text,
