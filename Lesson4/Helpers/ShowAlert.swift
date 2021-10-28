@@ -1,11 +1,10 @@
 //
-//  Alert.swift
+//  ShowAlert.swift
 //  Lesson4
 //
-//  Created by Милана Махсотова on 15.10.2021.
+//  Created by Милана Махсотова on 28.10.2021.
 //
 
-import Foundation
 import UIKit
 
 extension UIViewController {

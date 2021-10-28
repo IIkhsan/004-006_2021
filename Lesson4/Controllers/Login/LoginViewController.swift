@@ -19,23 +19,33 @@ class LoginViewController: UIViewController {
     
     //MARK: - Action login button
     @IBAction func loginButtonPressed(_ sender: Any) {
-        let error = validateFields()
-        if (!error) {
-            showAlert(title: "Invalid email or password", message: "Please, try again")
+        let validEmail = validateEmail()
+        let validPassword = validatePassword()
+        
+        if (!validEmail && !validPassword) {
+            showAlert(title: "Invalid email and password", message: "Please, try again")
+        }
+        if (!validEmail) {
+            showAlert(title: "Invalid email", message: "Please, try again")
         } else {
-            //тут проедполагается работа с бд и добавление пользователя
+            if (!validPassword) {
+                showAlert(title: "Invalid password", message: "Please, enter a password of at least 6 characters, uppercase and lowercase characters, numbers")
+            } else {
+                //добавление пользователя в бд
+            }
         }
     }
     
     //MARK: - Private Fucntions
-    private func validateFields() -> Bool {
-        
+    private func validateEmail() -> Bool {
         let email = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        return Validator.isEmailValid(email)
+    }
+    
+    private func validatePassword() -> Bool {
         let password = passwordTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if Validator.isEmailValid(email) && Validator.isPasswordValid(password) {
-            return true
-        }
-        return false
+        return Validator.isPasswordValid(password)
     }
 }
