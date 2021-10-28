@@ -1,13 +1,6 @@
-//
-//  ProfileStatusViewController.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 17.10.2021.
-//
-
 import UIKit
 
-// MARK: - Profile status view controller delegate protocol
+// MARK: - ProfileStatusViewControllerDelegate protocol
 
 protocol ProfileStatusViewControllerDelegate: AnyObject {
     
@@ -18,7 +11,7 @@ protocol ProfileStatusViewControllerDelegate: AnyObject {
 
 class ProfileStatusViewController: UIViewController {
     
-    // Outlets
+    // IBOutlets
 
     @IBOutlet weak var profileStatusView: UIView!
     @IBOutlet weak var profileStatusImageView: UIImageView!
@@ -26,7 +19,7 @@ class ProfileStatusViewController: UIViewController {
     @IBOutlet weak var profileStatusTextField: UITextField!
     @IBOutlet weak var profileStatusSaveChangesButton: UIButton!
     
-    // Initialization of delegate and other properties
+    // MARK: - Initialization
     
     weak var delegate: ProfileStatusViewControllerDelegate?
     var currentUser: User?
@@ -36,7 +29,6 @@ class ProfileStatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileDetailData()
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Private funcs
@@ -47,7 +39,7 @@ class ProfileStatusViewController: UIViewController {
         profileStatusImageView.layer.cornerRadius = profileStatusImageView.frame.size.height / 2
     }
     
-    // Actions
+    // IBActions
     
     @IBAction func profileStatusSaveChangesAction(_ sender: Any) {
         guard var currentUser = currentUser else { return }
@@ -55,15 +47,4 @@ class ProfileStatusViewController: UIViewController {
         delegate?.changeUserData(currentUser: currentUser)
         dismiss(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

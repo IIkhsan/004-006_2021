@@ -1,10 +1,3 @@
-//
-//  NewsFieldPostStruct.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 29.09.2021.
-//
-
 import Foundation
 import UIKit
 

@@ -1,10 +1,3 @@
-//
-//  DataManager.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 13.10.2021.
-//
-
 import Foundation
 import UIKit
 
@@ -24,7 +17,7 @@ class DataManager {
     
     let thirdProfilePosts: [ProfilePost] = [ProfilePost(profilePostFirstImage: #imageLiteral(resourceName: "image14"), profilePostSecondImage: #imageLiteral(resourceName: "image18"), profilePostThirdImage: #imageLiteral(resourceName: "image15")), ProfilePost(profilePostFirstImage: #imageLiteral(resourceName: "image17"), profilePostSecondImage: #imageLiteral(resourceName: "image16"), profilePostThirdImage: nil)]
     
-    // MARK: - Get users func
+    // MARK: - Get users public func
     
     func getUsers(completion: @escaping(([User]) -> Void)) {
         completion([.init(profileImageView: #imageLiteral(resourceName: "profileImage"), profileStatus: "Flame \nUTOPIA \nCactus Jack Rerords", profileNickName: "travisscott", profilePassword: "admin1", profileEmail: "ts@yahoo.com", userPosts: firstUserNewsFieldPosts, profileSubscribersCount: "43,5 млн", profileSubscriptionsCount: "81", profilePublicationsCount: "3 138", profilePosts: firstProfilePosts), .init(profileImageView: #imageLiteral(resourceName: "image10"), profileStatus: "Rich MF \nPUNK", profileNickName: "thuggerthugger1", profilePassword: "admin1", profileEmail: "yt@yandex.ru", userPosts: secondUserNewsFieldPosts, profileSubscribersCount: "8,9 млн", profileSubscriptionsCount: "1", profilePublicationsCount: "15", profilePosts: secondProfilePosts), .init(profileImageView: #imageLiteral(resourceName: "profileImage3"), profileStatus: "The big4l \nSAVAGE MODE2", profileNickName: "21savage", profilePassword: "admin1", profileEmail: "21s@mail.ru", userPosts: thirdUserNewsFieldPosts, profileSubscribersCount: "12,7 млн", profileSubscriptionsCount: "492", profilePublicationsCount: "1 285", profilePosts: thirdProfilePosts)])

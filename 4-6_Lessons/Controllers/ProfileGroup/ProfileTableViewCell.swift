@@ -1,29 +1,12 @@
-//
-//  ProfileTableViewCell.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 10.10.2021.
-//
-
 import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
     
-    // Outlets
+    // IBOutlets
     
     @IBOutlet weak var profilePostFirstImageView: UIImageView!
     @IBOutlet weak var profilePostSecondImageView: UIImageView!
     @IBOutlet weak var profilePostThirdImageView: UIImageView!
-    
-    // MARK: - View life cycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     // MARK: - Public func configure
     

@@ -1,15 +1,8 @@
-//
-//  NewsFieldTableViewCell.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 29.09.2021.
-//
-
 import UIKit
 
 class NewsFieldTableViewCell: UITableViewCell {
     
-    // Outlets
+    // IBOutlets
     
     @IBOutlet weak var newsFieldProfileView: UIView!
     @IBOutlet weak var newsFieldPostStackView: UIStackView!
@@ -20,13 +13,12 @@ class NewsFieldTableViewCell: UITableViewCell {
     
     // MARK: - View life cycle
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        newsFieldProfileImageView.layer.cornerRadius = newsFieldProfileImageView.frame.size.height / 2
+        
+        // Init Properties func call
+        
+        initProperties()
     }
     
     // MARK: - Public func configure
@@ -38,7 +30,13 @@ class NewsFieldTableViewCell: UITableViewCell {
         newsFieldProfileImageView.image = newsFieldPost.newsFieldProfileImage
     }
     
-    // MARK: - Prepare for reuse func
+    // MARK: - Private funcs
+    
+    private func initProperties() {
+        newsFieldProfileImageView.layer.cornerRadius = newsFieldProfileImageView.frame.size.height / 2
+    }
+    
+    // MARK: - Override func prepareForReuse
     
     override func prepareForReuse() {
         super.prepareForReuse()

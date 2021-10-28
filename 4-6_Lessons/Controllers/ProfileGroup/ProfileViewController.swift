@@ -1,15 +1,8 @@
-//
-//  ProfileViewController.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 30.09.2021.
-//
-
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDelegate {
     
-    // Outlets
+    // IBOutlets
     
     @IBOutlet weak var profileSubscriptionsStackView: UIStackView!
     @IBOutlet weak var profileSubscribersStackView: UIStackView!
@@ -48,12 +41,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Initialization of delegate and datasource
         
-        profileTableView.delegate = self
-        profileTableView.dataSource = self
+        initDelegate()
+        initDataSource()
         
-        // Properties
+        // Init properties func call
         
-        profileTableView.estimatedRowHeight = 100
+        initProperties()
     }
     
     // MARK: - Private funcs
@@ -78,23 +71,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    // MARK: - UITableViewDataSource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        (currentUser?.profilePosts.count)!
+    private func initDataSource() {
+        profileTableView.dataSource = self
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentModel = currentUser?.profilePosts[indexPath.row]
-        
-        // DequeueReusableCell call
-        
-        guard let currentCell = tableView.dequeueReusableCell(withIdentifier: "profileTableViewCellReuseIdentifier", for: indexPath) as? ProfileTableViewCell
-        else { return UITableViewCell() }
-        
-        currentCell.configureProfileTableViewCell(with: currentModel!)
-        
-        return currentCell
+    private func initDelegate() {
+        profileTableView.delegate = self
+    }
+    
+    private func initProperties() {
+        profileTableView.estimatedRowHeight = 100
     }
     
     // MARK: - Prepare func
@@ -119,7 +105,28 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 }
 
-// MARK: - Profile view controller extansion
+// MARK: - UITableViewDataSource extension
+
+extension ProfileViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        (currentUser?.profilePosts.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentModel = currentUser?.profilePosts[indexPath.row]
+        
+        // DequeueReusableCell call
+        
+        guard let currentCell = tableView.dequeueReusableCell(withIdentifier: "profileTableViewCellReuseIdentifier", for: indexPath) as? ProfileTableViewCell
+        else { return UITableViewCell() }
+        
+        currentCell.configureProfileTableViewCell(with: currentModel!)
+        
+        return currentCell
+    }
+}
+
+// MARK: - Profile view controller extension
 
 extension ProfileViewController: ProfileStatusViewControllerDelegate {
     
@@ -129,5 +136,4 @@ extension ProfileViewController: ProfileStatusViewControllerDelegate {
         self.currentUser = currentUser
         setUserData(currentUser: currentUser)
     }
-    
 }

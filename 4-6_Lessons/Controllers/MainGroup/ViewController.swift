@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 29.09.2021.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,7 +8,7 @@ class ViewController: UIViewController {
     let dataManager = DataManager()
     var user: User?
     
-    // Outlets
+    // IBOutlets
     
     @IBOutlet weak var instagramLogoImageView: UIImageView!
     @IBOutlet weak var loginPasswordStackView: UIStackView!
@@ -32,13 +25,9 @@ class ViewController: UIViewController {
         
         prepareUsers()
         
-        // Initialization
+        // Init properties func call
         
-        instagramLogoImageView.image = #imageLiteral(resourceName: "instagramLogo")
-        loginTextField.placeholder = "Телефон, имя пользователя или эл.адрес"
-        passwordTextField.placeholder = "Пароль"
-        passwordTextField.isSecureTextEntry = true
-        entryButton.layer.cornerRadius = 5
+        initProperties()
     }
     
     // MARK: - Private funcs
@@ -81,7 +70,15 @@ class ViewController: UIViewController {
         }
     }
     
-    // Actions
+    private func initProperties() {
+        instagramLogoImageView.image = #imageLiteral(resourceName: "instagramLogo")
+        loginTextField.placeholder = "Телефон, имя пользователя или эл.адрес"
+        passwordTextField.placeholder = "Пароль"
+        passwordTextField.isSecureTextEntry = false
+        entryButton.layer.cornerRadius = 5
+    }
+    
+    // IBActions
     
     @IBAction func entryAction(_ sender: Any) {
             if (isEmailValid(email: loginTextField.text) && isPasswordValid(password: passwordTextField.text)) {

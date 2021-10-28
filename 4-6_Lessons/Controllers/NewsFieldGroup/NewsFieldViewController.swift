@@ -1,15 +1,8 @@
-//
-//  NewsFieldViewController.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 29.09.2021.
-//
-
 import UIKit
 
-class NewsFieldViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsFieldViewController: UIViewController{
     
-    // Outlets
+    // IBOutlets
     
     @IBOutlet weak var newsFieldTableView: UITableView!
     
@@ -28,16 +21,16 @@ class NewsFieldViewController: UIViewController, UITableViewDelegate, UITableVie
         
         // Initialization of delegate and datasource
         
-        newsFieldTableView.delegate = self
-        newsFieldTableView.dataSource = self
+        initDelegate()
+        initDataSource()
         
         // Register XIB
         
-        newsFieldTableView.register(UINib(nibName: "NewsFieldTableViewCell", bundle: nil), forCellReuseIdentifier: "newsFieldTableViewCellReuseIdentifier")
+       registerCell()
         
-        // Properties
+        // Init properties func call
         
-        newsFieldTableView.estimatedRowHeight = 200
+        initProperties()
     }
     
     // MARK: - Private funcs
@@ -48,6 +41,28 @@ class NewsFieldViewController: UIViewController, UITableViewDelegate, UITableVie
             self.currentUser = currentUser
         }
     }
+    
+    private func initDelegate() {
+        newsFieldTableView.delegate = self
+    }
+    
+    private func initDataSource() {
+        newsFieldTableView.dataSource = self
+    }
+    
+    private func registerCell() {
+        newsFieldTableView.register(UINib(nibName: "NewsFieldTableViewCell", bundle: nil),
+                                    forCellReuseIdentifier: "newsFieldTableViewCellReuseIdentifier")
+    }
+    
+    private func initProperties() {
+        newsFieldTableView.estimatedRowHeight = 200
+    }
+}
+
+// MARK: - NewsFieldViewController extension
+
+extension NewsFieldViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDataSource
     
@@ -78,7 +93,7 @@ class NewsFieldViewController: UIViewController, UITableViewDelegate, UITableVie
         performSegue(withIdentifier: segueIdentifier, sender: model)
     }
     
-    // MARK: - Prepare for segue
+    // MARK: - Override func prepare for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newsFieldDetailIdentifier",
@@ -87,12 +102,4 @@ class NewsFieldViewController: UIViewController, UITableViewDelegate, UITableVie
             destinationController.newsFieldDetailPost = newsFieldPost
         }
     }
-    
-    // MARK: - Prepare content func
-    
-//    func prepareContent() {
-//        dataManager.getDataForNewsField { [unowned self] newsFieldPostsTemp in
-//            self.newsFieldPosts = newsFieldPostsTemp
-//        }
-//    }
 }

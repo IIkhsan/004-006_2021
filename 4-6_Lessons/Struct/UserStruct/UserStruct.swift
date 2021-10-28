@@ -1,10 +1,3 @@
-//
-//  UserStruct.swift
-//  4-6_Lessons
-//
-//  Created by Renat Murtazin on 18.10.2021.
-//
-
 import Foundation
 import UIKit
 
