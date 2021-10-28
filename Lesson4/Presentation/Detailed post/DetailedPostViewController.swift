@@ -8,23 +8,23 @@
 import UIKit
 
 class DetailedPostViewController: UIViewController {
-    //MARK: - UI
+    // MARK: - UI
     @IBOutlet weak var authorAvatarImageView: UIImageView!
     @IBOutlet weak var authorNameTextLabel: UILabel!
     @IBOutlet weak var mainTextLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var mainTextStackView: UIStackView!
     
-    //MARK: - Var
+    // MARK: - Properties
     var post: Post?
 
-    //MARK: - View controller's cycle
+    // MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
-    //MARK: - Helpers
+    // MARK: - Private
     private func configure() {
         guard let post = post else { return }
         authorNameTextLabel.text = post.author.name

@@ -7,12 +7,10 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController, UserExistenceDelegate {
-    //MARK: - Properties
+class MainTabBarViewController: UITabBarController {
+    // MARK: - Properties
     var user: User?
-    
-    //MARK: - VC cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
+
+// MARK: - UserExistenceDelegate
+extension MainTabBarViewController: UserExistenceDelegate {}

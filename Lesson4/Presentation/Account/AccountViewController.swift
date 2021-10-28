@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AccountViewController: UIViewController, UserExistenceDelegate {
-    //MARK: - UI
+class AccountViewController: UIViewController {
+    // MARK: - UI
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userStatusTextLabel: UILabel!
@@ -20,12 +20,14 @@ class AccountViewController: UIViewController, UserExistenceDelegate {
     @IBOutlet weak var addNewPostButton: UIButton!
     @IBOutlet weak var changeStatusButton: UIButton!
     
-    //MARK: - Var
+    // MARK: - Properties
     private var posts: [Post] = []
-    private let dataManager = DataManager()
     var user: User?
     
-    //MARK: - VC's cycle
+    // Dependencies
+    private let dataManager = DataManager()
+    
+    // MARK: - VC's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -33,20 +35,13 @@ class AccountViewController: UIViewController, UserExistenceDelegate {
         obtainUserData()
     }
     
-    //MARK: - Button's actions
+    // MARK: - Button's actions
     @IBAction func changeStatusButtonTapped(_ sender: Any) {
         guard let user = user else { return }
         performSegue(withIdentifier: Constants.editingAccountSeque.rawValue, sender: user)
     }
     
-    //MARK: - Table's method
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           tableView.deselectRow(at: indexPath, animated: true)
-           let post = posts[indexPath.row]
-           performSegue(withIdentifier: Constants.detailedPostSeque.rawValue, sender: post)
-    }
-       
-    //MARK: - Helpers
+    // MARK: - Private
     private func configure() {
         postsTableView.delegate = self
         postsTableView.dataSource = self
@@ -67,8 +62,8 @@ class AccountViewController: UIViewController, UserExistenceDelegate {
     }
     
     private func obtainUserData() {
-        let tabBar = tabBarController as! MainTabBarViewController
-        user = tabBar.user
+        guard let tabBarController = tabBarController as? MainTabBarViewController else { return }
+        user = tabBarController.user
         configureProfile()
     }
     
@@ -91,7 +86,7 @@ class AccountViewController: UIViewController, UserExistenceDelegate {
         userPhoneNumberTextLabel.text = user.phone
     }
     
-    // Segue
+    // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.detailedPostSeque.rawValue,
                let viewController = segue.destination as? DetailedPostViewController,
@@ -117,9 +112,15 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(posts[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           tableView.deselectRow(at: indexPath, animated: true)
+           let post = posts[indexPath.row]
+           performSegue(withIdentifier: Constants.detailedPostSeque.rawValue, sender: post)
+    }
 }
 
-//MARK: - Edit account delegate
+// MARK: - EditingAccountDelegate
 extension AccountViewController: EditingAccountDelegate {
     
     func editProfile(_ user: User) {
@@ -127,3 +128,6 @@ extension AccountViewController: EditingAccountDelegate {
         configureProfile()
     }
 }
+
+// MARK: - UserExistenceDelegate
+extension AccountViewController: UserExistenceDelegate {}

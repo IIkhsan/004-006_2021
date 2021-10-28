@@ -7,34 +7,35 @@
 
 import UIKit
 
-class EditingAccountViewController: UIViewController, UserExistenceDelegate {
-    //MARK: - UI
+class EditingAccountViewController: UIViewController {
+    // MARK: - UI
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userStatusTextField: UITextField!
     @IBOutlet weak var userCityTextField: UITextField!
     @IBOutlet weak var userPhoneTextLabel: UITextField!
     
-    //MARK: - Properties
-    weak var editingAccountDelegate: EditingAccountDelegate?
+    // MARK: - Properties
     var user: User?
     
-    //MARK: - VC's cycle
+    // Dependencies
+    weak var editingAccountDelegate: EditingAccountDelegate?
+    
+    // MARK: - VC's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureProfile()
     }
     
-    //MARK: - Buttons actions
+    // MARK: - Buttons actions
     @IBAction func saveButtonTapped(_ sender: Any) {
         saveInfo()
-        guard let editingAccountDelegate = editingAccountDelegate else { return }
-        guard let user = user else { return }
+        guard let editingAccountDelegate = editingAccountDelegate, let user = user else { return }
         editingAccountDelegate.editProfile(user)
         dismiss(animated: true, completion: nil)
     }
     
-    //MARK: - Helpers
+    // MARK: - Private
     private func saveInfo() {
         guard var user = user else { return }
         user.status = userStatusTextField.text ?? ""
@@ -52,3 +53,6 @@ class EditingAccountViewController: UIViewController, UserExistenceDelegate {
         userPhoneTextLabel.text = user.phone
     }
 }
+
+// MARK: - UserExistenceDelegate
+extension EditingAccountViewController: UserExistenceDelegate {}

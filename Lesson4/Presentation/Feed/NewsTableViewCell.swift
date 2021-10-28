@@ -15,21 +15,8 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var mainTextStack: UIStackView!
     @IBOutlet weak var descriptionTextLabel: UILabel!
     
-    //MARK: - Var
-    var post: Post?
-    
-    //MARK: - Cell's methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     //MARK: - Configure
     func configure(_ post: Post) {
-        self.post = post
         authorAvatarImageView.image = post.author.avatar
         authorNameTextLabel.text = post.author.name
         

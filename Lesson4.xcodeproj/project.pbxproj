@@ -19,7 +19,7 @@
 		D2320F6527075E9B00FF5C21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2320F6427075E9B00FF5C21 /* User.swift */; };
 		D2320F6A2707670400FF5C21 /* DetailedPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2320F692707670400FF5C21 /* DetailedPostViewController.swift */; };
 		D276EC0F270705F200AA8413 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276EC0E270705F200AA8413 /* LoginViewController.swift */; };
-		D276EC112707075900AA8413 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276EC102707075900AA8413 /* FeedsViewController.swift */; };
+		D276EC112707075900AA8413 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276EC102707075900AA8413 /* FeedViewController.swift */; };
 		D276EC132707076400AA8413 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276EC122707076400AA8413 /* AccountViewController.swift */; };
 		D2A1ED56271713A000FB2EF1 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1ED55271713A000FB2EF1 /* Validator.swift */; };
 		D2A1ED58271746F300FB2EF1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1ED57271746F300FB2EF1 /* MainTabBarViewController.swift */; };
@@ -43,7 +43,7 @@
 		D2320F6427075E9B00FF5C21 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D2320F692707670400FF5C21 /* DetailedPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPostViewController.swift; sourceTree = "<group>"; };
 		D276EC0E270705F200AA8413 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D276EC102707075900AA8413 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		D276EC102707075900AA8413 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D276EC122707076400AA8413 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D2A1ED55271713A000FB2EF1 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D2A1ED57271746F300FB2EF1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			children = (
 				D2A1ED5927174D6C00FB2EF1 /* Main Tab Bar */,
 				D2730D0F270DC8CA007DD777 /* Login */,
-				D2730D0C270DC864007DD777 /* Feeds */,
+				D2730D0C270DC864007DD777 /* Feed */,
 				D2730D0E270DC8AE007DD777 /* Detailed post */,
 				D2730D0D270DC884007DD777 /* Account */,
 				D2A1ED5C2717500A00FB2EF1 /* Editing account */,
@@ -104,13 +104,13 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		D2730D0C270DC864007DD777 /* Feeds */ = {
+		D2730D0C270DC864007DD777 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				D276EC102707075900AA8413 /* FeedsViewController.swift */,
+				D276EC102707075900AA8413 /* FeedViewController.swift */,
 				D2320F5D2707572500FF5C21 /* NewsTableViewCell.swift */,
 			);
-			path = Feeds;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		D2730D0D270DC884007DD777 /* Account */ = {
@@ -277,7 +277,7 @@
 				D2A1ED58271746F300FB2EF1 /* MainTabBarViewController.swift in Sources */,
 				D2320F5B270750A200FF5C21 /* Constants.swift in Sources */,
 				D2320F6327075E7100FF5C21 /* Post.swift in Sources */,
-				D276EC112707075900AA8413 /* FeedsViewController.swift in Sources */,
+				D276EC112707075900AA8413 /* FeedViewController.swift in Sources */,
 				D2320F6527075E9B00FF5C21 /* User.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,21 +7,16 @@
 
 import UIKit
 
-class LoginlViewController: UIViewController {
-    //MARK: - UI
+class LoginViewController: UIViewController {
+    // MARK: - UI
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    //MARK: - Var
+    // MARK: - Dependencies
     let validator = Validator()
-    
-    //MARK: - View controller's cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    //MARK: - Button's actions
+ 
+    // MARK: - Button's actions
     @IBAction func loginButtonTapped(_ sender: Any) {
         let email = emailTextField.text
         let password = passwordTextField.text
@@ -41,7 +36,7 @@ class LoginlViewController: UIViewController {
         performSegue(withIdentifier: Constants.feedsSeque.rawValue, sender: user)
     }
     
-    //MARK: - Helpers
+    // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.feedsSeque.rawValue,
                let viewController = segue.destination as? MainTabBarViewController,
@@ -50,6 +45,7 @@ class LoginlViewController: UIViewController {
         }
     }
     
+    // MARK: - Private
     private func showErrorMessage(_ message: String) {
         let errorAlertController = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ок", style: .cancel, handler: { action in
