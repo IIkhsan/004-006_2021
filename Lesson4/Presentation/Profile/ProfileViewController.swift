@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var changeStatusButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     
-    //MARK: - Var
+    //MARK: - Dependencies
     var currentUser: User?
     
     // MARK: -  View Life cycle

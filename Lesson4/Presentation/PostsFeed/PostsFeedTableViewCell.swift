@@ -17,15 +17,6 @@ class PostsFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     
-    // MARK: - Init
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     //MARK: - Functions
     func config(post: Post){
         accountImageView.image = post.accountImage

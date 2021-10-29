@@ -13,7 +13,7 @@ class PostsFeedViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: - Var
+    //MARK: - Dependencies
     private let dataManager = DataManager()
     private var postData: [Post] = []
     

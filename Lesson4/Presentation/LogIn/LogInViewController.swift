@@ -14,7 +14,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     
-    //MARK: - Var
+    //MARK: - Dependencies
     var usersData: [User] = []
     let dataManager = DataManager()
     var user: User?

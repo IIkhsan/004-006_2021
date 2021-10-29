@@ -17,7 +17,7 @@ class PostViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     
-    // MARK: - Var
+    // MARK: - Dependencies
     var post: Post?
     
     // MARK: -  View Life cycle

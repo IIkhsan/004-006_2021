@@ -28,7 +28,7 @@ class DataManager {
         
         var posts: [Post] = []
         
-        posts.append(Post(accountImage: #imageLiteral(resourceName: "duneAccountImage"), accountName: "@dunemovie" , username: "DUNE",postText: "A mythic and emotionally charged hero's journey,'Dune' tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people.", postDate: "12.09.2021", postImage: #imageLiteral(resourceName: "dunePostImage")))
+        posts.append(Post(accountImage: #imageLiteral(resourceName: "duneAccountImage"), accountName: "@dunemovie" , username: "DUNE",postText: "A mythic and emotionally charged hero's journey,'Dune' tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people.", postDate: "12 sep 2021", postImage: #imageLiteral(resourceName: "dunePostImage")))
         
         posts.append(Post(accountImage: #imageLiteral(resourceName: "netflixAccountImage"), accountName: "@dunemovie", username: "Netflix",postText: "A new look at ‘STRANGER THINGS’ Season 4.", postDate: "4 oct 2021", postImage: nil))
         

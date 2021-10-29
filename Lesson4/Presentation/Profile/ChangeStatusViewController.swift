@@ -16,7 +16,7 @@ class ChangeStatusViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var statusTextField: UITextField!
     
-    //MARK: - Var
+    //MARK: - Dependencies
     weak var delegate: ChangeStatusViewControllerDelegate?
     var currentUser: User?
     
