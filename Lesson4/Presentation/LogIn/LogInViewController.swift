@@ -69,7 +69,7 @@ class LogInViewController: UIViewController {
     //MARK: - IBAction
     @IBAction func logInButton(_sender: UIButton) {
         if isValidEmail(emailTextField.text) && isValidPassword(passwordTextField.text) {
-            user = usersData.first(where: { user in emailTextField.text == user.eMail
+            user = usersData.first(where: { user in emailTextField.text == user.email
                 
             })
             

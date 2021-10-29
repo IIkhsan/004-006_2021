@@ -14,11 +14,11 @@ class DataManager {
         sleep(1)
         var users: [User] = []
         
-        users.append(User(eMail: "dune@google.com", password: "qwert1", username: "DUNE", accountName: "@dunemovie", status: "waiting for the movie", accountImage: #imageLiteral(resourceName: "duneAccountImage"), profileHeader: #imageLiteral(resourceName: "tumblr_4d00676f0bc97f54025d7e6687ac396d_e56447ec_1280")))
+        users.append(User(email: "dune@google.com", password: "qwert1", username: "DUNE", accountName: "@dunemovie", status: "waiting for the movie", accountImage: #imageLiteral(resourceName: "duneAccountImage"), profileHeader: #imageLiteral(resourceName: "tumblr_4d00676f0bc97f54025d7e6687ac396d_e56447ec_1280")))
         
-        users.append(User(eMail: "netflix@mail.ru", password: "netflix12", username: "Netflix", accountName: "@netflix", status: "see netflix", accountImage: #imageLiteral(resourceName: "netflixAccountImage"), profileHeader:#imageLiteral(resourceName: "09f739cb30ca8a17f1a655cadd0f76a4")))
+        users.append(User(email: "netflix@mail.ru", password: "netflix12", username: "Netflix", accountName: "@netflix", status: "see netflix", accountImage: #imageLiteral(resourceName: "netflixAccountImage"), profileHeader:#imageLiteral(resourceName: "09f739cb30ca8a17f1a655cadd0f76a4")))
         
-        users.append(User(eMail: "cats@google.com", password: "catscool1", username: "Cats", accountName: "@cats", status: "Cats are cool", accountImage: #imageLiteral(resourceName: "catsAccountImage"), profileHeader: #imageLiteral(resourceName: "fc97c543dea3f9ef1ce04fee7fcb0082")))
+        users.append(User(email: "cats@google.com", password: "catscool1", username: "Cats", accountName: "@cats", status: "Cats are cool", accountImage: #imageLiteral(resourceName: "catsAccountImage"), profileHeader: #imageLiteral(resourceName: "fc97c543dea3f9ef1ce04fee7fcb0082")))
         
         completion(users)
     }

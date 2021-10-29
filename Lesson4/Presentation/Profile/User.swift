@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct User {
-    var eMail: String
+    var email: String
     var password: String
     var username: String
     var accountName: String
