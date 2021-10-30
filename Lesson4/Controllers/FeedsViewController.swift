@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedsViewController: UIViewController, UserIdentifiable {
+class FeedsViewController: UIViewController, UserProtocol {
     // MARK: - properties
     weak var user: User?
     var feedManager = FeedsManager()
@@ -28,8 +28,8 @@ class FeedsViewController: UIViewController, UserIdentifiable {
         
         // register cells with their identifiers
         registerNib(AppConstants.feedCell, with: AppConstants.feedCell)
-        registerNib(AppConstants.feedCell_Image, with: AppConstants.feedCell_Image)
-        registerNib(AppConstants.feedCell_Content, with: AppConstants.feedCell_Content)
+        registerNib(AppConstants.imageFeedCell, with: AppConstants.imageFeedCell)
+        registerNib(AppConstants.contentFeedCell, with: AppConstants.contentFeedCell)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,10 +104,10 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let feed = feeds[indexPath.row]
-        let cell: FeedCellDelegate?
+        let cell: FeedCellProtocol?
         switch feed.type {
-            case .contentOnly: cell = getFeedCell(withIdentifier: AppConstants.feedCell_Content, for: indexPath, as: FeedCell_Content.self)
-            case .imageOnly: cell = getFeedCell(withIdentifier: AppConstants.feedCell_Image, for: indexPath, as: FeedCell_Image.self)
+            case .contentOnly: cell = getFeedCell(withIdentifier: AppConstants.contentFeedCell, for: indexPath, as: ContentFeedCell.self)
+            case .imageOnly: cell = getFeedCell(withIdentifier: AppConstants.imageFeedCell, for: indexPath, as: ImageFeedCell.self)
             case .both: cell = getFeedCell(withIdentifier: AppConstants.feedCell, for: indexPath, as: FeedCell.self)
         }
         

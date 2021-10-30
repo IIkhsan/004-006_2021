@@ -34,7 +34,7 @@ struct FeedsService {
     }
     
     
-    // MARK: - helper functions
+    // MARK: - private helper functions
    
     // helper function for generating random [mocking] feeds
     private static func generateRandomFeeds() -> [Feed] {

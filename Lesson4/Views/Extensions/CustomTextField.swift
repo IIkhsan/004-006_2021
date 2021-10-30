@@ -1,30 +1,12 @@
 //
-//  UIView+Attributes.swift
-//  Profilia
+//  CustomTextField.swift
+//  Lesson4
 //
-//  Created by Evans Owamoyo on 23.07.2021.
+//  Created by Evans Owamoyo on 30.10.2021.
 //
 
 import UIKit
 
-
-
-//MARK: extension for ImageView which contains helper functions like making circleAvatars
-extension UIImageView {
-    func makeRounded() {
-        makeRounded(withColor: .black)
-    }
-    
-    func makeRounded(withColor color: UIColor) {
-        self.layer.borderWidth = 2
-        self.layer.masksToBounds = false
-        self.layer.borderColor = color.cgColor
-        self.layer.cornerRadius = self.frame.height / 2
-        self.clipsToBounds = true
-    }
-}
-
-// MARK: extension for textfields
 @IBDesignable class CustomTextField: UITextField {
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -35,7 +17,7 @@ extension UIImageView {
         return self.textRect(forBounds: bounds)
     }
     
-    //MARK: borderWidth for UIViews that have borders
+    //MARK: UIView borderWidth
     @IBInspectable var mBorderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
@@ -45,7 +27,7 @@ extension UIImageView {
         }
     }
     
-    // MARK: cornerRadius for textfield
+    // MARK: TextField cornerRadius
     @IBInspectable var mCornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
@@ -55,7 +37,7 @@ extension UIImageView {
         }
     }
     
-    // MARK: borderColor for UIViews that have borders
+    // MARK: UIView borderColor
     @IBInspectable var mBorderColor: UIColor? {
         set {
             layer.borderColor = newValue!.cgColor
@@ -79,6 +61,7 @@ extension UIImageView {
         }
     }
     
+    // shakes the textfield 4 times with a (10px) dx
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07

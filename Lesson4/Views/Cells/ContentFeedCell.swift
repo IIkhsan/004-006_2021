@@ -1,9 +1,8 @@
-
 import UIKit
 
-class FeedCell_Image: FeedCell {
+class ContentFeedCell: FeedCell {
     override func loadData(with feed: Feed) {
         super.loadData(with: feed)
-        feedImage?.image = feed.image
+        contentLabel.text = feed.content
     }
 }

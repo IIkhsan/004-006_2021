@@ -7,8 +7,8 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController, UserIdentifiable {
-    // MARK: - private props
+class EditProfileViewController: UIViewController, UserProtocol {
+    // MARK: - private properties
     weak var user: User?
     var delegate: ProfileViewControllerDelegate?
     
@@ -85,7 +85,7 @@ class EditProfileViewController: UIViewController, UserIdentifiable {
         }
     }
     
-    // MARK: - helper functions
+    // MARK: - private functions
     private func setupViewItems() {
         emailTF.text = user?.email
         passwordTF.text = user?.password

@@ -1,10 +1,12 @@
 import UIKit
 
-protocol FeedCellDelegate: UITableViewCell {
+// MARK: - FeedCellProtocol
+protocol FeedCellProtocol: UITableViewCell {
     func loadData(with feed: Feed)
 }
 
-class FeedCell: UITableViewCell, FeedCellDelegate {
+// MARK: - FeedCell 
+class FeedCell: UITableViewCell, FeedCellProtocol {
     
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!

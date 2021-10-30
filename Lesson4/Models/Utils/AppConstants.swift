@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppConstants {
-    // MARK: - segue identifiers
+    // MARK: - Segue Identifiers
     static let gotoMain = "gotoMain"
     static let gotoAuth = "gotoAuth"
     static let gotoProfileEdit = "editProfile"
@@ -17,15 +17,15 @@ struct AppConstants {
     static let gotoDetails = "gotoBoth"
     static let gotoImageDetails = "gotoImage"
     
-    // MARK: - cell identifiers
+    // MARK: - Cell Identifiers
     static let feedCell = "FeedCell"
-    static let feedCell_Image = "FeedCell-Image"
-    static let feedCell_Content = "FeedCell-Content"
+    static let imageFeedCell = "ImageFeedCell"
+    static let contentFeedCell = "ContentFeedCell"
     
-    // MARK: - view controller identifiers
+    // MARK: - ViewController Identifiers
     static let authVC = "authVC"
     
-    // MARK: - global helper functions
+    // MARK: - global functions
     public static func delay(bySeconds seconds: Double,
                      dispatchQueue: DispatchQueue = DispatchQueue.global(qos: .background),
                      closure: @escaping () -> Void) {

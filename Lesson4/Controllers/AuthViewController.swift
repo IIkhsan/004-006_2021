@@ -9,8 +9,8 @@ import UIKit
 
 class AuthViewController: UIViewController {
     // MARK: - properties
-    // FIXME: change autoLogin to `false` to prevent autoSign in
-    var autoLogin = true
+    // FIXME: change shouldAutoLogin to `false` to prevent autoSign in
+    var shouldAutoLogin = true
     
     // MARK: - IBOutlets
     @IBOutlet weak var passwordTextField: CustomTextField!
@@ -24,9 +24,10 @@ class AuthViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         authManager.delegate = self
         loadingSpinner.stopAnimating()
-        if autoLogin {
+        if shouldAutoLogin {
             authManager.silentLogin()
         }
     }
@@ -52,7 +53,7 @@ class AuthViewController: UIViewController {
             
             // update all viewControllers that are userIdentifiable
             for viewController in viewControllers {
-                if var viewController = viewController as? UserIdentifiable {
+                if var viewController = viewController as? UserProtocol {
                     viewController.user = sender
                 }
             }
@@ -92,9 +93,6 @@ class AuthViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Helper functions
-   
 }
 
 

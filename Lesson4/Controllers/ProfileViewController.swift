@@ -12,7 +12,7 @@ protocol ProfileViewControllerDelegate {
 }
 
 
-class ProfileViewController: UIViewController, UserIdentifiable {
+class ProfileViewController: UIViewController, UserProtocol {
     
     // MARK: - IBOutlets
     @IBOutlet weak var profileImageView: UIImageView!
@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController, UserIdentifiable {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == AppConstants.gotoAuth {
             if let authVC = segue.destination as? AuthViewController {
-                authVC.autoLogin = false
+                authVC.shouldAutoLogin = false
             }
         } else if segue.identifier == AppConstants.gotoProfileEdit {
             if let editProfileVC = segue.destination as? EditProfileViewController {
