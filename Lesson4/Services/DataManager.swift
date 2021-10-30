@@ -30,7 +30,7 @@ class DataManager {
                                   martialStatus: "Married",
                                   phoneNumber: "79190287278",
                                   instagram: "HinataChan",
-                                  eMail: "hinata@konoha.com",
+                          email: "hinata@konoha.com",
                                   password: "hinata1",
                                   posts: [post1,post5,post8]))
         users.append(User(profileImage: UIImage(named: "12"),
@@ -40,7 +40,7 @@ class DataManager {
                                   martialStatus: "Married",
                                   phoneNumber: "79190287777",
                                   instagram: "NarutoKun",
-                                  eMail: "naruto@konoha.com",
+                                  email: "naruto@konoha.com",
                                   password: "naruto1",
                                   posts: [post2,post6,post9]))
         users.append(User(profileImage: UIImage(named: "13"),
@@ -50,9 +50,10 @@ class DataManager {
                                   martialStatus: "Married",
                                   phoneNumber: "79190286666",
                                   instagram: "SasukeKun",
-                                  eMail: "sasuke@konoha.com",
+                                  email: "sasuke@konoha.com",
                                   password: "sasuke1",
                                   posts: [post3,post4,post7,post10]))
         completion(users)
     }
+    
 }

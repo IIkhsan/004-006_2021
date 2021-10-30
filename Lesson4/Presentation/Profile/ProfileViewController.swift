@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var instagramLabel: UILabel!
     
-    //MARK: - Var
+    //MARK: - Properties
     var currentUser: User?
     
     //MARK: - View controller's cycle
@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
     
     
     
-    //MARK: - Get current user and set data
+    //MARK: - Private functions
     private func getCurrentUser() {
         if let presentingViewController = presentingViewController as? LoginViewController, let currentUser = presentingViewController.user {
             self.currentUser = currentUser
@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController {
         instagramLabel.text = user?.instagram
     }
     
-    //MARK: - Log out and change status buttons
+    //MARK: - Button's actions
     @IBAction func logOutButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController {
 
 }
 
-//MARK: - Change status view controller delegate
+//MARK: - ChangeStatusViewControllerDelegate
 extension ProfileViewController: ChangeStatusViewControllerDelegate {
     func changeData(user: User) {
         currentUser = user

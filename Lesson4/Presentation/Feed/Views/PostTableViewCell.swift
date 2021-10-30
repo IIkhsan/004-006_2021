@@ -16,10 +16,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     
     //MARK: - Cell's methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

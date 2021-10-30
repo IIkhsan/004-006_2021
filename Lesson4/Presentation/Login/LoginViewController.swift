@@ -12,9 +12,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    //MARK: - Var
+    //MARK: - Dependencies
     var usersData: [User] = []
     let dataManager = DataManager()
+    
+    //MARK: - Properties
     var user: User?
     
     //MARK: - View controller's cycle
@@ -23,7 +25,7 @@ class LoginViewController: UIViewController {
         prepareUsers()
     }
     
-    //MARK: - Private func to get users
+    //MARK: - Private functions
     private func prepareUsers() {
         dataManager.getUsers(completion: processingUser(_:))
     }
@@ -70,7 +72,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         if isValidEmail(mailTextField.text) && isValidPassword(passwordTextField.text) {
             user = usersData.first(where: { user in
-                mailTextField.text == user.eMail
+                mailTextField.text == user.email
             })
             if passwordTextField.text == user?.password {
                 sleep(3)

@@ -18,7 +18,7 @@ struct User {
     var martialStatus: String
     var phoneNumber: String
     var instagram: String
-    let eMail: String
+    let email: String
     let password: String
     let posts: [Post]
 }

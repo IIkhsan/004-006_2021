@@ -11,27 +11,32 @@ class FeedViewController: UIViewController {
     //MARK: - UI
     @IBOutlet var tableView: UITableView!
     
-    //MARK: - Var
+    //MARK: - Properties
     var currentUser: User?
     
     //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    //MARK: - Private functions
+    private func getCurrentUser() {
+        if let presentingViewController = presentingViewController as? LoginViewController, let currentUser = presentingViewController.user {
+            self.currentUser = currentUser
+        }
+    }
+    
+    private func configure() {
         getCurrentUser()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 150
     }
     
-    //MARK: - Get current user and set data
-    private func getCurrentUser() {
-        if let presentingViewController = presentingViewController as? LoginViewController, let currentUser = presentingViewController.user {
-            self.currentUser = currentUser
-        }
-    }
 }
 
-// MARK: - Table view data source and delegate
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentUser?.posts.count ?? 0
