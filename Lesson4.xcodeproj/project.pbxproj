@@ -17,6 +17,7 @@
 		7C623DA5271CC6F000733221 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA4271CC6F000733221 /* PostCell.swift */; };
 		7C623DA7271CC75600733221 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA6271CC75600733221 /* NewsController.swift */; };
 		7C623DAA271DDF2E00733221 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA9271DDF2E00733221 /* Post.swift */; };
+		7CB97D62272C343D0081D00D /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB97D61272C343D0081D00D /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7C623DA4271CC6F000733221 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		7C623DA6271CC75600733221 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		7C623DA9271DDF2E00733221 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7CB97D61272C343D0081D00D /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,10 @@
 		5EE68FFF27036B9200F5C170 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6900627036B9200F5C170 /* Main.storyboard */,
+				7CB97D60272C33EA0081D00D /* Services */,
 				7C623DA8271DDF1900733221 /* Models */,
-				7C623DA1271CC25000733221 /* Tab bar elements */,
-				7C623D9A271C912300733221 /* Sign in board */,
+				7C623DA1271CC25000733221 /* Controllers */,
 				7C623D99271C8BDB00733221 /* System delegates */,
 				5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */,
 				5EE6900E27036B9400F5C170 /* Info.plist */,
@@ -84,23 +87,23 @@
 			path = "System delegates";
 			sourceTree = "<group>";
 		};
-		7C623D9A271C912300733221 /* Sign in board */ = {
+		7C623D9A271C912300733221 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6900627036B9200F5C170 /* Main.storyboard */,
 				7C623D9B271C978B00733221 /* MainViewController.swift */,
 			);
-			path = "Sign in board";
+			path = SignIn;
 			sourceTree = "<group>";
 		};
-		7C623DA1271CC25000733221 /* Tab bar elements */ = {
+		7C623DA1271CC25000733221 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C623D9E271CBE3900733221 /* TabBarController.swift */,
+				7C623D9A271C912300733221 /* SignIn */,
 				7C623DA3271CC26D00733221 /* News */,
 				7C623DA2271CC26200733221 /* Profile */,
-				7C623D9E271CBE3900733221 /* TabBarController.swift */,
 			);
-			path = "Tab bar elements";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7C623DA2271CC26200733221 /* Profile */ = {
@@ -125,6 +128,14 @@
 				7C623DA9271DDF2E00733221 /* Post.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7CB97D60272C33EA0081D00D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7CB97D61272C343D0081D00D /* PostService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				7C623DA7271CC75600733221 /* NewsController.swift in Sources */,
 				7C623D9C271C978B00733221 /* MainViewController.swift in Sources */,
 				7C623D9F271CBE3900733221 /* TabBarController.swift in Sources */,
+				7CB97D62272C343D0081D00D /* PostService.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 				7C623DAA271DDF2E00733221 /* Post.swift in Sources */,

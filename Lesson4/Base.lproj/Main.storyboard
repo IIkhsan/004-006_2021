@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3zu-cW-BAW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3zu-cW-BAW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -138,14 +138,14 @@
                                                             <rect key="frame" x="90" y="0.0" width="284" height="70"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Group Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yR-oq-ucj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="49.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="42.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgT-ig-1fc">
-                                                                    <rect key="frame" x="0.0" y="49.5" width="33.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="42.5" width="27.5" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -153,26 +153,29 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sNk-M2-RI6">
-                                                    <rect key="frame" x="0.0" y="85" width="414" height="390"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sNk-M2-RI6">
+                                                    <rect key="frame" x="0.0" y="85" width="414" height="380.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wau-d8-A56">
-                                                            <rect key="frame" x="11.5" y="0.0" width="391.5" height="141"/>
+                                                            <rect key="frame" x="4" y="0.0" width="406.5" height="131.5"/>
                                                             <string key="text">Антивещество́ — вещество, состоящее из античастиц, стабильно не образующееся в природе. Ядра антивещества, синтезированные учёными, состоят из антипротонов и антинейтронов, а оболочки — из позитронов.</string>
-                                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-XP-edN">
-                                                            <rect key="frame" x="0.0" y="141" width="414" height="249"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-XP-edN">
+                                                            <rect key="frame" x="0.0" y="131.5" width="414" height="249"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="KdJ-XP-edN" secondAttribute="height" multiplier="138:83" id="ng8-ON-ka7"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="u9S-HK-eIr" firstAttribute="trailing" secondItem="JkO-MK-5Fs" secondAttribute="trailingMargin" id="9Eo-cq-j46"/>
-                                                <constraint firstAttribute="bottom" secondItem="sNk-M2-RI6" secondAttribute="bottom" constant="25" id="9o4-QZ-ogG"/>
                                                 <constraint firstItem="sNk-M2-RI6" firstAttribute="leading" secondItem="JkO-MK-5Fs" secondAttribute="leading" id="BDv-YB-H2W"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sNk-M2-RI6" secondAttribute="bottom" constant="23.5" id="EWE-dg-7F6"/>
                                                 <constraint firstItem="u9S-HK-eIr" firstAttribute="top" secondItem="JkO-MK-5Fs" secondAttribute="topMargin" id="aLX-lN-NUt"/>
                                                 <constraint firstItem="u9S-HK-eIr" firstAttribute="leading" secondItem="JkO-MK-5Fs" secondAttribute="leadingMargin" id="imx-UW-2Rw"/>
                                                 <constraint firstAttribute="trailing" secondItem="sNk-M2-RI6" secondAttribute="trailing" id="jrH-6J-AfK"/>
