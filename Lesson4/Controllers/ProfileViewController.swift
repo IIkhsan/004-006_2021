@@ -53,16 +53,16 @@ class ProfileViewController: UIViewController, UserProtocol {
         performSegue(withIdentifier: AppConstants.gotoAuth, sender: nil)
     }
     
-    // MARK: - Helper functions
+    // MARK: - Private functions
     
-    func beautifyViews() {
+    private func beautifyViews() {
         let color = #colorLiteral(red: 0.9882352941, green: 0.8588235294, blue: 0.7176470588, alpha: 1)
         profileImageView.makeRounded(withColor: color)
         editProfileBtn.layer.borderWidth = 1
         editProfileBtn.layer.borderColor = #colorLiteral(red: 0.9882352941, green: 0.8588235294, blue: 0.7176470588, alpha: 1).cgColor
     }
     
-    func updateUserInfo() {
+    private func updateUserInfo() {
         nameLabel.text = user?.name
         emailLabel.text = user?.email
         profileImageView.image = user?.image
