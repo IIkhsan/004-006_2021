@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - ProfileStatusViewControllerDelegate protocol
 
-protocol ProfileStatusViewControllerDelegate: AnyObject {
+protocol IProfileStatusViewControllerDelegate: AnyObject {
     
     // Change user data func
     
@@ -21,7 +21,7 @@ class ProfileStatusViewController: UIViewController {
     
     // MARK: - Initialization
     
-    weak var delegate: ProfileStatusViewControllerDelegate?
+    weak var delegate: IProfileStatusViewControllerDelegate?
     var currentUser: User?
     
     // MARK: - View life cycle

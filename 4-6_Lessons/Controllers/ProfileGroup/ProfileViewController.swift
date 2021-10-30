@@ -128,7 +128,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 // MARK: - Profile view controller extension
 
-extension ProfileViewController: ProfileStatusViewControllerDelegate {
+extension ProfileViewController: IProfileStatusViewControllerDelegate {
     
     // Change user data func 
     
