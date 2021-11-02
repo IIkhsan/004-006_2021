@@ -1,5 +1,5 @@
 //
-//  Alert.swift
+//  UIViewController+Alert.swift
 //  Lesson4
 //
 //  Created by Руслан on 11.10.2021.
