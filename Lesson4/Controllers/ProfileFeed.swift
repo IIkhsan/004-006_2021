@@ -8,7 +8,10 @@
 import UIKit
 
 class ProfileFeed: UIViewController {
-
+    
+    // MARK: - Properties
+    var accountCell:AccountInformationTableViewCell = AccountInformationTableViewCell()
+    
     // MARK: - IBOutlets
     @IBOutlet weak var profileFeed: UITableView!
     
@@ -47,7 +50,8 @@ extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.row > 1 else {
             if indexPath.row == 0 {
-                return tableView.dequeueReusableCell(withIdentifier: "accountInformation") as! AccountInformationTableViewCell
+                accountCell = tableView.dequeueReusableCell(withIdentifier: "accountInformation") as! AccountInformationTableViewCell
+                return accountCell
             }
             else {
                 return tableView.dequeueReusableCell(withIdentifier: "friendsList") as! FriendsListTableViewCell
@@ -79,5 +83,20 @@ extension ProfileFeed: UITableViewDataSource, UITableViewDelegate {
             return 650
         }
         return 200
+    }
+}
+
+
+extension ProfileFeed: StatusChangeVCDelegate {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "statusChangeSegue" {
+            let destinationVC = segue.destination as! StatusChangeViewController
+            destinationVC.delegate = self
+        }
+    }
+    
+    func setStatusTo(status: String) {
+        accountCell.accountStatus.text = status
     }
 }

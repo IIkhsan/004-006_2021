@@ -28,7 +28,7 @@ class InstagramFeed: UIViewController {
 }
 
 // MARK: - InstagramFeed extensions
-extension InstagramFeed: UITableViewDataSource, UITableViewDelegate{
+extension InstagramFeed: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
