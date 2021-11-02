@@ -8,12 +8,12 @@
 import UIKit
 
 extension UIViewController {
-    
+
     func showOkAlert(title: String?, description: String?) {
         let alertController = UIAlertController(title: title, message: description, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         present(alertController, animated: true, completion: nil)
     }
-    
+
 }

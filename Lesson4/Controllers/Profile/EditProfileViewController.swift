@@ -12,8 +12,9 @@ protocol EditProfileViewControllerDelegate: AnyObject {
     func updateUserData(with user: User)
 }
 
-class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, CanValidateData {
-    
+class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
+
+    // Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var statusTextField: UITextField!
@@ -23,14 +24,15 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
     @IBOutlet weak var educationTextField: UITextField!
     @IBOutlet weak var followersCountTextField: UITextField!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    
+
     // Properties
     var user: User?
     weak var delegate: EditProfileViewControllerDelegate?
     static let identifier = String(describing: EditProfileViewController.self)
-    var imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     var pickImageCallback: ((UIImage) -> ())?
-    
+    let validator = Validator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,9 +41,9 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
         
         configureUserData()
     }
-    
+
     // MARK: - Private methods
-    
+
     private func configureUserData() {
         guard let user = user else { return }
         
@@ -52,14 +54,14 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
         fullNameTextField.text = user.fullName
         statusTextField.text = user.status
         lastActivityTextField.text = user.lastActivity
-        friendsCountTextField.text = user.friendsCount
+        friendsCountTextField.text = user.friendsCountInfo
         cityTextField.text = user.city
         educationTextField.text = user.education
-        followersCountTextField.text = user.followersCount
+        followersCountTextField.text = user.followersCountInfo
         
         imagesCollectionView.reloadData()
     }
-    
+
     private func presentImagePicker() {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             imagePicker.delegate = self
@@ -69,9 +71,9 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
             present(imagePicker, animated: true, completion: nil)
         }
     }
-    
+
     // MARK: - Actions
-    
+
     @IBAction func didTapAddImageButton(_ sender: UIButton) {
         pickImageCallback = { [weak self] image in
             guard let self = self else { return }
@@ -80,10 +82,10 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
         }
         presentImagePicker()
     }
-    
+
     @IBAction func didTapSaveBarButton(_ sender: UIBarButtonItem) {
         guard let fullName = fullNameTextField.text else { return }
-        if let (title, description) = validate(fullName: fullName, email: nil, password: nil, confirmedPassword: nil) {
+        if let (title, description) = validator.validate(fullName: fullName, email: nil, password: nil, confirmedPassword: nil) {
             showOkAlert(title: title, description: description)
             return
         }
@@ -92,8 +94,8 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
             email: user?.email ?? "", password: user?.password ?? "",
             avatarImage: avatarImageView.image, fullName: fullName,
             status: statusTextField.text, lastActivity: lastActivityTextField.text,
-            friendsCount: friendsCountTextField.text, city: cityTextField.text,
-            education: educationTextField.text, followersCount: followersCountTextField.text,
+            friendsCount: Int(friendsCountTextField.text ?? ""), city: cityTextField.text,
+            education: educationTextField.text, followersCount: Int(followersCountTextField.text ?? ""),
             images: user?.images ?? [], posts: user?.posts ?? []
         )
         delegate?.updateUserData(with: updatedUser)
@@ -105,7 +107,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate, 
 // MARK: - ImagePicker delegate methods
 
 extension EditProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[.editedImage] as? UIImage else {
@@ -113,17 +115,17 @@ extension EditProfileViewController: UINavigationControllerDelegate, UIImagePick
         }
         pickImageCallback?(image)
     }
-    
+
 }
 
 // MARK: - CollectionView data source methods
 
 extension EditProfileViewController: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return user?.images.count ?? 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: ImagesCollectionViewCell.identifier, for: indexPath) as? ImagesCollectionViewCell else { return UICollectionViewCell() }
         
@@ -131,32 +133,33 @@ extension EditProfileViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
+
 }
 
 // MARK: - CollectionView delegate methods
 
 extension EditProfileViewController: UICollectionViewDelegate {
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         imagesCollectionView.deselectItem(at: indexPath, animated: true)
     }
-    
+
 }
 
 // MARK: - CollectionView delegate flow methods
 
 extension EditProfileViewController: UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 100)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout
                             collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5.0
     }
+
 }

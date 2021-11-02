@@ -19,11 +19,16 @@ class PostTableViewCell: UITableViewCell {
     // Properties
     static let identifier = String(describing: PostTableViewCell.self)
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        accountLogoImageView.layer.cornerRadius = accountLogoImageView.frame.size.height / 2
+    }
+    
     func configure(with post: Post) {
         accountLogoImageView.image = post.accountLogo
-        accountLogoImageView.layer.cornerRadius = accountLogoImageView.frame.size.height / 2
         accountNameLabel.text = post.accountName
-        postDate.text = post.date
+        postDate.text = post.dateString
         
         if post.text != nil {
             postTextLabel.text = post.text

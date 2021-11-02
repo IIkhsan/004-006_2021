@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, ForUser {
-    
+class ProfileViewController: UIViewController, UserHandlingProtocol {
+
     // Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -21,11 +21,7 @@ class ProfileViewController: UIViewController, ForUser {
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     
     // Properties
-    var user: User? {
-        didSet {
-            reloadUserData = true
-        }
-    }
+    var user: User?
     static let identifier = String(describing: ProfileViewController.self)
     private var reloadUserData = false
     
@@ -36,19 +32,33 @@ class ProfileViewController: UIViewController, ForUser {
 
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
-        
-//        configureUserData()
+        imagesCollectionView.collectionViewLayout = getImagesCollectionViewLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if reloadUserData {
             configureUserData()
         }
     }
     
+    // MARK: - UserHandlingProtocol methods
+    
+    func setUser(_ user: User) {
+        self.user = user
+        reloadUserData = true
+    }
+    
     // MARK: - Private methods
+    
+    private func getImagesCollectionViewLayout() -> UICollectionViewFlowLayout {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.itemSize = CGSize(width: 100, height: 100)
+        collectionViewLayout.minimumLineSpacing = 5.0
+        collectionViewLayout.scrollDirection = .horizontal
+        return collectionViewLayout
+    }
     
     private func configureUserData() {
         guard let user = user else { return }
@@ -60,10 +70,10 @@ class ProfileViewController: UIViewController, ForUser {
         fullNameLabel.text = user.fullName
         statusLabel.text = user.status
         lastActivityLabel.text = user.lastActivity
-        friendsCountLabel.text = user.friendsCount
+        friendsCountLabel.text = user.friendsCountInfo
         cityLabel.text = user.city
         educationLabel.text = user.education
-        followersCountLabel.text = user.followersCount
+        followersCountLabel.text = user.followersCountInfo
         
         imagesCollectionView.reloadData()
     }
@@ -82,7 +92,7 @@ class ProfileViewController: UIViewController, ForUser {
             navigationController.logout()
         }
     }
-    
+
 }
 
 // MARK: - Custom delegate methods
@@ -99,7 +109,7 @@ extension ProfileViewController: EditProfileViewControllerDelegate {
 // MARK: - CollectionView data source methods
 
 extension ProfileViewController: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return user?.images.count ?? 0
     }
@@ -111,7 +121,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
+
 }
 
 // MARK: - CollectionView delegate methods
@@ -122,22 +132,4 @@ extension ProfileViewController: UICollectionViewDelegate {
         imagesCollectionView.deselectItem(at: indexPath, animated: true)
     }
 
-}
-
-// MARK: - CollectionView delegate flow methods
-
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout
-                            collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5.0
-    }
-    
 }

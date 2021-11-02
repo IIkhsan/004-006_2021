@@ -27,7 +27,7 @@ class PostViewController: UIViewController {
         accountLogoImageView.image = post.accountLogo
         accountLogoImageView.layer.cornerRadius = accountLogoImageView.frame.size.height / 2
         accountNameLabel.text = post.accountName
-        postDate.text = post.date
+        postDate.text = post.dateString
         
         if post.text != nil {
             postTextLabel.text = post.text

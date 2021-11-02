@@ -8,13 +8,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+
     // Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     // Properties
-    var users: [User] = []
+    let dataManager = DataManager()
+    let validator = Validator()
     
     // MARK: - ViewController life cycle
     
@@ -27,17 +28,15 @@ class LoginViewController: UIViewController {
     // MARK: - Private methods
     
     private func prepareUsers() {
-        DataManager.createDefaultUsers { [weak self] users in
-            guard let self = self else { return }
-            self.users = users
+        dataManager.createDefaultUsers { [weak self] users in
+            users.forEach { [weak self] user in
+                guard let self = self else { return }
+                self.dataManager.addUser(user)
+            }
         }
     }
     
     // MARK: - Public methods
-    
-    func addUser(_ user: User) {
-        users.append(user)
-    }
     
     func loginUser(_ user: User) {
         guard let nav = navigationController as? AuthenticationNavigationController else { return }
@@ -50,7 +49,12 @@ class LoginViewController: UIViewController {
     @IBAction func didTapLoginButton(_ sender: UIButton) {
         let email = emailTextField.text
         let password = passwordTextField.text
-        let user = users.filter({ $0.email == email }).first
+        let user = dataManager.getUser(email: email)
+        
+        guard let email = email, validator.isValidEmail(email) else {
+            showOkAlert(title: "Invalid email", description: "Please try again")
+            return
+        }
         
         guard let user = user else {
             showOkAlert(title: "Wrong login", description: "User with such email is not found")
@@ -63,5 +67,5 @@ class LoginViewController: UIViewController {
             showOkAlert(title: "Wrong password", description: "Please try again")
         }
     }
-    
+
 }

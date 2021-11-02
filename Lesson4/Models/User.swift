@@ -14,10 +14,18 @@ struct User {
     let fullName: String
     let status: String?
     let lastActivity: String?
-    let friendsCount: String?
+    let friendsCount: Int?
     let city: String?
     let education: String?
-    let followersCount: String?
+    let followersCount: Int?
     var images: [UIImage?]
     let posts: [Post]
+
+    var friendsCountInfo: String {
+        "\(friendsCount ?? 0) friends"
+    }
+
+    var followersCountInfo: String {
+        "\(followersCount ?? 0) followers"
+    }
 }

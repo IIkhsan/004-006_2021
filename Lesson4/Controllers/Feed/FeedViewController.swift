@@ -7,24 +7,25 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, ForUser {
-    
+class FeedViewController: UIViewController, UserHandlingProtocol {
+
     // Outlets
     @IBOutlet weak var postsTableView: UITableView!
     
     // Properties
-    var user: User? {
-        didSet {
-            reloadUserData = true
-        }
-    }
-    private var reloadUserData = false
-
+    var user: User?
+    
     // MARK: - ViewController life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configurePostsTableView()
+    }
+    
+    // MARK: - Private methods
+    
+    private func configurePostsTableView() {
         postsTableView.register(UINib(nibName: PostTableViewCell.identifier, bundle: nil),
                                 forCellReuseIdentifier: PostTableViewCell.identifier)
         postsTableView.delegate = self
@@ -32,12 +33,11 @@ class FeedViewController: UIViewController, ForUser {
         postsTableView.estimatedRowHeight = 492
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if reloadUserData {
-            postsTableView.reloadData()
-        }
+    // MARK: - UserHandlingProtocol methods
+    
+    func setUser(_ user: User) {
+        self.user = user
+        postsTableView.reloadData()
     }
 
 }
@@ -45,7 +45,7 @@ class FeedViewController: UIViewController, ForUser {
 // MARK: - TableView data source methods
 
 extension FeedViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return user?.posts.count ?? 0
     }
@@ -56,18 +56,18 @@ extension FeedViewController: UITableViewDataSource {
         cell.configure(with: post)
         return cell
     }
-    
+
 }
 
 // MARK: - TableView delegate methods
 
 extension FeedViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let postViewController = storyboard?.instantiateViewController(withIdentifier: PostViewController.identifier) as? PostViewController else { return }
         postViewController.post = user?.posts[indexPath.row]
         navigationController?.pushViewController(postViewController, animated: true)
     }
-    
+
 }

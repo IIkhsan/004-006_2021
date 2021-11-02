@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanValidateData {
-    
+class SignupViewController: UIViewController, UIGestureRecognizerDelegate {
+
     // Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -22,8 +22,10 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     // Properties
-    var imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     var pickImageCallback: ((UIImage) -> ())?
+    let validator = Validator()
+    let dataManager = DataManager()
 
     // MARK: - ViewController life cycle
     
@@ -38,8 +40,11 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
     @IBAction func didTapSignUpButton(_ sender: UIButton) {
         guard let fullName = fullNameTextField.text, let email = emailTextField.text,
               let password = passwordTextField.text, let confirmedPassword = confirmPasswordTextField.text else { return }
-        if let (alertTitle, alertDescription) = validate(fullName: fullName, email: email,
-                                               password: password, confirmedPassword: confirmedPassword) {
+        if let (alertTitle, alertDescription) = validator.validate(
+            fullName: fullName,
+            email: email,
+            password: password,
+            confirmedPassword: confirmedPassword) {
             showOkAlert(title: alertTitle, description: alertDescription)
             return
         }
@@ -49,12 +54,12 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
             email: email, password: password,
             avatarImage: avatarImageView.image, fullName: fullName,
             status: statusTextField.text, lastActivity: "Online",
-            friendsCount: countOfFriendsTextField.text,
+            friendsCount: Int(countOfFriendsTextField.text ?? ""),
             city: cityTextField.text, education: educationTextField.text,
-            followersCount: followersCountTextField.text,
+            followersCount: Int(followersCountTextField.text ?? ""),
             images: [], posts: []
         )
-        loginViewController.addUser(newUser)
+        dataManager.addUser(newUser)
         loginViewController.loginUser(newUser)
         navigationController?.popViewController(animated: false)
     }
@@ -93,7 +98,7 @@ class SignupViewController: UIViewController, UIGestureRecognizerDelegate, CanVa
 // MARK: - ImagePicker delegate methods
 
 extension SignupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[.editedImage] as? UIImage else {
@@ -101,5 +106,5 @@ extension SignupViewController: UINavigationControllerDelegate, UIImagePickerCon
         }
         pickImageCallback?(image)
     }
-    
+
 }

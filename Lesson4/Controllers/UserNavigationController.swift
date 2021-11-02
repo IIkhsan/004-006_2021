@@ -7,13 +7,16 @@
 
 import UIKit
 
-protocol ForUser: AnyObject {
-    
+protocol UserHandlingProtocol: AnyObject {
+
     var user: User? { get set }
+    
+    func setUser(_ user: User)
+
 }
 
 class UserNavigationController: UINavigationController {
-    
+
     var user: User? {
         didSet {
             configureTopViewController()
@@ -28,8 +31,10 @@ class UserNavigationController: UINavigationController {
     }
     
     private func configureTopViewController() {
-        if let topViewController = topViewController as? ForUser {
-            topViewController.user = user
+        if let topViewController = topViewController as? UserHandlingProtocol {
+            if let user = user {
+                topViewController.setUser(user)
+            }
         }
     }
     

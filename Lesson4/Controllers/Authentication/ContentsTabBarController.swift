@@ -8,7 +8,7 @@
 import UIKit
 
 class ContentsTabBarController: UITabBarController {
-    
+
     // Properties
     var user: User? {
         didSet {
@@ -18,11 +18,6 @@ class ContentsTabBarController: UITabBarController {
     static let identifier = String(describing: ContentsTabBarController.self)
     
     // MARK: - ViewController life cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -52,5 +47,5 @@ class ContentsTabBarController: UITabBarController {
             }
         }
     }
-    
+
 }

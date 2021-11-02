@@ -8,7 +8,7 @@
 import UIKit
 
 class AuthenticationNavigationController: UINavigationController {
-    
+
     var user: User? {
         didSet {
             contentsTabBarController?.user = user
@@ -16,5 +16,5 @@ class AuthenticationNavigationController: UINavigationController {
     }
     static let identifier = String(describing: AuthenticationNavigationController.self)
     weak var contentsTabBarController: ContentsTabBarController?
-    
+
 }
