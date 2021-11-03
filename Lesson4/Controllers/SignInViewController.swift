@@ -54,19 +54,19 @@ class SignInViewController: UIViewController {
     
     //   MARK: - Private functions
     
-    private func authorizeUser(_ username: String, _ password: String) -> User?{
+    private func authorizeUser(_ email: String, _ password: String) -> User?{
         
         let usernames:[String] = UserDefaults.standard.array(forKey: "usernames") as? [String] ?? DataManager.defaultUsersNames
         let emails:[String] = UserDefaults.standard.array(forKey: "emails") as? [String] ?? DataManager.defaultUsersEmails
         let passwords:[String] = UserDefaults.standard.array(forKey: "passwords") as? [String] ?? DataManager.defaultUsersPasswords
         
-        guard let userId = usernames.firstIndex(of: username) else {
-            showValidationAlert(message: "The password is wrong")
+        guard let userId = emails.firstIndex(of: email) else {
+            showValidationAlert(message: "The username is wrong")
             return nil }
         
         if passwords[userId] == password {
             UserDefaults.standard.set(userId,forKey: "currentUserId")
-            let user = User(username: username, email: emails[userId], password: password)
+            let user = User(username: usernames[userId], email: email, password: password)
             return user
         }else{
             showValidationAlert(message: "The password is wrong")
