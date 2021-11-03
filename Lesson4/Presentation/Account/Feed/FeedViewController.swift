@@ -10,7 +10,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     //MARK: - Properties
-    var user: User?
+    var user = User()
     
     //MARK: - Outlets
     @IBOutlet weak var feedTableView: UITableView!
@@ -19,10 +19,14 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getUser()
-        self.navigationItem.title = user?.login
+        self.navigationItem.title = user.login
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewDidLoad()
     }
     
     //MARK: - Private Functions
@@ -39,9 +43,8 @@ extension FeedViewController: UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let postVC = storyboard.instantiateViewController(withIdentifier: "PostViewController") as? PostViewController
         
-        postVC?.post = user?.feed[indexPath.row]
-        postVC?.name = "Случайный пользователь"
-        postVC?.avatar = UIImage(named: "friend1") ?? UIImage()
+        postVC?.post = user.feed[indexPath.row]
+        postVC?.setUnknownUser()
         
         navigationController?.pushViewController(postVC!, animated: true)
     }
@@ -50,14 +53,14 @@ extension FeedViewController: UITableViewDataSource {
 //MARK: - Table View Delegate
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user?.feed.count ?? 0
+        return user.feed.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let postCell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
         
-        postCell.setData(post: user?.feed[indexPath.row])
+        postCell.setData(post: user.feed[indexPath.row])
         postCell.setUnknownUser()
         
         return postCell

@@ -14,23 +14,12 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
-    //MARK: - Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-    
     //MARK: - Functions
-    func setData(user: User?) {
-        avatarImageView.image = user?.profileImage
-        nameLabel.text = user?.name
-        if user?.status != nil {
-            statusLabel.text = user?.status
+    func setData(user: User) {
+        avatarImageView.image = user.profileImage
+        nameLabel.text = user.name
+        if user.status != nil {
+            statusLabel.text = user.status
         } else {
             statusLabel.text = "Восславь Солнце!"
         }
@@ -41,6 +30,5 @@ class MainTableViewCell: UITableViewCell {
 extension MainTableViewCell: TableViewCellDelegate {
     func didDataChange(user: User) {
         setData(user: user)
-        DataManager.user = user
     }
 }

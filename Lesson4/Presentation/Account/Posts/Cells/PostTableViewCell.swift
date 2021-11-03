@@ -16,14 +16,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     
     //MARK: - Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     override func prepareForReuse() {
         postTextLabel.isHidden = false
         postImageView.isHidden = false
@@ -44,9 +36,9 @@ class PostTableViewCell: UITableViewCell {
         }
     }
     
-    func setUser(user: User?) {
-        nameLabel.text = user?.name
-        avatarImageView.image = user?.profileImage
+    func setUser(user: User) {
+        nameLabel.text = user.name
+        avatarImageView.image = user.profileImage
     }
     
     func setUnknownUser() {

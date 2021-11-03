@@ -10,7 +10,7 @@ import UIKit
 class EditViewController: UIViewController {
 
     //MARK: - Properties
-    var user: User?
+    var user = User()
     weak var delegateMainCell: TableViewCellDelegate?
     weak var delegateInfoCell: TableViewCellDelegate?
     weak var delegatePostCell: TableViewCellDelegate?
@@ -22,11 +22,14 @@ class EditViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func signoutAction(_ sender: Any) {
+        DataManager.user = nil
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func confirmChangesAction(_ sender: Any) {
-        guard var user = user else { return }
+        
+        var user = self.user
+        
         if nameTextField.text != "" {
             user.name = nameTextField.text ?? "Иван Иванов"
         }
@@ -37,17 +40,13 @@ class EditViewController: UIViewController {
             user.city = cityTextField.text ?? "Казань"
         }
         
+        DataManager.user = user
+        
         delegateMainCell?.didDataChange(user: user)
         delegateInfoCell?.didDataChange(user: user)
         delegatePostCell?.didDataChange(user: user)
         
         navigationController?.popViewController(animated: true)
-    }
-    
-    //MARK: - View Controller Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }
 

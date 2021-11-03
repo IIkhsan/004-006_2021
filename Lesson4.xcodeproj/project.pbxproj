@@ -112,9 +112,9 @@
 		394A4BE7271879D100ADC4C9 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				3950E0E5272D227E0063F444 /* Posts */,
-				3950E0E4272D22560063F444 /* Feed */,
 				3950E0E3272D22350063F444 /* Profile */,
+				3950E0E4272D22560063F444 /* Feed */,
+				3950E0E5272D227E0063F444 /* Posts */,
 			);
 			path = Account;
 			sourceTree = "<group>";

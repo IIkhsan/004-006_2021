@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
 
     //MARK: - Properties
     var users: [User] = []
-    var user: User?
+    var user: User = User()
     
     //MARK: - Outlets
     @IBOutlet weak var errorOrWelcomeText: UILabel!
@@ -24,13 +24,12 @@ class LoginViewController: UIViewController {
         let login = loginTextField.text
         let password = passwordTextField.text
         
-        
         if validateLogin(login: login) {
             if validatePassword(password: password) {
                 user = users.first(where: { user in login == user.login
-                })
+                }) ?? User()
                 
-                if password == user?.password {
+                if password == user.password {
                     
                     if DataManager.user == nil {
                         DataManager.user = user
@@ -41,10 +40,10 @@ class LoginViewController: UIViewController {
                     accountViewController.modalPresentationStyle = .fullScreen
                     present(accountViewController, animated: true, completion: nil)
                 } else {
-                    showAlert(title: "Wrong Password", message: "Please make sure the password is correct")
+                    showAlert(title: "Wrong Password or Email", message: "Please make sure the password or email is correct")
                 }
             } else {
-                showAlert(title: "Validation Alert", message: "Password must be atleast 9 characters and contain atlest 1 digit.")
+                showAlert(title: "Validation Alert", message: "Password must be atleast 9 characters and contain atlest 1 digit and 1 capital letter.")
             }
         } else {
             showAlert(title: "Validation Alert", message: "Login must be in email format.")

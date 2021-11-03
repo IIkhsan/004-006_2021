@@ -43,8 +43,13 @@ class PostViewController: UIViewController {
     }
     
     //MARK: - Functions
-    func setUserData(avatar: UIImage?, name: String?) {
-        nameLabel?.text = name
-        avatarImageView?.image = avatar
+    func setUser(user: User) {
+        name = user.name
+        avatar = user.profileImage
+    }
+    
+    func setUnknownUser() {
+        name = "Случайный пользователь"
+        avatar = UIImage(named: "friend1") ?? UIImage()
     }
 }

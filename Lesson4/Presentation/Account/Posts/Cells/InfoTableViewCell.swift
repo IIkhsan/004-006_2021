@@ -13,18 +13,10 @@ class InfoTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var subscribersLabel: UILabel!
     
-    //MARK: - Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     //MARK: - Functions
-    func setData(user: User?) {
-        cityLabel.text = "Город: \(user?.city ?? "Казань")"
-        subscribersLabel.text = "\(user?.subscribers ?? 100) подписчиков"
+    func setData(user: User) {
+        cityLabel.text = "Город: \(user.city)"
+        subscribersLabel.text = "\(user.subscribers) подписчиков"
     }
 
 }
