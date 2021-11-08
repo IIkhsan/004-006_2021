@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				74DDFC6F2720372B00919962 /* Resources */,
-				74DDFC67272036D600919962 /* Enteties */,
+				74DDFC67272036D600919962 /* Entities */,
 				74DDFC6A272036D600919962 /* Managers */,
 				74DDFC212720360200919962 /* Presentation */,
 				74DDFC1C2720358500919962 /* Services */,
@@ -330,13 +330,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		74DDFC67272036D600919962 /* Enteties */ = {
+		74DDFC67272036D600919962 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				74DDFC68272036D600919962 /* User.swift */,
 				74DDFC69272036D600919962 /* Post.swift */,
 			);
-			path = Enteties;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		74DDFC6A272036D600919962 /* Managers */ = {
