@@ -20,7 +20,7 @@ class ValidEmail {
     
     func isEmailFree(email: String?, array: [Person]) -> Bool {
         for persons in arrayOfUsers {
-            if email == persons.number {
+            if email == persons.email {
                 return false
             }
         }

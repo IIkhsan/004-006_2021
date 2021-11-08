@@ -14,8 +14,8 @@ class Post {
     var imageOfOfPost: String?
     var datePost: String?
     
-    init(foto: String?, textInPost: String?, nameOfPost: String?, image: String?, dateOfPost: String?) {
-        avatar = foto
+    init(photo: String?, textInPost: String?, nameOfPost: String?, image: String?, dateOfPost: String?) {
+        avatar = photo
         textOfPost = textInPost
         name = nameOfPost
         imageOfOfPost = image

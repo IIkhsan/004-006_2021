@@ -17,7 +17,7 @@ class RegistrationViewController: UIViewController {
     private var counterSecond: Int = 0
    
     //MARK: TEXT FIELDS
-    @IBOutlet private weak var numberTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet weak var firstPasswordTextField: UITextField!
     @IBOutlet weak var secondPasswordTextFiled: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,9 +30,9 @@ class RegistrationViewController: UIViewController {
         if let data = UserDefaults.standard.object(forKey: "personsArray") as? Data {
             arrayOfUsers = try! PropertyListDecoder().decode(Array<Person>.self, from: data)
         }
-        if validator.checkAllParametrs(email: numberTextField.text, firstPassword: firstPasswordTextField.text, secondPassword: secondPasswordTextFiled.text, arrayOfUsers: arrayOfUsers) {
+        if validator.checkAllParametrs(email: emailTextField.text, firstPassword: firstPasswordTextField.text, secondPassword: secondPasswordTextFiled.text, arrayOfUsers: arrayOfUsers) {
             createAlert(title: "Ваш аккаунт успешно создан", description: nil)
-            arrayOfUsers.append(Person.init(number: numberTextField.text ?? "", password: firstPasswordTextField.text ?? "", name: nameTextField.text ?? ""))
+            arrayOfUsers.append(Person.init(email: emailTextField.text ?? "", password: firstPasswordTextField.text ?? "", name: nameTextField.text ?? ""))
             UserDefaults.standard.set(try? PropertyListEncoder().encode(arrayOfUsers), forKey: "personsArray")
         } else {
             createAlert(title: "Ошибка в email или пароле", description: "Возможно данный email уже занят")

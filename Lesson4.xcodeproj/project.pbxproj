@@ -34,6 +34,7 @@
 		E513AF2C271F71D700B578D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2B271F71D700B578D0 /* FeedViewController.swift */; };
 		E513AF2E271F71E600B578D0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2D271F71E600B578D0 /* DetailViewCell.swift */; };
 		E513AF30271F71F600B578D0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513AF2F271F71F600B578D0 /* CustomTableViewCell.swift */; };
+		E5B0A4F42739BA5B00EAE5F7 /* AdderAccaunts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0A4F32739BA5B00EAE5F7 /* AdderAccaunts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		E513AF2B271F71D700B578D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E513AF2D271F71E600B578D0 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		E513AF2F271F71F600B578D0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E5B0A4F32739BA5B00EAE5F7 /* AdderAccaunts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderAccaunts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				E513AF0B271F6F3600B578D0 /* SaverOfProfile.swift */,
 				E513AF0D271F6F5700B578D0 /* CheckerLogIn.swift */,
 				E513AF0F271F6F6C00B578D0 /* PostService.swift */,
+				E5B0A4F32739BA5B00EAE5F7 /* AdderAccaunts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				E513AF0E271F6F5700B578D0 /* CheckerLogIn.swift in Sources */,
 				E513AF0C271F6F3600B578D0 /* SaverOfProfile.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
+				E5B0A4F42739BA5B00EAE5F7 /* AdderAccaunts.swift in Sources */,
 				E513AF10271F6F6C00B578D0 /* PostService.swift in Sources */,
 				E513AF29271F717900B578D0 /* DetailProfileViewController.swift in Sources */,
 				E513AF22271F711800B578D0 /* RegistrationViewController.swift in Sources */,

@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    static var arrayOfUsers: [Person] = []
+    static var arrayOfUsers: [Person] = [Person(email: "test@yandex.ru", password: "qwerty123", name: "Ivanov Ivan Ivanovich"),Person(email: "test2@mail.ru", password: "qaz123", name: "Petrov Petr Petrovich"), Person(email: "test3@yahoo.com", password: "qweasdzxc12", name: "Mirgaliev Timur Aidarovich")]
     static var personHowLogIn: [Person] = []
     let checker = CheckerLogIn()
+    let adder = AdderAccaunts()
     
     private var counter: Int = 0
     
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didClickSignInButton(_ sender: Any) {
-        if checker.checker(login: loginTextField.text, password: passwordTextField.text) {
+        if checker.checkUser(login: loginTextField.text, password: passwordTextField.text) {
             let storyboard = UIStoryboard(name: "General", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "1234")
             self.present(vc, animated: true, completion: nil)
@@ -48,6 +49,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        adder.prepareForWork()
+        adder.addAccaunt(personsArray: ViewController.arrayOfUsers)
         buttonSignInNoAction.layer.cornerRadius = buttonSignInNoAction.frame.height / 2.5
         buttonRegistrationNoAction.layer.cornerRadius = buttonRegistrationNoAction.frame.height / 2.5
         passwordTextField.isSecureTextEntry = true

@@ -10,7 +10,7 @@ import UIKit
 
 class ValidPassword{
     
-    func numberCheck(firstPassword: String, secondPassword: String) -> Bool{
+    func emailCheck(firstPassword: String, secondPassword: String) -> Bool{
         if similarPasswords(first: firstPassword, second: secondPassword) {
             let decimalCharacters = CharacterSet.decimalDigits
             
@@ -27,7 +27,7 @@ class ValidPassword{
     }
     
     func isValidPassword(firstPassword: String, secondPassword: String) -> Bool {
-        if numberCheck(firstPassword: firstPassword, secondPassword: secondPassword) && firstPassword.count >= 6 {
+        if emailCheck(firstPassword: firstPassword, secondPassword: secondPassword) && firstPassword.count >= 6 {
             return true
         }
         return false

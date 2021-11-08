@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hl6-bS-NPI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hl6-bS-NPI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -132,9 +133,9 @@
                     </view>
                     <connections>
                         <outlet property="buttonSaveProfileNoAction" destination="jNI-nj-hmb" id="m3z-jH-49E"/>
+                        <outlet property="emailTextField" destination="pmw-hq-bpC" id="UT1-J2-DZg"/>
                         <outlet property="firstPasswordTextField" destination="vx1-kc-eJK" id="2lf-r4-QGI"/>
                         <outlet property="nameTextField" destination="r7N-MS-d5B" id="4Ui-xO-5RF"/>
-                        <outlet property="numberTextField" destination="pmw-hq-bpC" id="Qaj-IZ-iQK"/>
                         <outlet property="secondPasswordTextFiled" destination="Nxg-NN-VMq" id="3ae-eg-vVa"/>
                     </connections>
                 </viewController>

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol personHowLogIn {
-    func getPersonHowLogIn()
-}
-
 class ProfleViewController: UIViewController {
     
     var arrayOfPosts: [Post] = []
