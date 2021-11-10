@@ -17,8 +17,8 @@
 | Тема      | Описание |
 | ----------- | ----------- |
 | Работа с кастомными  ячейками. AutoLayout | Отображение данных в таблице с кастомными ячейками, разметка UI компонентов с помощью AutoLayout. |
-| Динамическая высота ячеек. | Передача данных между контроллерами. Работа с ячейками, которые будут динамически менять свою высоту от контента, передача данных между разными контроллерами. |
 | MVC. Блоки кода. | Использование принципов MVC при проектировании приложения, работа и использование блоков (closures) в проекте. |
+| Динамическая высота ячеек. | Передача данных между контроллерами. Работа с ячейками, которые будут динамически менять свою высоту от контента, передача данных между разными контроллерами. |
 
 
 * Все на Autolayout. Верстка должна красиво выглядить как на iPodTouch так и на 12 Pro. Если верстка будет отличаться будут вычитаться 1 балл.
@@ -38,17 +38,35 @@
 
 ### Задание с 5 занятия (5 баллов). 
 
+1. Делаем рефакторинг проекта по стилю с MARK(lifecycle, init, private functions, public functions, Delegates, Datasources) `// MARK: - `, применяем архитектуру MVC(Model, View(в нашем случае это Storyboard), Controller) и рефакторим наши модули, добавляем логическое разделение и ставим комментарии (Outlets, properties, private properties) `// Outlet properties и т.д.`. 
+https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
+https://coderoad.ru/35963128/Swift-%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-MARK
+
+2. Во viewController, вы просто добавяляли некий генератор для моделей (профиль, лента). Теперь задача стоит в том, чтобы создать некий сервис для получения этих данных из вне. В нашем случае - это будет как на паре. Получить данные нужно будет через @escaping closure, в функции получения сделайте задержку перед получением `sleep(3)`, конфигурирование данных и обновление таблиц производим после получения данных. 
+https://docs.swift.org/swift-book/LanguageGuide/Closures.html
+3. Соблюдаем style guide 
+https://github.com/raywenderlich/swift-style-guide
+
+### Задание с 6 занятия (5 баллов).
+
 1. При ошибке валидации отображать UIAlertController с текстом ошибки.
 2. Для каждой пары логин пароль (читай юзера) своя инфа как на стене, так и о профиле (минимум 3 юзера)
 3. Логин и пароль валидируется: логин всегда email, все что не email пропускать не должно; пароль не меньше 6 символов, только латиница, содержит хотя бы 1 цифру.
 4. Редактирование статуса пользователя через делегат на новом экране
 5. Использовать TabBarController для экрана профиля и ленты.
 
-### Задание с 6 занятия (5 баллов).
+https://gist.github.com/IIkhsan/465f6e211308f6af6bb73e15a6c81be3 - регулярные выражения для валидации
+https://gist.github.com/IIkhsan/4ca17552ae790e2b6d5dc283962fe53a - замыкания
+https://gist.github.com/IIkhsan/6d2d643f3dfb6963f6bc90bbd079fa76 - делегаты
+https://developer.apple.com/documentation/uikit/windows_and_screens/getting_the_user_s_attention_with_alerts_and_action_sheets - UIAllertController usage
+https://developer.apple.com/documentation/uikit/uialertcontroller - класс UIAlertController
 
-1. Делаем рефакторинг проекта по стилю с MARK, применяем архитектуру MVC и рефакторим наши модули.
+#### Ссылки
 
-Доробатывается. Если уже дошли до этого места - напишите.
+* style guide: https://github.com/raywenderlich/swift-style-guide
+* все о замыкании: https://docs.swift.org/swift-book/LanguageGuide/Closures.html
+* все о MVC от apple: https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
+* все о MARK: https://coderoad.ru/35963128/Swift-%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-MARK
 
 Итого:
 
