@@ -9,6 +9,7 @@ import UIKit
 
 class NewsController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var newsTableView: UITableView!
     
 
@@ -17,6 +18,7 @@ class NewsController: UIViewController {
         posts = generatedPosts
     }
     private let postService = PostService()
+    private var currentUser: User?
     private var posts: [Post] = []
     
     // MARK: - Life Cycle
@@ -27,7 +29,8 @@ class NewsController: UIViewController {
         newsTableView.delegate = self
         newsTableView.rowHeight = UITableView.automaticDimension;
         newsTableView.estimatedRowHeight = 500.0
-        postService.generateNews(completion: setNews(_:))
+        currentUser = (tabBarController! as! TabBarController).getCurrentUser()
+        postService.generateNews(completion: setNews(_:), user: currentUser)
     }
     
 }

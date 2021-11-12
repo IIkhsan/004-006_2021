@@ -12,6 +12,9 @@
 		5EE6900827036B9200F5C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900627036B9200F5C170 /* Main.storyboard */; };
 		5EE6900A27036B9400F5C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900927036B9400F5C170 /* Assets.xcassets */; };
 		5EE6900D27036B9400F5C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6900B27036B9400F5C170 /* LaunchScreen.storyboard */; };
+		7C56B528273DCCC2005EA55C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B527273DCCC2005EA55C /* UserService.swift */; };
+		7C56B52A273DCCFA005EA55C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B529273DCCFA005EA55C /* User.swift */; };
+		7C56B52C273DE12C005EA55C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B52B273DE12C005EA55C /* Validator.swift */; };
 		7C623D9C271C978B00733221 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623D9B271C978B00733221 /* MainViewController.swift */; };
 		7C623D9F271CBE3900733221 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623D9E271CBE3900733221 /* TabBarController.swift */; };
 		7C623DA5271CC6F000733221 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA4271CC6F000733221 /* PostCell.swift */; };
@@ -28,6 +31,9 @@
 		5EE6900927036B9400F5C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE6900C27036B9400F5C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE6900E27036B9400F5C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C56B527273DCCC2005EA55C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7C56B529273DCCFA005EA55C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7C56B52B273DE12C005EA55C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7C623D9B271C978B00733221 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7C623D9E271CBE3900733221 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7C623DA4271CC6F000733221 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7C623D9B271C978B00733221 /* MainViewController.swift */,
+				7C56B52B273DE12C005EA55C /* Validator.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				7C623DA9271DDF2E00733221 /* Post.swift */,
+				7C56B529273DCCFA005EA55C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7CB97D61272C343D0081D00D /* PostService.swift */,
+				7C56B527273DCCC2005EA55C /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,11 +219,14 @@
 			files = (
 				7C623DA7271CC75600733221 /* NewsController.swift in Sources */,
 				7C623D9C271C978B00733221 /* MainViewController.swift in Sources */,
+				7C56B528273DCCC2005EA55C /* UserService.swift in Sources */,
 				7C623D9F271CBE3900733221 /* TabBarController.swift in Sources */,
 				7CB97D62272C343D0081D00D /* PostService.swift in Sources */,
+				7C56B52C273DE12C005EA55C /* Validator.swift in Sources */,
 				5EE6900127036B9200F5C170 /* AppDelegate.swift in Sources */,
 				5EE6900327036B9200F5C170 /* SceneDelegate.swift in Sources */,
 				7C623DAA271DDF2E00733221 /* Post.swift in Sources */,
+				7C56B52A273DCCFA005EA55C /* User.swift in Sources */,
 				7C623DA5271CC6F000733221 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

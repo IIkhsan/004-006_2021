@@ -12,11 +12,20 @@ class PostService {
     }
     
     //generator
-    func generateNews( completion: @escaping(_ posts: [Post]) -> Void) -> Void {
+    func generateNews( completion: @escaping(_ posts: [Post]) -> Void, user: User?) -> Void {
         sleep(3)
-        completion([postsWithAll[Int.random(in: 0...2)],
-                    postsWithImg[Int.random(in: 0...2)],
-                    postsWithTxt[Int.random(in: 0...2)]])
+        var setNumber = 0
+        switch user!.name {
+        case "Oscar":
+            setNumber = 1
+        case "Bernard":
+            setNumber = 2
+        default:
+            setNumber = 0
+        }
+        completion([postsWithAll[setNumber],
+                    postsWithImg[setNumber],
+                    postsWithTxt[setNumber]])
     }
     
     // MARK: - Private Properties
