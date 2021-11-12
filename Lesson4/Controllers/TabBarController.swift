@@ -16,6 +16,5 @@ class TabBarController: UITabBarController {
     }
     
     func setCurrentUser(user: User) -> Void { currentUser = user }
-    
     func getCurrentUser() -> User? { return currentUser }
 }

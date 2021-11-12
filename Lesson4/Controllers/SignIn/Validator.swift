@@ -1,10 +1,3 @@
-//
-//  Validator.swift
-//  Lesson4
-//
-//  Created by Alina Bikkinina on 12.11.2021.
-//
-
 import Foundation
 
 class Validator {

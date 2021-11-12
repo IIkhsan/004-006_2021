@@ -34,6 +34,7 @@ class UserProfileViewController: UIViewController {
     }
 }
 
+//MARK: Extensions
 extension UserProfileViewController: StatusEditDelegate{
     func editStatus(text: String) {
         statusLabel.text = text

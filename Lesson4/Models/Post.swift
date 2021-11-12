@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class Post {
+    //MARK: - Properties
     let authImage: UIImage
     let authName: String
     let postTime: String
@@ -16,6 +17,7 @@ class Post {
     let postImage: UIImage!
     let postText: String!
     
+    //MARK: - Initializer
     init(authImage: UIImage, authName: String, postTime: String, postImage: UIImage!, postText: String!) {
         self.authImage = authImage
         self.authName = authName
