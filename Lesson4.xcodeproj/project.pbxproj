@@ -22,6 +22,7 @@
 		7C623DA7271CC75600733221 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA6271CC75600733221 /* NewsController.swift */; };
 		7C623DAA271DDF2E00733221 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA9271DDF2E00733221 /* Post.swift */; };
 		7CB97D62272C343D0081D00D /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB97D61272C343D0081D00D /* PostService.swift */; };
+		7CFF70F0273EA8C800220292 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF70EF273EA8C800220292 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7C623DA6271CC75600733221 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		7C623DA9271DDF2E00733221 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7CB97D61272C343D0081D00D /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		7CFF70EF273EA8C800220292 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				7C56B533273E8C6C005EA55C /* UserProfileViewController.swift */,
+				7CFF70EF273EA8C800220292 /* EditProfileViewController.swift */,
 			);
 			path = "User profile";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFF70F0273EA8C800220292 /* EditProfileViewController.swift in Sources */,
 				7C623DA7271CC75600733221 /* NewsController.swift in Sources */,
 				7C56B534273E8C6C005EA55C /* UserProfileViewController.swift in Sources */,
 				7C623D9C271C978B00733221 /* MainViewController.swift in Sources */,

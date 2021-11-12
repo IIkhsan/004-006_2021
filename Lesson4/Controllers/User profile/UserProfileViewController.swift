@@ -1,11 +1,8 @@
-//
-//  UserProfileViewController.swift
-//  Lesson4
-//
-//  Created by Alina Bikkinina on 12.11.2021.
-//
-
 import UIKit
+
+protocol StatusEditDelegate {
+    func editStatus(text: String)
+}
 
 class UserProfileViewController: UIViewController {
     
@@ -13,6 +10,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    
     
     // MARK: - private properties
     var currentUser: User?
@@ -27,4 +26,16 @@ class UserProfileViewController: UIViewController {
         statusLabel.text = currentUser?.status
     }
 
+    // MARK: - IBAction
+    @IBAction func editPressed(_ sender: Any) {
+        guard let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as? EditProfileViewController else { return }
+        editProfileViewController.statusEditDelegate = self
+        navigationController?.present(editProfileViewController, animated: true)
+    }
+}
+
+extension UserProfileViewController: StatusEditDelegate{
+    func editStatus(text: String) {
+        statusLabel.text = text
+    }
 }
