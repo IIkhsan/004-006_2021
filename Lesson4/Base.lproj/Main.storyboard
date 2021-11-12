@@ -74,7 +74,7 @@
         <!--Профиль-->
         <scene sceneID="zBA-xU-hNi">
             <objects>
-                <viewController id="dMf-y9-a9H" sceneMemberID="viewController">
+                <viewController id="dMf-y9-a9H" customClass="UserProfileViewController" customModule="Lesson4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFD-cZ-Bft">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,23 +89,30 @@
                                             <constraint firstAttribute="height" constant="217" id="jtt-51-WTE"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kab-Av-zak">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kab-Av-zak">
                                         <rect key="frame" x="190" y="0.0" width="184" height="217"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikkinina Alina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BO-ld-6Qb">
                                                 <rect key="frame" x="0.0" y="0.0" width="141.5" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="8kr-Ne-J0z"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46q-EE-tkR">
-                                                <rect key="frame" x="0.0" y="60" width="32" height="157"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иногда надо рассмешить людей, чтобы отвлечь их от намерения вас повесить." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBz-Wc-t1f">
+                                                <rect key="frame" x="0.0" y="40" width="173" height="177"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Kab-Av-zak" secondAttribute="bottom" id="i3c-5F-uj9"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rrr-4U-aR1"/>
@@ -117,6 +124,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="paperclip" catalog="system" id="L0a-YL-5jQ"/>
+                    <connections>
+                        <outlet property="NameLabel" destination="2BO-ld-6Qb" id="EY5-yX-P1j"/>
+                        <outlet property="nameLabel" destination="2BO-ld-6Qb" id="2HI-u2-A9h"/>
+                        <outlet property="profileImageView" destination="6ag-xa-NTs" id="Sts-P0-lYg"/>
+                        <outlet property="statusLabel" destination="LBz-Wc-t1f" id="Ey6-qD-v7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYM-HT-YWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

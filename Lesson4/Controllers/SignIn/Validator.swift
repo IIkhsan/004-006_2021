@@ -10,7 +10,7 @@ import Foundation
 class Validator {
     // MARK: - Private properties
     private let loginRegex = try! NSRegularExpression(pattern: "([a-z0-9]){1,64}@([a-z]){2,16}.([a-z]){2,16}")
-    private let passwordRegex = try! NSRegularExpression(pattern: "([a-z0-9!*%+=-]){6,16}")
+    private let passwordRegex = try! NSRegularExpression(pattern: "([a-zA-Z0-9!*%+=-]){6,16}")
     
     // MARK: - Private function
     private func isValid (string: String?, regex: NSRegularExpression) -> Bool {

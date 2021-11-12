@@ -15,6 +15,7 @@
 		7C56B528273DCCC2005EA55C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B527273DCCC2005EA55C /* UserService.swift */; };
 		7C56B52A273DCCFA005EA55C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B529273DCCFA005EA55C /* User.swift */; };
 		7C56B52C273DE12C005EA55C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B52B273DE12C005EA55C /* Validator.swift */; };
+		7C56B534273E8C6C005EA55C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56B533273E8C6C005EA55C /* UserProfileViewController.swift */; };
 		7C623D9C271C978B00733221 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623D9B271C978B00733221 /* MainViewController.swift */; };
 		7C623D9F271CBE3900733221 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623D9E271CBE3900733221 /* TabBarController.swift */; };
 		7C623DA5271CC6F000733221 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C623DA4271CC6F000733221 /* PostCell.swift */; };
@@ -34,6 +35,7 @@
 		7C56B527273DCCC2005EA55C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7C56B529273DCCFA005EA55C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C56B52B273DE12C005EA55C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		7C56B533273E8C6C005EA55C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		7C623D9B271C978B00733221 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7C623D9E271CBE3900733221 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7C623DA4271CC6F000733221 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Lesson4;
 			sourceTree = "<group>";
 		};
+		7C56B532273E8C55005EA55C /* User profile */ = {
+			isa = PBXGroup;
+			children = (
+				7C56B533273E8C6C005EA55C /* UserProfileViewController.swift */,
+			);
+			path = "User profile";
+			sourceTree = "<group>";
+		};
 		7C623D99271C8BDB00733221 /* System delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +117,10 @@
 			children = (
 				7C623D9E271CBE3900733221 /* TabBarController.swift */,
 				7C623D9A271C912300733221 /* SignIn */,
+				7C56B532273E8C55005EA55C /* User profile */,
 				7C623DA3271CC26D00733221 /* News */,
-				7C623DA2271CC26200733221 /* Profile */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7C623DA2271CC26200733221 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		7C623DA3271CC26D00733221 /* News */ = {
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C623DA7271CC75600733221 /* NewsController.swift in Sources */,
+				7C56B534273E8C6C005EA55C /* UserProfileViewController.swift in Sources */,
 				7C623D9C271C978B00733221 /* MainViewController.swift in Sources */,
 				7C56B528273DCCC2005EA55C /* UserService.swift in Sources */,
 				7C623D9F271CBE3900733221 /* TabBarController.swift in Sources */,
