@@ -10,9 +10,6 @@ import UIKit
 
 class GenerateUser {
     
-    // MARK: - Dependency
-    static var currentUser: User!
-    
     // MARK: - Properties
     static let names = ["Milana", "Marat", "Kolya", "Elina"]
     static let avatars = ["image1", "image2", "image3", "image4"]
@@ -23,9 +20,5 @@ class GenerateUser {
     static func getUser() -> User {
         return User(name: names.randomElement()!, avatarImage: UIImage(named: avatars.randomElement()!)!, hometown: cities.randomElement()!, numberOfFriends: String(Int.random(in: 1...1000)) + " friends", lastActivity: activivties.randomElement()!, status: "dead inside")
     }
-    
-    static func getCurrentUser() -> User {
-        currentUser = getUser()
-        return currentUser
-    }
+
 }

@@ -15,6 +15,9 @@ struct User {
     var numberOfFriends: String?
     var lastActivity: String?
     var status: String?
+    var email: String?
+    var password: String?
+    var posts: [Post]?
     
     init() {
 

@@ -32,15 +32,15 @@ class GeneratePosts {
         return posts
     }
     
-    public static func generatePostsForCurrentUser() -> [Post] {
-        let curUser = GenerateUser.currentUser
+    public static func generatePostsForCurrentUser(user: User) -> [Post] {
+        let curUser = user
         
         if posts.count != 0 {
             posts.removeAll()
         }
         
         for _ in 0..<5 {
-            posts.append(Post(user: curUser!, imagePost: UIImage(named: images.randomElement()!)!, description: descriptions.randomElement()!))
+            posts.append(Post(user: curUser, imagePost: UIImage(named: images.randomElement()!)!, description: descriptions.randomElement()!))
         }
         
         return posts

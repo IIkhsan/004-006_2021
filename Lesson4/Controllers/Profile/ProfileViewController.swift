@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
     
     // MARK: - Dependencies
     private let dataManager = DataManager()
-    private var user = User()
+    var user = User()
     private var postsOfCurrentUser: [Post] = []
     
     // MARK: - Properties
@@ -31,25 +31,9 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUser()
-        getPostsForCurrentUser()
         configure()
     }
-    
-    // MARK: - Private Functions
-    private func getUser() {
-        dataManager.getCurrentUser(){ user in
-            self.user = user
-        }
-    }
-    
-    private func getPostsForCurrentUser() {
-        dataManager.getPostsForCurrentUser { posts in
-            self.postsOfCurrentUser = posts
-            self.tableView.reloadData()
-        }
-    }
-    
+
     private func configure() {
         tableView.backgroundColor = #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
         navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.8994444609, green: 0.8452375531, blue: 0.7285131812, alpha: 1)
@@ -66,6 +50,8 @@ class ProfileViewController: UIViewController, UITextViewDelegate , UITableViewD
         numberOfFriends.text =  user.numberOfFriends!
         statusLabel.text = user.status!
         lastActivityLabel.text = user.lastActivity!
+        postsOfCurrentUser = user.posts!
+        
         
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.delegate = self
