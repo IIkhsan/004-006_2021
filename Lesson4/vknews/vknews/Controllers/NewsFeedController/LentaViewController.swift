@@ -11,11 +11,27 @@ class LentaViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-   override func viewDidLoad() {
+    private let postService = PostService()
+    private var Info:[SinglePostCellData] = []
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-   }
+        obtainData()
+    }
+    
+    private func obtainData() {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.postService.getNews{ data in
+                DispatchQueue.main.async {
+                    strongSelf.Info = data
+                    strongSelf.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension LentaViewController: UITableViewDataSource {

@@ -19,7 +19,13 @@
 		2338E858270216FB00F378CA /* LentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E857270216FB00F378CA /* LentaViewController.swift */; };
 		2338E8602702195200F378CA /* DetailedPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E85F2702195200F378CA /* DetailedPostViewController.swift */; };
 		23B3B58927146A28007E60C6 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3B58827146A28007E60C6 /* MyProfileViewController.swift */; };
-		23B3B5912714A684007E60C6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3B5902714A684007E60C6 /* Data.swift */; };
+		23B3B5912714A684007E60C6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3B5902714A684007E60C6 /* UserService.swift */; };
+		23F79382275E3D4F0048C2DB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F79381275E3D4F0048C2DB /* Post.swift */; };
+		23F79387275E3DD70048C2DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F79386275E3DD70048C2DB /* User.swift */; };
+		23F7938C275E3E160048C2DB /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7938B275E3E150048C2DB /* Auth.swift */; };
+		23F79391275E3EE30048C2DB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F79390275E3EE30048C2DB /* PostService.swift */; };
+		23F793A0275E46690048C2DB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7939F275E46690048C2DB /* Validator.swift */; };
+		23F793A5275E47FE0048C2DB /* LogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F793A4275E47FE0048C2DB /* LogInService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +64,13 @@
 		2338E857270216FB00F378CA /* LentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaViewController.swift; sourceTree = "<group>"; };
 		2338E85F2702195200F378CA /* DetailedPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPostViewController.swift; sourceTree = "<group>"; };
 		23B3B58827146A28007E60C6 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
-		23B3B5902714A684007E60C6 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		23B3B5902714A684007E60C6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		23F79381275E3D4F0048C2DB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		23F79386275E3DD70048C2DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		23F7938B275E3E150048C2DB /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		23F79390275E3EE30048C2DB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		23F7939F275E46690048C2DB /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		23F793A4275E47FE0048C2DB /* LogInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +101,9 @@
 		231B36392727E74F00E399F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				23B3B5902714A684007E60C6 /* Data.swift */,
+				23F79381275E3D4F0048C2DB /* Post.swift */,
+				23F79386275E3DD70048C2DB /* User.swift */,
+				23F7938B275E3E150048C2DB /* Auth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,38 +111,30 @@
 		2336DB12270B3070000DC20D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				23B3B58827146A28007E60C6 /* MyProfileViewController.swift */,
-				2336DB17270B33C2000DC20D /* LogInViewController.swift */,
-				2338E857270216FB00F378CA /* LentaViewController.swift */,
-				2338E85F2702195200F378CA /* DetailedPostViewController.swift */,
+				23F79398275E3F840048C2DB /* PostController */,
+				23F79397275E3F690048C2DB /* NewsFeedController */,
+				23F79396275E3F5A0048C2DB /* LogInController */,
+				23F79395275E3F460048C2DB /* UserProfileController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		2336DB14270B30DF000DC20D /* Delegates */ = {
+		2336DB14270B30DF000DC20D /* SystemDelegates */ = {
 			isa = PBXGroup;
 			children = (
 				2338E8242702041A00F378CA /* AppDelegate.swift */,
 				2338E8262702041B00F378CA /* SceneDelegate.swift */,
 			);
-			path = Delegates;
+			path = SystemDelegates;
 			sourceTree = "<group>";
 		};
 		2336DB15270B30FE000DC20D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				2338E82A2702041B00F378CA /* Main.storyboard */,
-				2338E82F2702041C00F378CA /* LaunchScreen.storyboard */,
+				23F7939A275E3FDA0048C2DB /* SystemStoryboards */,
+				23F79399275E3FC40048C2DB /* AppStoryboards */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		2336DB16270B33A0000DC20D /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				230D841A2702EE6A0059DD37 /* PostTableViewCell.swift */,
-			);
-			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		2338E8182702041A00F378CA = {
@@ -154,10 +160,10 @@
 		2338E8232702041A00F378CA /* vknews */ = {
 			isa = PBXGroup;
 			children = (
+				23F79380275E3D2B0048C2DB /* Services */,
 				231B36392727E74F00E399F5 /* Models */,
 				2336DB15270B30FE000DC20D /* Storyboards */,
-				2336DB14270B30DF000DC20D /* Delegates */,
-				2336DB16270B33A0000DC20D /* TableViewCells */,
+				2336DB14270B30DF000DC20D /* SystemDelegates */,
 				2336DB12270B3070000DC20D /* Controllers */,
 				2338E82D2702041C00F378CA /* Assets.xcassets */,
 				2338E8322702041C00F378CA /* Info.plist */,
@@ -181,6 +187,66 @@
 				2338E8482702041C00F378CA /* Info.plist */,
 			);
 			path = vknewsUITests;
+			sourceTree = "<group>";
+		};
+		23F79380275E3D2B0048C2DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				23B3B5902714A684007E60C6 /* UserService.swift */,
+				23F79390275E3EE30048C2DB /* PostService.swift */,
+				23F793A4275E47FE0048C2DB /* LogInService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		23F79395275E3F460048C2DB /* UserProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				23B3B58827146A28007E60C6 /* MyProfileViewController.swift */,
+			);
+			path = UserProfileController;
+			sourceTree = "<group>";
+		};
+		23F79396275E3F5A0048C2DB /* LogInController */ = {
+			isa = PBXGroup;
+			children = (
+				2336DB17270B33C2000DC20D /* LogInViewController.swift */,
+				23F7939F275E46690048C2DB /* Validator.swift */,
+			);
+			path = LogInController;
+			sourceTree = "<group>";
+		};
+		23F79397275E3F690048C2DB /* NewsFeedController */ = {
+			isa = PBXGroup;
+			children = (
+				2338E857270216FB00F378CA /* LentaViewController.swift */,
+				230D841A2702EE6A0059DD37 /* PostTableViewCell.swift */,
+			);
+			path = NewsFeedController;
+			sourceTree = "<group>";
+		};
+		23F79398275E3F840048C2DB /* PostController */ = {
+			isa = PBXGroup;
+			children = (
+				2338E85F2702195200F378CA /* DetailedPostViewController.swift */,
+			);
+			path = PostController;
+			sourceTree = "<group>";
+		};
+		23F79399275E3FC40048C2DB /* AppStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				2338E82A2702041B00F378CA /* Main.storyboard */,
+			);
+			path = AppStoryboards;
+			sourceTree = "<group>";
+		};
+		23F7939A275E3FDA0048C2DB /* SystemStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				2338E82F2702041C00F378CA /* LaunchScreen.storyboard */,
+			);
+			path = SystemStoryboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +380,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2338E8602702195200F378CA /* DetailedPostViewController.swift in Sources */,
+				23F79382275E3D4F0048C2DB /* Post.swift in Sources */,
 				2338E8252702041A00F378CA /* AppDelegate.swift in Sources */,
 				2336DB18270B33C2000DC20D /* LogInViewController.swift in Sources */,
-				23B3B5912714A684007E60C6 /* Data.swift in Sources */,
+				23F793A0275E46690048C2DB /* Validator.swift in Sources */,
+				23B3B5912714A684007E60C6 /* UserService.swift in Sources */,
 				230D841B2702EE6A0059DD37 /* PostTableViewCell.swift in Sources */,
+				23F793A5275E47FE0048C2DB /* LogInService.swift in Sources */,
+				23F7938C275E3E160048C2DB /* Auth.swift in Sources */,
+				23F79391275E3EE30048C2DB /* PostService.swift in Sources */,
 				23B3B58927146A28007E60C6 /* MyProfileViewController.swift in Sources */,
 				2338E8272702041B00F378CA /* SceneDelegate.swift in Sources */,
+				23F79387275E3DD70048C2DB /* User.swift in Sources */,
 				2338E858270216FB00F378CA /* LentaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

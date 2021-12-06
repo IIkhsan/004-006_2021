@@ -368,7 +368,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAD-6A-Msf">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAD-6A-Msf">
                                 <rect key="frame" x="87" y="365" width="240" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -387,6 +387,7 @@
                                 <color key="tintColor" red="0.21006859650000001" green="0.34634988439999997" blue="0.43306864750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
+                                    <action selector="logIn:" destination="EZL-J7-Mqv" eventType="touchUpInside" id="PBd-4L-8TE"/>
                                     <action selector="submitButtonClicked:" destination="EZL-J7-Mqv" eventType="touchUpInside" id="PkB-La-bBx"/>
                                 </connections>
                             </button>

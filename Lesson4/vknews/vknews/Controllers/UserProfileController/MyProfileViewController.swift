@@ -12,8 +12,6 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileName: UILabel!
     
-    var info: Accounts?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
