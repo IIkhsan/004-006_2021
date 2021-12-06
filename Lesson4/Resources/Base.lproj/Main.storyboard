@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="378" id="v9b-GF-gPy" customClass="TableViewCell" customModule="Lesson4" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="378" id="v9b-GF-gPy" customClass="PostTableViewCell" customModule="Lesson4" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="378"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v9b-GF-gPy" id="ZOb-LC-DHT">
@@ -311,29 +311,38 @@
                                 <rect key="frame" x="0.0" y="-52" width="414" height="1000"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="65" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYP-Sa-9fx">
-                                        <rect key="frame" x="32" y="129" width="350" height="640"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="lYP-Sa-9fx">
+                                        <rect key="frame" x="35" y="129" width="344" height="582"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W15-Xw-SP3">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="345"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="308.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="W15-Xw-SP3" secondAttribute="height" multiplier="70:69" id="jXO-vK-SbW"/>
+                                                    <constraint firstAttribute="width" secondItem="W15-Xw-SP3" secondAttribute="height" multiplier="339:304" id="jcD-1I-sLR"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McB-3o-5tu">
-                                                <rect key="frame" x="0.0" y="387" width="350" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McB-3o-5tu">
+                                                <rect key="frame" x="0.0" y="342.5" width="344" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="McB-3o-5tu" secondAttribute="height" multiplier="100:10" id="zuJ-Ka-3HQ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atW-le-3df">
-                                                <rect key="frame" x="0.0" y="451" width="350" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atW-le-3df">
+                                                <rect key="frame" x="0.0" y="411" width="344" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="atW-le-3df" secondAttribute="height" multiplier="100:10" id="0z3-jJ-5Gt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-WQ-Hom">
-                                                <rect key="frame" x="0.0" y="509" width="350" height="66"/>
+                                                <rect key="frame" x="0.0" y="479.5" width="344" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bTu-WQ-Hom" secondAttribute="height" multiplier="100:10" id="Nt9-wZ-SxM"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Поменять статус!"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Поменять статус!">
@@ -345,7 +354,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-fQ-idC">
-                                                <rect key="frame" x="0.0" y="596" width="350" height="44"/>
+                                                <rect key="frame" x="0.0" y="547.5" width="344" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hpl-fQ-idC" secondAttribute="height" multiplier="100:10" id="UT5-ah-BTB"/>
+                                                </constraints>
                                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Выйти из аккаунта">
@@ -356,17 +368,14 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="lYP-Sa-9fx" secondAttribute="height" multiplier="350:640" id="6J4-G0-HBy"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="X7y-jp-Iby"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="lYP-Sa-9fx" firstAttribute="top" secondItem="X7y-jp-Iby" secondAttribute="top" constant="85" id="E7O-hx-eUo"/>
-                                    <constraint firstItem="X7y-jp-Iby" firstAttribute="trailing" secondItem="lYP-Sa-9fx" secondAttribute="trailing" constant="32" id="mBr-3k-QFx"/>
-                                    <constraint firstItem="lYP-Sa-9fx" firstAttribute="leading" secondItem="X7y-jp-Iby" secondAttribute="leading" constant="32" id="rbX-nf-Iqs"/>
+                                    <constraint firstAttribute="trailing" secondItem="lYP-Sa-9fx" secondAttribute="trailing" constant="35" id="Gmc-m1-0Fh"/>
+                                    <constraint firstItem="lYP-Sa-9fx" firstAttribute="leading" secondItem="X7y-jp-Iby" secondAttribute="leading" constant="35" id="rbX-nf-Iqs"/>
                                 </constraints>
                             </view>
                         </subviews>
