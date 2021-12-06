@@ -10,30 +10,10 @@ import UIKit
 class LoginViewController: UIViewController {
 
     
-    @IBOutlet weak var nickField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    //    MARK: - Outlets
     
-    var validator: Validator = Validator()
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
-    @IBAction func logIn(_ sender: Any) {
-        if nickField.text == "1" && passwordField.text == "1" {
-            
-            guard let tabBarViewController = storyboard?.instantiateViewController(identifier: "TabBarViewController") as? UITabBarController else { return }
-            navigationController?.pushViewController(tabBarViewController, animated: true)} else{
-                UIView.animate(withDuration: 0.5, animations: {
-                                //self.refuse.alpha = 1
-                    
-                })
-                UIView.animate(withDuration: 0.5, animations: {
-                                //self.refuse.alpha = 0
-                    
-                })
-                passwordField.text = ""
-                
-            }
-    }
 }

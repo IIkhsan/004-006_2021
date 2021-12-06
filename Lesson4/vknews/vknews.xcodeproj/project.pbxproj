@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		230D841B2702EE6A0059DD37 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D841A2702EE6A0059DD37 /* PostTableViewCell.swift */; };
-		231B363B2727E85700E399F5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B363A2727E85700E399F5 /* Validator.swift */; };
 		2336DB18270B33C2000DC20D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336DB17270B33C2000DC20D /* LogInViewController.swift */; };
 		2338E8252702041A00F378CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E8242702041A00F378CA /* AppDelegate.swift */; };
 		2338E8272702041B00F378CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E8262702041B00F378CA /* SceneDelegate.swift */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		230D841A2702EE6A0059DD37 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		231B363A2727E85700E399F5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2336DB17270B33C2000DC20D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2338E8212702041A00F378CA /* vknews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vknews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2338E8242702041A00F378CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				23B3B5902714A684007E60C6 /* Data.swift */,
-				231B363A2727E85700E399F5 /* Validator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,7 +320,6 @@
 				230D841B2702EE6A0059DD37 /* PostTableViewCell.swift in Sources */,
 				23B3B58927146A28007E60C6 /* MyProfileViewController.swift in Sources */,
 				2338E8272702041B00F378CA /* SceneDelegate.swift in Sources */,
-				231B363B2727E85700E399F5 /* Validator.swift in Sources */,
 				2338E858270216FB00F378CA /* LentaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

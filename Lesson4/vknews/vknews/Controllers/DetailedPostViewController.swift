@@ -15,8 +15,6 @@ class DetailedPostViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
-    @IBOutlet weak var image4: UIImageView!
     
     var post: SinglePostCellData?
     
@@ -31,10 +29,6 @@ class DetailedPostViewController: UIViewController {
         }
         if post?.pinnedPics.count ?? 0 > 1 {
             image2.image = post?.pinnedPics[1]
-        }
-        if post?.pinnedPics.count ?? 0 > 2 {
-            image3.image = post?.pinnedPics[2]
-            image4.image = post?.pinnedPics[3]
         }
     }
     
