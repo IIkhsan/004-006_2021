@@ -7,33 +7,69 @@
 
 import Foundation
 
+protocol ValidatorDelegate {
+    
+    func showValidationAlert(message: String)
+}
+
 class Validator {
-    // MARK: - Private properties
-    private let loginRegex = try! NSRegularExpression(pattern: "([a-z0-9]){1,64}@([a-z]){2,16}.([a-z]){2,16}")
-    private let passwordRegex = try! NSRegularExpression(pattern: "([a-zA-Z0-9!*%+=-]){6,16}")
     
-    // MARK: - Private function
-    private func isValid (string: String?, regex: NSRegularExpression) -> Bool {
+    //    MARK: - Properties
+    
+    var delegate: ValidatorDelegate?
+    
+    
+    //    MARK: - Regular Expressions
+    
+    private let emailRegex = #"^\S+@\S+\.\S+$"#
+    private let passwordLengthRegex = #"(?=.{6,})"#
+    private let passwordLatinRegex = #"(?=.*[a-zA-Z\d])"#
+    private let passwordNumberRegex = #"(?=.*\d)"#
+    
+    
+    //    MARK: - Validation functions
+    
+    func validateEmail(_ email:String) -> Bool {
+        guard let delegate = delegate else { return false }
         
-        var result: NSTextCheckingResult?
-        let range = NSRange(location: 0, length: string?.utf16.count ?? 0)
-        
-        if let string = string {
-            result = regex.firstMatch(in: string, range: range)
+        if email == "" {
+            delegate.showValidationAlert(message: "Поле почты не должно быть пустым")
+            return false
         }
-        return result != nil
         
+        if email.range(of: emailRegex, options: .regularExpression) == nil {
+            delegate.showValidationAlert(message: "Почта должна содержать спец. символы")
+            return false
+        }
+        
+        return true
     }
     
-    // MARK: - Validate functions
-    func isValidLogin (login: String?) -> Bool {
-        return isValid(string: login, regex: loginRegex)
+    func validatePassword(_ password:String) -> Bool {
         
-    }
-    
-    func isValidPassword (password: String?) -> Bool {
-        return isValid(string: password, regex: passwordRegex)
+        guard let delegate = delegate else { return false }
         
+        if password == "" {
+            delegate.showValidationAlert(message: "Поле пароля не должно быть пустым")
+            return false
+        }
+        
+        if password.range(of: passwordLengthRegex, options: .regularExpression) == nil {
+            delegate.showValidationAlert(message: "Пароль должен состоять как минимум из 6 символов")
+            return false
+        }
+        
+        if password.range(of: passwordNumberRegex, options: .regularExpression) == nil {
+            delegate.showValidationAlert(message: "Пароль должен содержать как минимум одну цифру")
+            return false
+        }
+        
+        if password.range(of: passwordLatinRegex, options: .regularExpression) == nil {
+            delegate.showValidationAlert(message: "Пароль должен содержать только криллицу(английские буквы)")
+            return false
+        }
+        
+        return true
     }
     
 }

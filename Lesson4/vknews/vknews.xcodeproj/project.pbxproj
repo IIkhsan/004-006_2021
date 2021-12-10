@@ -20,6 +20,8 @@
 		2338E8602702195200F378CA /* DetailedPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E85F2702195200F378CA /* DetailedPostViewController.swift */; };
 		23B3B58927146A28007E60C6 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3B58827146A28007E60C6 /* MyProfileViewController.swift */; };
 		23B3B5912714A684007E60C6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3B5902714A684007E60C6 /* UserService.swift */; };
+		23F3D40E27637FED00E49A44 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3D40D27637FED00E49A44 /* TabBarViewController.swift */; };
+		23F3D4162763939C00E49A44 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3D4152763939C00E49A44 /* SettingsViewController.swift */; };
 		23F79382275E3D4F0048C2DB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F79381275E3D4F0048C2DB /* Post.swift */; };
 		23F79387275E3DD70048C2DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F79386275E3DD70048C2DB /* User.swift */; };
 		23F7938C275E3E160048C2DB /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7938B275E3E150048C2DB /* Auth.swift */; };
@@ -65,6 +67,8 @@
 		2338E85F2702195200F378CA /* DetailedPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPostViewController.swift; sourceTree = "<group>"; };
 		23B3B58827146A28007E60C6 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		23B3B5902714A684007E60C6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		23F3D40D27637FED00E49A44 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		23F3D4152763939C00E49A44 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23F79381275E3D4F0048C2DB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		23F79386275E3DD70048C2DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23F7938B275E3E150048C2DB /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		2336DB12270B3070000DC20D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				23F3D40D27637FED00E49A44 /* TabBarViewController.swift */,
 				23F79398275E3F840048C2DB /* PostController */,
 				23F79397275E3F690048C2DB /* NewsFeedController */,
 				23F79396275E3F5A0048C2DB /* LogInController */,
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				23B3B58827146A28007E60C6 /* MyProfileViewController.swift */,
+				23F3D4152763939C00E49A44 /* SettingsViewController.swift */,
 			);
 			path = UserProfileController;
 			sourceTree = "<group>";
@@ -386,12 +392,14 @@
 				23F793A0275E46690048C2DB /* Validator.swift in Sources */,
 				23B3B5912714A684007E60C6 /* UserService.swift in Sources */,
 				230D841B2702EE6A0059DD37 /* PostTableViewCell.swift in Sources */,
+				23F3D4162763939C00E49A44 /* SettingsViewController.swift in Sources */,
 				23F793A5275E47FE0048C2DB /* LogInService.swift in Sources */,
 				23F7938C275E3E160048C2DB /* Auth.swift in Sources */,
 				23F79391275E3EE30048C2DB /* PostService.swift in Sources */,
 				23B3B58927146A28007E60C6 /* MyProfileViewController.swift in Sources */,
 				2338E8272702041B00F378CA /* SceneDelegate.swift in Sources */,
 				23F79387275E3DD70048C2DB /* User.swift in Sources */,
+				23F3D40E27637FED00E49A44 /* TabBarViewController.swift in Sources */,
 				2338E858270216FB00F378CA /* LentaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

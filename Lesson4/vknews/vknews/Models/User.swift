@@ -10,5 +10,6 @@ import UIKit
 struct Account {
     var authentification: LogIns
     var username: String
+    var bio: String
     var profilePicture: UIImage
 }

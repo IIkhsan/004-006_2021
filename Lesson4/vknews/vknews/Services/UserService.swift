@@ -12,8 +12,8 @@ class UserService {
     private var users: [Account]
     
     init() {
-        users = [.init(authentification: LogInfo1, username: "badgalriri", profilePicture: #imageLiteral(resourceName: "1613768")),
-                 .init(authentification: LogInfo2, username: "egorkreed", profilePicture: #imageLiteral(resourceName: "ff681219b653530b1f0b1d63c292bd29"))]
+        users = [.init(authentification: LogInfo1, username: "badgalriri", bio: "", profilePicture: #imageLiteral(resourceName: "1613768")),
+                 .init(authentification: LogInfo2, username: "egorkreed", bio: "", profilePicture: #imageLiteral(resourceName: "ff681219b653530b1f0b1d63c292bd29"))]
     }
     
     func getUser(email: String, password: String) -> Account? {

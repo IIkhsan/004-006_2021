@@ -293,14 +293,76 @@
                                 <rect key="frame" x="30" y="118" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVN-ib-iNc">
+                                <rect key="frame" x="190" y="118" width="204" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBn-9z-Ps5">
+                                <rect key="frame" x="190" y="161" width="204" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWJ-ww-rnu">
-                                <rect key="frame" x="156" y="432" width="106" height="36"/>
+                                <rect key="frame" x="154" y="297" width="106" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title=" Настройки"/>
+                                <connections>
+                                    <action selector="ifSettingsButtonPressed:" destination="Ljr-Ab-GfF" eventType="touchUpInside" id="Nk3-05-0Z2"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVN-ib-iNc">
-                                <rect key="frame" x="190" y="118" width="34" height="21"/>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мой Профиль" image="person" catalog="system" id="mrv-G4-SHw">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="profieSettingsButton" destination="GWJ-ww-rnu" id="bFT-NY-7IH"/>
+                        <outlet property="profileBioLabel" destination="HBn-9z-Ps5" id="1WX-r7-nxd"/>
+                        <outlet property="profileImage" destination="vHy-U1-A2h" id="bbT-lL-nR4"/>
+                        <outlet property="profileName" destination="ZVN-ib-iNc" id="tZV-rb-b86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKe-Pn-zec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.8985507246377" y="-208.25892857142856"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="8Ch-4k-gsd">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="lJw-TL-eTd" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hXI-4d-GWm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jqh-CI-p3t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mca-Nj-P8w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш текущий статус: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-Go-eeG">
+                                <rect key="frame" x="121" y="97" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8R-Ua-aPp">
+                                <rect key="frame" x="169" y="301" width="99" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Cохранить"/>
+                                <connections>
+                                    <action selector="saveIfPressed:" destination="lJw-TL-eTd" eventType="touchUpInside" id="bto-KK-9pQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-T3-TAo">
+                                <rect key="frame" x="99" y="140" width="194" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -309,17 +371,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Мой Профиль" image="person" catalog="system" id="mrv-G4-SHw">
-                        <color key="badgeColor" systemColor="labelColor"/>
-                    </tabBarItem>
                     <connections>
-                        <outlet property="profileImage" destination="vHy-U1-A2h" id="bbT-lL-nR4"/>
-                        <outlet property="profileName" destination="ZVN-ib-iNc" id="tZV-rb-b86"/>
+                        <outlet property="changeBioLabel" destination="fKi-T3-TAo" id="PTe-ld-lx1"/>
+                        <outlet property="saveButton" destination="d8R-Ua-aPp" id="8jf-nG-BFD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qKe-Pn-zec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKQ-sr-wS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="-208"/>
+            <point key="canvasLocation" x="2028.985507246377" y="-208.25892857142856"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="9zJ-tY-EUN">
@@ -349,12 +408,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="LQb-eF-bi2" kind="relationship" relationship="rootViewController" id="Yt9-qT-9Ag"/>
+                        <segue destination="EZL-J7-Mqv" kind="relationship" relationship="rootViewController" id="k6n-jK-88Q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omr-Lq-R4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581" y="155"/>
+            <point key="canvasLocation" x="-1283" y="155"/>
         </scene>
         <!--Вход-->
         <scene sceneID="8zA-Gd-t9Z">
@@ -387,8 +446,7 @@
                                 <color key="tintColor" red="0.21006859650000001" green="0.34634988439999997" blue="0.43306864750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <action selector="logIn:" destination="EZL-J7-Mqv" eventType="touchUpInside" id="PBd-4L-8TE"/>
-                                    <action selector="submitButtonClicked:" destination="EZL-J7-Mqv" eventType="touchUpInside" id="PkB-La-bBx"/>
+                                    <action selector="logInAction:" destination="EZL-J7-Mqv" eventType="touchUpInside" id="VYD-aK-cNd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -402,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIF-Vp-S85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1332" y="155"/>
+            <point key="canvasLocation" x="-555" y="155"/>
         </scene>
     </scenes>
     <resources>

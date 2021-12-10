@@ -60,7 +60,7 @@ final class PostService {
 
     private func newsMixer() -> [SinglePostCellData] {
         var dataCopy = Data
-        for i in stride(from: dataCopy.count - 1, through: 1, by: -1){
+        for i in stride(from: dataCopy.count - 1, through: 2, by: -1){
             let j = Int.random(in: 0...i+1)
             
             let helper = dataCopy[j]
@@ -70,5 +70,7 @@ final class PostService {
         return dataCopy
     }
 }
+
+
 
 
