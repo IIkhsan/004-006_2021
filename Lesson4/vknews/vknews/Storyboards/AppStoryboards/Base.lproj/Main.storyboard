@@ -313,7 +313,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title=" Настройки"/>
                                 <connections>
-                                    <action selector="ifSettingsButtonPressed:" destination="Ljr-Ab-GfF" eventType="touchUpInside" id="Nk3-05-0Z2"/>
+                                    <action selector="ifSettingsButtonPressed:" destination="Ljr-Ab-GfF" eventType="touchUpInside" id="Lre-mQ-LFt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="1202.8985507246377" y="-208.25892857142856"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Настройки-->
         <scene sceneID="8Ch-4k-gsd">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="lJw-TL-eTd" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="Настройки" id="lJw-TL-eTd" customClass="SettingsViewController" customModule="vknews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hXI-4d-GWm"/>
                         <viewControllerLayoutGuide type="bottom" id="Jqh-CI-p3t"/>
@@ -345,15 +345,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш текущий статус: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-Go-eeG">
-                                <rect key="frame" x="121" y="97" width="172" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Изменить статус: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-Go-eeG">
+                                <rect key="frame" x="132" y="98" width="151" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="введите новый статус здесь" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ykt-qi-9gw">
+                                <rect key="frame" x="27" y="162" width="367" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8R-Ua-aPp">
-                                <rect key="frame" x="169" y="301" width="99" height="36"/>
+                                <rect key="frame" x="158" y="267" width="99" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cохранить"/>
@@ -361,18 +367,11 @@
                                     <action selector="saveIfPressed:" destination="lJw-TL-eTd" eventType="touchUpInside" id="bto-KK-9pQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-T3-TAo">
-                                <rect key="frame" x="99" y="140" width="194" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="changeBioLabel" destination="fKi-T3-TAo" id="PTe-ld-lx1"/>
+                        <outlet property="newBioTextField" destination="ykt-qi-9gw" id="9Dz-kK-eF1"/>
                         <outlet property="saveButton" destination="d8R-Ua-aPp" id="8jf-nG-BFD"/>
                     </connections>
                 </viewController>

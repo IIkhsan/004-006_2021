@@ -9,6 +9,7 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var imagesLowPriorityConstraint: NSLayoutConstraint!
     @IBOutlet weak var image2Constraint: NSLayoutConstraint!
     @IBOutlet weak var image1Constraint: NSLayoutConstraint!
@@ -20,10 +21,12 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postPicImageView1: UIImageView!
     @IBOutlet weak var postPicImageView2: UIImageView!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
+    // MARK: - Function
     public func configure(post: SinglePostCellData) {
         groupImageView.image = post.groupImage
         groupNameLabel.text = post.groupName

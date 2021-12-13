@@ -9,8 +9,8 @@ import UIKit
 
 final class PostService {
     
-    private var Info: [SinglePostCellData] = []
-
+    // MARK: - Properties
+    var Info: [SinglePostCellData] = []
     var Data: [SinglePostCellData] = [SinglePostCellData(groupName: "на дальней станции сойду",
                                                          description: "железная дорога через озеро в алтайском крае.",
                                                          groupImage: #imageLiteral(resourceName: "IMG_7613"),
@@ -29,7 +29,7 @@ final class PostService {
                                       SinglePostCellData(groupName: "GIRL MEMES",
                                                          description: nil,
                                                          groupImage: #imageLiteral(resourceName: "IMG_7615"),
-                                                         publishingTime: "27 ноя в 7:345 РМ",
+                                                         publishingTime: "27 ноя в 7:35 РМ",
                                                          pinnedPics: [#imageLiteral(resourceName: "w9f0sFXyoRs")]),
                                       SinglePostCellData(groupName: "ART casket",
                                                          description: "Я почти продал душу, но сделал это...",
@@ -52,20 +52,24 @@ final class PostService {
                                                          groupImage: #imageLiteral(resourceName: "0IEf2FjkGQ4"), publishingTime: "сегодня в 4:07 АМ", pinnedPics:[])
                                     ]
 
+    // MARK: - Public function
     func getNews(completion : @escaping (_ data: [SinglePostCellData]) -> Void) {
         Info = newsMixer()
         sleep(3)
         completion(Info)
     }
-
+    
+    // MARK: - Private function
     private func newsMixer() -> [SinglePostCellData] {
         var dataCopy = Data
         for i in stride(from: dataCopy.count - 1, through: 2, by: -1){
             let j = Int.random(in: 0...i+1)
             
-            let helper = dataCopy[j]
-            dataCopy[j] = dataCopy[i]
-            dataCopy[i] = helper
+            if j < 9 {
+                let helper = dataCopy[j]
+                dataCopy[j] = dataCopy[i]
+                dataCopy[i] = helper
+            }
         }
         return dataCopy
     }

@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
     //    MARK: - IBOutlets
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -49,7 +48,6 @@ class LoginViewController: UIViewController {
         }
     }
 
-    
     // MARK: - Functions
     func showAlert(alertTitle: String, alertMessage: String, actionTitle: String) -> Void {
         let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
@@ -60,13 +58,11 @@ class LoginViewController: UIViewController {
     }
 }
     
-//   MARK: - Delegate
-
-extension LoginViewController: ValidatorDelegate{
+// MARK: - Delegate
+extension LoginViewController: ValidatorDelegate {
     
     func showValidationAlert(message: String) {
-        
-        let dismissAction = UIAlertAction(title: "Назад", style: .default, handler: {action in action.isEnabled = false})
+        let dismissAction = UIAlertAction(title: "Назад", style: .default, handler: { action in action.isEnabled = false })
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alertController.addAction(dismissAction)
         present(alertController, animated: true, completion: nil)

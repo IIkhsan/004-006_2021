@@ -8,12 +8,14 @@
 import UIKit
 
 class SinglePostCellData {
+    // MARK: - Properties
     var groupName: String?
     var description: String?
     var groupImage: UIImage?
     var publishingTime: String?
     var pinnedPics: [UIImage?]
     
+    // MARK: - Initializer
     init(groupName: String?, description: String?, groupImage: UIImage?, publishingTime: String?, pinnedPics: [UIImage?]) {
         self.groupName = groupName
         self.description = description

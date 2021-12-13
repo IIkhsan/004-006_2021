@@ -15,20 +15,15 @@ protocol ValidatorDelegate {
 class Validator {
     
     //    MARK: - Properties
-    
     var delegate: ValidatorDelegate?
     
-    
     //    MARK: - Regular Expressions
-    
     private let emailRegex = #"^\S+@\S+\.\S+$"#
     private let passwordLengthRegex = #"(?=.{6,})"#
     private let passwordLatinRegex = #"(?=.*[a-zA-Z\d])"#
     private let passwordNumberRegex = #"(?=.*\d)"#
     
-    
     //    MARK: - Validation functions
-    
     func validateEmail(_ email:String) -> Bool {
         guard let delegate = delegate else { return false }
         
@@ -71,5 +66,4 @@ class Validator {
         
         return true
     }
-    
 }

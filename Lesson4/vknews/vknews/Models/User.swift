@@ -8,6 +8,7 @@
 import UIKit
 
 struct Account {
+    // MARK: - Properties
     var authentification: LogIns
     var username: String
     var bio: String

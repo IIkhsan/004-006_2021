@@ -8,6 +8,7 @@
 import Foundation
 
 struct LogIns {
+    // MARK: - Properties
     var email: String
     var password: String
 }

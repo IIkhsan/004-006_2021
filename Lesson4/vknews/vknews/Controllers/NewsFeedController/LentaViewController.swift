@@ -9,11 +9,14 @@ import UIKit
 
 class LentaViewController: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Private properties
     private let postService = PostService()
     private var Info:[SinglePostCellData] = []
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -21,6 +24,7 @@ class LentaViewController: UIViewController {
         obtainData()
     }
     
+    // MARK: - Private function
     private func obtainData() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let strongSelf = self else { return }
@@ -34,6 +38,7 @@ class LentaViewController: UIViewController {
     }
 }
 
+// MARK: - Exstensions
 extension LentaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Info.count

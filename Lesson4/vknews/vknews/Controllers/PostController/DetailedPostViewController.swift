@@ -9,6 +9,7 @@ import UIKit
 
 class DetailedPostViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var groupImageView: UIImageView!
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var publishTimeLabel: UILabel!
@@ -16,8 +17,10 @@ class DetailedPostViewController: UIViewController {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     
+    // MARK: - Properties
     var post: SinglePostCellData?
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         groupImageView.image = post?.groupImage
@@ -27,10 +30,9 @@ class DetailedPostViewController: UIViewController {
         if post?.pinnedPics.count ?? 0 > 0 {
             image1.image = post?.pinnedPics[0]
         }
+        
         if post?.pinnedPics.count ?? 0 > 1 {
             image2.image = post?.pinnedPics[1]
         }
     }
-    
-    
 }

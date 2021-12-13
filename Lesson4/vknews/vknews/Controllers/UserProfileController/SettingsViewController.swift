@@ -10,20 +10,27 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var changeBioLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var newBioTextField: UITextField!
     
     // MARK: - properties
-    var statusEditDelegate: StatusEditDelegate?
+    var delegate: StatusEditDelegate?
+    var account: Account?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<Back", style: .plain, target: self, action: #selector(backAction))
     }
     
     // MARK: - IBAction
     @IBAction func saveIfPressed(_ sender: Any) {
-        statusEditDelegate?.editStatus(text: changeBioLabel.text!)
+        delegate?.editStatus(text: newBioTextField.text!)
+        backAction()
     }
     
+    //  MARK: - Object fuction
+    @objc func backAction() {
+        dismiss(animated: true, completion: nil)
+    }
 }
